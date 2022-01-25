@@ -1,0 +1,363 @@
+SEDE_TECNICA;LIVELLO1;LIVELLO2;LIVELLO3;LIVELLO4;LIVELLO5;LIVELLO6;DESC_SEDE
+S;XXS;XXXX;00;"";"";"";OPERE E SERVIZI COMUNI
+S;XXS;XXXX;00;PV;"";"";Sistema PV
+S;XXS;XXXX;00;PV;CL;"";Cavi collegamento Inverter
+S;XXS;XXXX;00;PV;SC;"";Cavi solari tra moduli/stringhe
+S;XXS;XXXX;00;PV;CC;"";Connettori
+S;XXS;XXXX;00;PV;SM;"";Moduli PV
+S;XXS;XXXX;00;VC;"";"";EDIFICI, AREE E STRADE
+S;XXS;XXXX;00;VC;BU;"";Cabinato
+S;XXS;XXXX;00;VC;FE;"";Recinzione metallica e cancello
+S;XXS;XXXX;00;VC;GA;"";Aree verdi
+S;XXS;XXXX;00;VC;RO;"";Strade perimetrali ed interne
+S;XXS;XXXX;00;IL;"";"";SISTEMA DI ILLUMINAZIONE
+S;XXS;XXXX;00;IL;LU;"";Lampade perimetrali ed interne
+S;XXS;XXXX;00;IL;LS;"";Lampade Interne
+S;XXS;XXXX;00;IL;PL;"";Pozzetti illuminazione e TVCC
+S;XXS;XXXX;00;IL;CL;"";Cavidotto di connessione e cavi BT
+S;XXS;XXXX;00;IT;"";"";SISTEMA DI COMUNICAZIONE
+S;XXS;XXXX;00;SS;"";"";SISTEMA DI SICUREZZA
+S;XXS;XXXX;00;SS;VS;"";Sistema di videosorveglianza
+S;XXS;XXXX;00;SS;IR;"";Sistema antintrusione
+S;XXS;XXXX;00;IC;"";"";Comunicazioni Interne
+S;XXS;XXXX;00;IC;HT;"";Impianto telefonico
+S;XXS;XXXX;00;TC;"";"";scada
+S;XXS;XXXX;00;TC;LN;"";Rete LAN Interna
+S;XXS;XXXX;00;TC;AP;"";Dispositivi SCADA
+S;XXS;XXXX;00;TC;SM;"";Stazione Meteorologica
+S;XXS;XXXX;00;TC;SM;IR;Piranometro
+S;XXS;XXXX;00;TC;SM;PR;Pressione ambiente
+S;XXS;XXXX;00;TC;SM;TA;Termoigrometro/temperatura ambiente
+S;XXS;XXXX;00;TC;SM;TM;Sensore temperatura modulo
+S;XXS;XXXX;00;TC;SM;HU;Sensore umidità
+S;XXS;XXXX;00;TC;SM;WI;Anemometro
+S;XXS;XXXX;00;TC;SM;WU;Anemoscopio
+S;XXS;XXXX;00;TC;SM;RI;Pluviometro
+S;XXS;XXXX;00;TC;HI;"";Interfaccia uomo macchina
+S;XXS;XXXX;00;FF;"";"";SISTEMA ANTINCENDIO
+S;XXS;XXXX;00;GG;"";"";IMPIANTO DI MESSA A TERRA
+S;XXS;XXXX;00;AS;"";"";SISTEMA ANTIRATTO
+S;XXS;XXXX;00;CL;"";"";CAVIDOTTI E CANALINE MT
+S;XXS;XXXX;00;CL;MC;"";Cavi MT di connessione
+S;XXS;XXXX;00;CL;JC;"";Giunzioni e connessioni MT
+S;XXS;XXXX;00;CL;CT;"";Canaline
+S;XXS;XXXX;00;SC;"";"";RETE DI CONNESSIONE ED EROGAZIONE
+S;XXS;XXXX;00;SC;HV;"";Sezione Alta Tensione
+S;XXS;XXXX;00;SC;HV;IT;Interruttore generale AT
+S;XXS;XXXX;00;SC;HV;SZ;sezionatore AT
+S;XXS;XXXX;00;SC;HV;SB;Sabrre AT
+S;XXS;XXXX;00;SC;HV;PG;Relè di protezione
+S;XXS;XXXX;00;SC;HV;TM;trasformatori misura
+S;XXS;XXXX;00;SC;MV;"";Sezione MT
+S;XXS;XXXX;00;SC;MV;IT;Interruttore generale
+S;XXS;XXXX;00;SC;MV;IP;Interruttore di Interfaccia
+S;XXS;XXXX;00;SC;MV;PI;Relè Protezione di Interfaccia
+S;XXS;XXXX;00;SC;MV;PG;Relè di protezione
+S;XXS;XXXX;00;SC;MV;L1;Interruttore di Linea 1
+S;XXS;XXXX;00;SC;MV;P1;Protezione di Linea 1
+S;XXS;XXXX;00;SC;MV;L2;Interruttore di Linea 2
+S;XXS;XXXX;00;SC;MV;P2;Protezione di Linea 2
+S;XXS;XXXX;00;SC;MV;L3;Interruttore di Linea 3
+S;XXS;XXXX;00;SC;MV;P3;Protezione di Linea 3
+S;XXS;XXXX;00;SC;MV;Ln;Interruttore di Linea n
+S;XXS;XXXX;00;SC;MV;Pn;Protezione di Linea n 
+S;XXS;XXXX;00;SC;MV;MM;Trasformatori di corrente e tensione
+S;XXS;XXXX;00;SC;MV;LS;Servizi ausiliari
+S;XXS;XXXX;00;SC;MV;PS;Protezioni servizi ausiliari
+S;XXS;XXXX;00;SC;LV;"";SEZIONE BT (consegna)
+S;XXS;XXXX;00;SC;LV;IT;Interruttore generale
+S;XXS;XXXX;00;SC;LV;PG;Relè di protezione
+S;XXS;XXXX;00;SC;LV;LS;Servizi ausiliari
+S;XXS;XXXX;00;SC;LV;PS;Protezioni servizi ausiliari
+S;XXS;XXXX;00;SC;TR;"";TRASFORMATORE BT/MT
+S;XXS;XXXX;00;SC;TR;PT;Sistema Protezione Trasformatore
+S;XXS;XXXX;00;SC;UP;"";UPS
+S;XXS;XXXX;00;SC;FC;"";Sistema di aerazione
+S;XXS;XXXX;00;SC;LA;"";Servizi ausiliari BT
+S;XXS;XXXX;00;SC;LA;UP ;Utenze Privilegiate UPS
+S;XXS;XXXX;00;SC;LA;UN;Circuiti CA normale
+S;XXS;XXXX;00;SC;LA;IT;Auxiliary general breaker
+S;XXS;XXXX;00;SC;CB;"";banco condensatori
+S;XXS;XXXX;00;SC;SA;"";trasformatore servizi ausiliari
+S;XXS;XXXX;00;SC;OC;"";Opere civili
+S;XXS;XXXX;00;SC;CL;"";cavi sotterranei e Linea elettrica
+S;XXS;XXXX;00;SC;CE;"";Contatori di energia
+S;XXS;XXXX;00;SC;CE;CS;Interruttore di interfaccia contatore
+S;XXS;XXXX;00;SC;CE;CA;Contatore di energia di autoconsumo
+S;XXS;XXXX;00;SC;CE;CR;Contatore di energia NETTA prodotta
+S;XXS;XXXX;00;Tn;"";"";Trasformatore BT/MT
+S;XXS;XXXX;00;OC;"";"";OPERE CIVILI
+S;XXS;XXXX;00;OC;WS;"";Guaine protettive
+S;XXS;XXXX;00;OC;MF;"";Struttura metallica
+S;XXS;XXXX;00;OC;FO;"";Fondazioni e pozzetti
+S;XXS;XXXX;00;OC;MR;"";Altre opere
+S;XXS;XXXX;ZZ;"";"";"";Sistemi e attrezzature varie
+S;XXS;XXXX;ZZ;GE;"";"";GRUPPO ELETTROGENO
+S;XXS;XXXX;ZZ;VB;"";"";SISTEMI E ATTREZZATURE VARIE
+S;XXS;XXXX;ZZ;VB;MU;"";Sistemi e attrezzature varie
+S;XXS;XXXX;ZZ;VD;"";"";RETE IDRICA E FOGNATURE
+S;XXS;XXXX;0A;"";"";"";Sistema comune di raccolta e distribuzione dell'energia
+S;XXS;XXXX;0A;1T;"";"";Trasformatore comune Alta e Media Tensione
+S;XXS;XXXX;0A;1T;HV;"";Sezione di Alta Tensione
+S;XXS;XXXX;0A;1T;HV;IT;Interruttore generale AT
+S;XXS;XXXX;0A;1T;HV;SZ;sezionatore AT
+S;XXS;XXXX;0A;1T;HV;SB;Sabrre AT
+S;XXS;XXXX;0A;1T;HV;PG;Relè di protezione
+S;XXS;XXXX;0A;1T;HV;TM;trasformatori misura
+S;XXS;XXXX;0A;1T;MT;"";Sezione di Media Tensione
+S;XXS;XXXX;0A;1T;MT;IT;Interruttore generale
+S;XXS;XXXX;0A;1T;MT;PG;Relè di protezione
+S;XXS;XXXX;0A;1T;MT;L1;Interruttore di Linea 1
+S;XXS;XXXX;0A;1T;MT;P1;Protezione di Linea 1
+S;XXS;XXXX;0A;1T;MT;L2;Interruttore di Linea 2
+S;XXS;XXXX;0A;1T;MT;P2;Protezione di Linea 2
+S;XXS;XXXX;0A;1T;MT;L3;Interruttore di Linea 3
+S;XXS;XXXX;0A;1T;MT;P3;Protezione di Linea 3
+S;XXS;XXXX;0A;1T;MT;Ln;Interruttore di Linea n
+S;XXS;XXXX;0A;1T;MT;Pn;Protezione di Linea n 
+S;XXS;XXXX;0A;1T;MT;MM;Trasformatori di corrente e tensione
+S;XXS;XXXX;0A;1T;MT;LS;Servizi ausiliari
+S;XXS;XXXX;0A;1T;MT;PS;Protezioni servizi ausiliari
+S;XXS;XXXX;0A;1T;TR;"";TRASFORMATORE BT/MT
+S;XXS;XXXX;0A;1T;TR;PT;Protezioni servizi ausiliari
+S;XXS;XXXX;0A;1T;UP;"";UPS
+S;XXS;XXXX;0A;1T;FC;"";Sistema di aerazione
+S;XXS;XXXX;0A;1T;LA;"";Servizi ausiliari BT
+S;XXS;XXXX;0A;1T;LA;UP ;Utenze Privilegiate UPS
+S;XXS;XXXX;0A;1T;LA;UN;Circuiti CA normale
+S;XXS;XXXX;0A;1T;CB;"";banco condensatori
+S;XXS;XXXX;0A;1T;SA;"";trasformatore servizi ausiliari
+S;XXS;XXXX;0A;1T;OC;"";Opere civili
+S;XXS;XXXX;0A;1T;CL;"";cavi sotterranei e Linea elettrica
+S;XXS;XXXX;0A;1T;CE;"";Contatori di energia
+S;XXS;XXXX;0A;2T;"";"";Trasformatore comune HV/MV 2
+S;XXS;XXXX;0A;3T;"";"";Trasformatore comune HV/MV 3
+S;XXS;XXXX;0A;nT;"";"";Trasformatore comune HV/MV n
+S;XXS;XXXX;01;"";"";"";sottocampo 1
+S;XXS;XXXX;01;OC;"";"";Opere civili
+S;XXS;XXXX;01;OC;WS;"";Guaine protettive
+S;XXS;XXXX;01;OC;MF;"";strutture metalliche
+S;XXS;XXXX;01;OC;FO;"";Fondazioni e pozzetti
+S;XXS;XXXX;01;OC;MR;"";Altre opere
+S;XXS;XXXX;01;MV;"";"";Sezione MT
+S;XXS;XXXX;01;MV;IT;"";Interruttore MT
+S;XXS;XXXX;01;MV;PR;"";Relè di protezione
+S;XXS;XXXX;01;MV;SZ;"";Switch trasformatore MV
+S;XXS;XXXX;01;RU;"";"";RMU SEZIONE MT
+S;XXS;XXXX;01;RU;LI;"";Ingresso anello MT
+S;XXS;XXXX;01;RU;LO;"";Uscita anello MT
+S;XXS;XXXX;01;RU;SZ;"";Switch trasformatore MV
+S;XXS;XXXX;01;CE;"";"";CONTATORI DI ENERGIA
+S;XXS;XXXX;01;CE;CA;"";Contatore di energia di autoconsumo
+S;XXS;XXXX;01;CE;CR;"";Contatore di energia LORDA prodotta
+S;XXS;XXXX;01;LV;"";"";SEZIONE BT
+S;XXS;XXXX;01;LV;LA;"";Quadro servizi BT
+S;XXS;XXXX;01;LV;LA;IT;Interruttore Generale Servizi
+S;XXS;XXXX;01;LV;LA;UP ;Circuiti UPS
+S;XXS;XXXX;01;LV;LA;UN;Circuiti CA Normali
+S;XXS;XXXX;01;LV;LA;TR;Trasformatore Servizi Ausiliari
+S;XXS;XXXX;01;LV;LP;"";Quadro parallelo BT
+S;XXS;XXXX;01;LV;LP;IT;Interruttore generale
+S;XXS;XXXX;01;LV;LP;PI;Relè Protezione di Interfaccia
+S;XXS;XXXX;01;LV;LP;CB;Banco Condensatori
+S;XXS;XXXX;01;LV;LP;IP;Interfaccia di protezione
+S;XXS;XXXX;01;LV;LP;QG ;Cablaggio BT fino al Trasformatore SU
+S;XXS;XXXX;01;LV;LP;01;Interruttore INVERTER 1
+S;XXS;XXXX;01;LV;LP;02;Interruttore INVERTER 2
+S;XXS;XXXX;01;LV;LP;03;Interruttore INVERTER 3
+S;XXS;XXXX;01;LV;LP;04;Interruttore INVERTER 4
+S;XXS;XXXX;01;LV;LP;nn;Interruttore INVERTER nn
+S;XXS;XXXX;01;UP;"";"";UPS
+S;XXS;XXXX;01;FC;"";"";SISTEMA DI AERAZIONE
+S;XXS;XXXX;01;CL;"";"";cavi sotterranei e Linea elettrica
+S;XXS;XXXX;01;ST;"";"";STRUTTURE DI SUPPORTO
+S;XXS;XXXX;01;ST;S1;"";Struttura sostegno metallica 
+S;XXS;XXXX;01;ST;S2;"";Fondazioni in calcestruzzo/vite metallica
+S;XXS;XXXX;01;ST;S3;"";Fissaggio pannelli
+S;XXS;XXXX;01;ST;S4;"";Sistema di messa a terra
+S;XXS;XXXX;01;ST;S5;"";Cavidotto Vele-Cassette di raccolta
+S;XXS;XXXX;01;TT;"";"";Tracker
+S;XXS;XXXX;01;TT;T1;"";dispositivi elettromeccanici
+S;XXS;XXXX;01;TT;T2;"";sistema di controllo
+S;XXS;XXXX;01;TT;nn;"";Componenti del Tracker
+S;XXS;XXXX;01;TT;"";BU;Boccole
+S;XXS;XXXX;01;TT;"";MO;Motore
+S;XXS;XXXX;01;TT;"";GB;GearBox
+S;XXS;XXXX;01;TT;"";T1;Dispositivi elettromeccanici
+S;XXS;XXXX;01;TT;"";T2;Sistema di Controllo
+S;XXS;XXXX;01;TS;"";"";SISTEMA SICUREZZA ARRAY
+S;XXS;XXXX;01;TS;TA;"";Sistema di sicurezza attivo
+S;XXS;XXXX;01;TS;TS;"";Sistema di sicurezza passivo
+S;XXS;XXXX;01;TC;"";"";scada
+S;XXS;XXXX;01;TC;AP;"";Dispositivi SCADA
+S;XXS;XXXX;01;TC;LN;"";Rete LAN Interna
+S;XXS;XXXX;01;TC;SM;"";Sensori Meteorologici
+S;XXS;XXXX;01;TC;SM;IR;Piranometro
+S;XXS;XXXX;01;TC;SM;TA;Termoigrometro
+S;XXS;XXXX;01;TC;SM;TM;Sensore temperatura modulo
+S;XXS;XXXX;01;TC;SM;PR;Pressione ambiente
+S;XXS;XXXX;01;TC;SM;HU;Sensore umidità
+S;XXS;XXXX;01;TC;SM;WI;Anemometro
+S;XXS;XXXX;01;TC;SM;WU;Anemoscopio
+S;XXS;XXXX;01;TC;SM;RI;Pluviometro
+S;XXS;XXXX;01;TC;SM;MS;Alimentatore Stazione Metereologica
+S;XXS;XXXX;01;TC;SM;SO;Sensore di Sporcizia
+S;XXS;XXXX;01;TC;SM;WE;Sensore meteorologico polivalente
+S;XXS;XXXX;01;TC;SM;BI;Back Irradiance
+S;XXS;XXXX;01;T1;"";"";TRASFORMATORE BT/MT 1
+S;XXS;XXXX;01;T1;PT;"";Sistema Protezione Trasformatore
+S;XXS;XXXX;01;Tn;"";"";TRASFORMATORE BT/MT n
+S;XXS;XXXX;01;Tn;PT;"";Sistema Protezione Trasformatore
+S;XXS;XXXX;01;01;"";"";Inverter 1
+S;XXS;XXXX;01;01;T1;"";Trasformatore BT/BT
+S;XXS;XXXX;01;01;FU;"";Quadro fusibili
+S;XXS;XXXX;01;01;D1;"";Sezione DC
+S;XXS;XXXX;01;01;D1;MP;MPPT
+S;XXS;XXXX;01;01;D1;GI;Sistema controllo impedenza
+S;XXS;XXXX;01;01;AC;"";Sezione AC
+S;XXS;XXXX;01;01;AC;C;Gruppo di conversione
+S;XXS;XXXX;01;01;AC;IP;Interfaccia di protezione
+S;XXS;XXXX;01;01;IS;"";Trasformatore di isolamento
+S;XXS;XXXX;01;01;CO;"";Filtri dell'aria/consumables
+S;XXS;XXXX;01;01;AR;"";Ventole di raffreddamento
+S;XXS;XXXX;01;01;TK;"";Cofano metallico e maniglie
+S;XXS;XXXX;01;01;HI;"";HMI
+S;XXS;XXXX;01;01;DS;"";Interruttore disconnessione DC
+S;XXS;XXXX;01;01;IT;"";Interruttore AC
+S;XXS;XXXX;01;01;PS;"";Alimentazione esterna
+S;XXS;XXXX;01;01;RC;"";Controllo da remoto
+S;XXS;XXXX;01;01;01;"";Quadro di connessione 1
+S;XXS;XXXX;01;01;01;01;stringa 1
+S;XXS;XXXX;01;01;01;02;stringa 2
+S;XXS;XXXX;01;01;01;….;stringa …
+S;XXS;XXXX;01;01;01;mm;stringa mm
+S;XXS;XXXX;01;01;02;"";Quadro di connessione 2
+S;XXS;XXXX;01;01;02;01;stringa 1
+S;XXS;XXXX;01;01;02;02;stringa 2
+S;XXS;XXXX;01;01;02;….;stringa …
+S;XXS;XXXX;01;01;02;mm;stringa mm
+S;XXS;XXXX;01;01;….;"";Quadro di connessione …
+S;XXS;XXXX;01;01;nn;"";Quadro di connessione nn
+S;XXS;XXXX;01;01;nn;01;stringa 1
+S;XXS;XXXX;01;01;nn;02;stringa 2
+S;XXS;XXXX;01;01;nn;….;stringa …
+S;XXS;XXXX;01;01;nn;mm;stringa mm
+S;XXS;XXXX;01;02;"";"";inverter 2
+S;XXS;XXXX;01;…;"";"";inverter…
+S;XXS;XXXX;01;kk;"";"";inverter n
+S;XXS;XXXX;01;Pn;"";"";LV/AC Panel
+S;XXS;XXXX;01;Pn;T1;"";LV/LV Field Transformer
+S;XXS;XXXX;01;Pn;PA;"";Power Analyser
+S;XXS;XXXX;01;Pn;IS;"";Trasformatore di isolamento
+S;XXS;XXXX;01;Pn;CO;"";Filtri dell'aria/consumables
+S;XXS;XXXX;01;Pn;AR;"";Ventole di raffreddamento
+S;XXS;XXXX;01;Pn;TK;"";Cofano metallico e maniglie
+S;XXS;XXXX;01;Pn;HI;"";HMI
+S;XXS;XXXX;01;Pn;DS;"";Interruttore disconnessione DC
+S;XXS;XXXX;01;Pn;IT;"";Interruttore AC
+S;XXS;XXXX;01;Pn;PS;"";Alimentazione esterna
+S;XXS;XXXX;01;Pn;RC;"";Controllo da remoto
+S;XXS;XXXX;01;Pn;01;"";Quadro di connessione 1
+S;XXS;XXXX;01;Pn;01;DS;Interruttore disconnessione DC
+S;XXS;XXXX;01;Pn;01;01;stringa 1
+S;XXS;XXXX;01;Pn;01;02;stringa 2
+S;XXS;XXXX;01;Pn;01;….;stringa …
+S;XXS;XXXX;01;Pn;01;mm;stringa mm
+S;XXS;XXXX;01;Pn;01;MP;MPPT
+S;XXS;XXXX;01;Pn;01;GI;Sistema controllo impedenza
+S;XXS;XXXX;01;Pn;01;GC;Gruppo di conversione
+S;XXS;XXXX;01;Pn;01;IP;Interfaccia di protezione
+S;XXS;XXXX;01;Pn;02;"";Quadro di connessione 2
+S;XXS;XXXX;01;Pn;02;DS;Interruttore disconnessione DC
+S;XXS;XXXX;01;Pn;02;01;stringa 1
+S;XXS;XXXX;01;Pn;02;02;stringa 2
+S;XXS;XXXX;01;Pn;02;….;stringa …
+S;XXS;XXXX;01;Pn;02;mm;stringa mm
+S;XXS;XXXX;01;Pn;02;MP;MPPT
+S;XXS;XXXX;01;Pn;02;GI;Sistema controllo impedenza
+S;XXS;XXXX;01;Pn;02;GC;Gruppo di conversione
+S;XXS;XXXX;01;Pn;02;IP;Interfaccia di protezione
+S;XXS;XXXX;01;Pn;nn;"";Quadro di connessione nn
+S;XXS;XXXX;01;Pn;nn;DS;Interruttore disconnessione DC
+S;XXS;XXXX;01;Pn;nn;01;stringa 1
+S;XXS;XXXX;01;Pn;nn;02;stringa 2
+S;XXS;XXXX;01;Pn;nn;….;stringa …
+S;XXS;XXXX;01;Pn;nn;mm;stringa mm
+S;XXS;XXXX;01;Pn;nn;MP;MPPT
+S;XXS;XXXX;01;Pn;nn;GI;Sistema controllo impedenza
+S;XXS;XXXX;01;Pn;nn;GC;Gruppo di conversione
+S;XXS;XXXX;01;Pn;nn;IP;Interfaccia di protezione
+S;XXS;XXXX;01;Pn;0B;"";AC Switch
+S;XXS;XXXX;01;Pn;…;"";AC Switch
+S;XXS;XXXX;01;Pn;0n;"";AC Switch CON n=B...Z
+S;XXS;XXXX;01;P9;"";"";LV/AC PANEL n=9
+S;XXS;XXXX;01;A0;"";"";Inverter modulare 1 parte comune
+S;XXS;XXXX;01;A0;FU;"";Quadro fusibili
+S;XXS;XXXX;01;A0;D1;"";Sezione Comune DC
+S;XXS;XXXX;01;A0;D1;MP;MPPT comune
+S;XXS;XXXX;01;A0;D1;GI;Sistema comunecontrollo impedenza
+S;XXS;XXXX;01;A0;AC;"";Sezione AC
+S;XXS;XXXX;01;A0;AC;GC;Gruppo di conversione
+S;XXS;XXXX;01;A0;AC;IP;Interfaccia di protezione
+S;XXS;XXXX;01;A0;IS;"";Trasformatore di isolamento
+S;XXS;XXXX;01;A0;CO;"";Filtri dell'aria/consumables
+S;XXS;XXXX;01;A0;AR;"";Ventole di raffreddamento
+S;XXS;XXXX;01;A0;TK;"";Cofano metallico e maniglie
+S;XXS;XXXX;01;A0;HI;"";HMI
+S;XXS;XXXX;01;A0;IT;"";Interruttore AC
+S;XXS;XXXX;01;A0;PS;"";Alimentazione esterna
+S;XXS;XXXX;01;A0;RC;"";Comunicatione remota
+S;XXS;XXXX;01;A1;"";"";Inverter modulare MPPT 1
+S;XXS;XXXX;01;A1;FU;"";Quadro fusibili
+S;XXS;XXXX;01;A1;D1;"";Sezione DC
+S;XXS;XXXX;01;A1;D1;MP;MPPT
+S;XXS;XXXX;01;A1;D1;GI;Sistema controllo impedenza
+S;XXS;XXXX;01;A1;CO;"";Filtri dell'aria/consumables
+S;XXS;XXXX;01;A1;AR;"";Ventole di raffreddamento
+S;XXS;XXXX;01;A1;DS;"";Interruttore disconnessione DC
+S;XXS;XXXX;01;A1;HI;"";HMI su MPPT
+S;XXS;XXXX;01;A1;PS;"";Alimentazione esterna
+S;XXS;XXXX;01;A1;01;"";Quadro di connessione 1
+S;XXS;XXXX;01;A1;01;01;stringa 1
+S;XXS;XXXX;01;A1;01;02;stringa 2
+S;XXS;XXXX;01;A1;01;….;stringa …
+S;XXS;XXXX;01;A1;01;mm;stringa mm
+S;XXS;XXXX;01;A1;02;"";Quadro di connessione 2
+S;XXS;XXXX;01;A1;02;01;stringa 1
+S;XXS;XXXX;01;A1;02;02;stringa 2
+S;XXS;XXXX;01;A1;02;….;stringa …
+S;XXS;XXXX;01;A1;02;mm;stringa mm
+S;XXS;XXXX;01;A1;….;"";Quadro di connessione ….
+S;XXS;XXXX;01;A1;nn;"";Quadro di connessione nn
+S;XXS;XXXX;01;A1;nn;01;stringa 1
+S;XXS;XXXX;01;A1;nn;02;stringa 2
+S;XXS;XXXX;01;A1;nn;….;stringa …
+S;XXS;XXXX;01;A1;nn;mm;stringa mm
+S;XXS;XXXX;01;A2;"";"";Inverter Modulare 1 MPPT 2
+S;XXS;XXXX;01;A…;"";"";Inverter Modulare 1 MPPT …
+S;XXS;XXXX;01;Ak;"";"";Inverter Modulare 1 MPPT k
+S;XXS;XXXX;01;B0;"";"";Inverter Modulare 2 parti comuni
+S;XXS;XXXX;01;B1;"";"";Inverter Modulare 2 MPPT 1
+S;XXS;XXXX;01;B…;"";"";Inverter Modulare 2 MPPT …
+S;XXS;XXXX;01;Bk;"";"";Inverter Modulare 2 MPPT k
+S;XXS;XXXX;01;n0;"";"";Inverter Modulare n parti comuni
+S;XXS;XXXX;01;n1;"";"";Inverter Modulare n MPPT 1
+S;XXS;XXXX;01;n…;"";"";Inverter Modulare n MPPT …
+S;XXS;XXXX;01;nk;"";"";Inverter Modulare n MPPT k
+S;XXS;XXXX;02;"";"";"";sottocampo 2
+S;XXS;XXXX;03;"";"";"";sottocampo 3
+S;XXS;XXXX;04;"";"";"";sottocampo 4
+S;XXS;XXXX;05;"";"";"";sottocampo 5
+S;XXS;XXXX;06;"";"";"";sottocampo 6
+S;XXS;XXXX;07;"";"";"";sottocampo 7
+S;XXS;XXXX;99;"";"";"";sottocampo 99
+S;XXS;XXXX;A0;"";"";"";sottocampo 100
+S;XXS;XXXX;A1;"";"";"";sottocampo 101
+S;XXS;XXXX;Z9;"";"";"";sottocampo 359
+S;XXS;XXXX;9Z;"";"";"";FORNITURE LOGISTICHE
+S;XXS;XXXX;9Z;01;"";"";strumenti officina e laboratorio
+S;XXS;XXXX;9Z;02;"";"";Arredi
+S;XXS;XXXX;9Z;03;"";"";macchine d'ufficio
+S;XXS;XXXX;9Z;04;"";"";veicoli speciali
+S;XXS;XXXX;9Z;05;"";"";pc, stampanti, altro
+S;XXS;XXXX;9Z;06;"";"";dispositivi sicurezza

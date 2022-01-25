@@ -1,0 +1,91 @@
+{
+  "name": "PM030",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^5",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.8.4",
+    "express": "^4",
+    "hdb": "^0.18.3"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "Enel_Gateway": {
+        "kind": "odata",
+        "model": "srv/external/Enel_Gateway",
+        "credentials": {
+          "destination": "Enel_Gateway"
+        }
+      },
+      "ZEWRKR_NOTIFICATION_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZEWRKR_NOTIFICATION_SRV",
+        "[production]": {
+            "credentials": {
+              "destination": "Enel_Gateway",
+              "path": "/ZEWRKR_NOTIFICATION_SRV"
+            }
+          },
+          "credentials": {
+            "destination": "backend_dest",
+            "path": "/ZEWRKR_NOTIFICATION_SRV"
+          }    
+          
+      },
+      "ZEWRKR_WORK_ORDER_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZEWRKR_WORK_ORDER_SRV",
+        "[production]": {
+            "credentials": {
+              "destination": "Enel_Gateway",
+              "path": "/ZEWRKR_WORK_ORDER_SRV"
+            }
+          },
+          "credentials": {
+            "destination": "backend_dest",
+            "path": "/ZEWRKR_WORK_ORDER_SRV"
+          }  
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}
