@@ -8,10 +8,13 @@
   "dependencies": {
     "@sap/cds": "^5",
     "@sap/cds-odata-v2-adapter-proxy": "^1.8.4",
+    "@sap/hana-client": "^2.11.14",
     "express": "^4",
-    "hdb": "^0.18.3"
+    "hdb": "^0.18.3",
+    "underscore": "^1.13.2"
   },
   "devDependencies": {
+    "@sap/hdi-deploy": "4.2.3",
     "sqlite3": "^5.0.2"
   },
   "scripts": {
@@ -45,7 +48,7 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sql"
+        "kind": "hana"
       },
       "Enel_Gateway": {
         "kind": "odata",
@@ -58,30 +61,113 @@
         "kind": "odata-v2",
         "model": "srv/external/ZEWRKR_NOTIFICATION_SRV",
         "[production]": {
-            "credentials": {
-              "destination": "Enel_Gateway",
-              "path": "/ZEWRKR_NOTIFICATION_SRV"
-            }
-          },
           "credentials": {
-            "destination": "backend_dest",
+            "destination": "Enel_Gateway",
             "path": "/ZEWRKR_NOTIFICATION_SRV"
-          }    
-          
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZEWRKR_NOTIFICATION_SRV"
+        }
       },
       "ZEWRKR_WORK_ORDER_SRV": {
         "kind": "odata-v2",
         "model": "srv/external/ZEWRKR_WORK_ORDER_SRV",
         "[production]": {
-            "credentials": {
-              "destination": "Enel_Gateway",
-              "path": "/ZEWRKR_WORK_ORDER_SRV"
-            }
-          },
           "credentials": {
-            "destination": "backend_dest",
+            "destination": "Enel_Gateway",
             "path": "/ZEWRKR_WORK_ORDER_SRV"
-          }  
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZEWRKR_WORK_ORDER_SRV"
+        }
+      },
+      "ZPM4R_PMO_MASTERDATA_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_MASTERDATA_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_MASTERDATA_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_MASTERDATA_SRV"
+        }
+      },
+      "Z4R_SEARCH_HELP_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/Z4R_SEARCH_HELP_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/Z4R_SEARCH_HELP_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/Z4R_SEARCH_HELP_SRV"
+        }
+      },
+      "ZPM4R_PMO_TAB_ANAG_1_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_TAB_ANAG_1_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_TAB_ANAG_1_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_TAB_ANAG_1_SRV"
+        }
+      },
+      "ZPM4R_PMO_TAB_ANAG_2_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_TAB_ANAG_2_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_TAB_ANAG_2_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_TAB_ANAG_2_SRV"
+        }
+      },
+      "ZPM4R_PMO_TAB_ANAG_3_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_TAB_ANAG_3_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_TAB_ANAG_3_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_TAB_ANAG_3_SRV"
+        }
+      },
+      "ZPM4R_PMO_TAB_ANAG_4_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_TAB_ANAG_4_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_TAB_ANAG_4_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_TAB_ANAG_4_SRV"
+        }
       }
     },
     "hana": {

@@ -1,0 +1,12 @@
+{   "welcomeFile": "catalog/",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/(.*)$",
+            "destination": "srv-api",
+            "scope": "$XSAPPNAME.servicedata_auth",
+            "authenticationType": "xsuaa",
+            "csrfProtection": false
+        }
+    ]
+}

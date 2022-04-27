@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZPM4R_PMO_TAB_ANAG_3_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "ZPM4R_PMO_TAB_ANAG_3_SRV.T_PLANNIGSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Werks": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic."
+        },
+        "Lstar": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "Tp. attività"
+        },
+        "Steus": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Ch. di contr."
+        },
+        "Daune": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Utà durata std",
+          "@sap.semantics": "unit-of-measure"
+        },
+        "FlgAct": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flg tp attv mod"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_3_SRV.T_TP_MANSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "TipoGestione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo Gestione"
+        },
+        "Divisione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic."
+        },
+        "DesTipoGest": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Desc. Tipo Gest."
+        },
+        "Raggruppamento": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_3_SRV.T_TP_MAN1Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "TipoGestione1": {
+          "key": true,
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Finalità"
+        },
+        "Divisione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic."
+        },
+        "DesTipoGest1": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione Finalità"
+        },
+        "Raggruppamento": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_3_SRV.T_TP_MAN2Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "TipoGestione2": {
+          "key": true,
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Grup.Controllo"
+        },
+        "Divisione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic."
+        },
+        "DesTipoGest2": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "DescGrControlli"
+        },
+        "Raggruppamento": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        }
+      }
+    }
+  }
+}

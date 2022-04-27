@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZPM4R_PMO_TAB_ANAG_2_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "ZPM4R_PMO_TAB_ANAG_2_SRV.T_ACT_PROGSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Werks": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisione"
+        },
+        "Sistema": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema"
+        },
+        "Progres": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Progressivo"
+        },
+        "Txt": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Descriz. Progress"
+        },
+        "ComponentTipo": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.unicode": "false",
+          "@sap.label": "Componente Tipo"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_2_SRV.T_RAGGRSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Divisione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic."
+        },
+        "Raggruppamento": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        },
+        "DescRaggr": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Desc. raggrup."
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_2_SRV.T_DESTSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Werks": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisione"
+        },
+        "Arbpl": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Centro di lav."
+        },
+        "Destinatario": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Destinatario"
+        },
+        "Txt": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione Destin."
+        },
+        "Raggruppamento": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        },
+        "Mail": {
+          "type": "cds.String",
+          "length": 241,
+          "@sap.unicode": "false",
+          "@sap.label": "Indir. e-mail"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_2_SRV.T_DEST_USRSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Werks": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisione"
+        },
+        "Arbpl": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Centro di lav."
+        },
+        "Destinatario": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Destinatario"
+        },
+        "Uname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Utente"
+        },
+        "Object": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Aut Object PMO"
+        },
+        "Id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Authorization Field"
+        },
+        "Auto": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "auth. object z_auth_"
+        },
+        "Raggruppamento": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Raggruppamento"
+        }
+      }
+    }
+  }
+}

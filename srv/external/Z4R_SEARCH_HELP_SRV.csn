@@ -1,0 +1,4254 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "Z4R_SEARCH_HELP_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "Z4R_SEARCH_HELP_SRV.CompanyCodeListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "User": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Land1": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Paese",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Waers": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ktopl": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Piano dei conti",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.PurchaseGroupListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uname": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome utente",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Role": {
+          "type": "cds.String",
+          "length": 100,
+          "@sap.unicode": "false",
+          "@sap.label": "Campo carattere a 100 posizioni",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.StorageListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lgobe": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Definizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werks": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.UomListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Unità di miusra",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo UM 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Componente del numero versione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.CurrencyListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Waers": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisa",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LText": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IVendor": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IEkorg": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.TipoMovimentoSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Bwart": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo movimento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Lingua",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Grund": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Causa movimento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Grtxt": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Motivo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.TipoValorizzazioneSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Bwtar": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo valut.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kkref": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Rif. cl. conto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bsext": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "ORDACQ esterni",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bsint": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "ORDACQ interni",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.DeliveryAddressListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Plant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lgort": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name1": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name2": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Street": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HouseNum1": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PostCode1": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "City1": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Region": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.PayTermsListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bukrs": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ekorg": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vendor": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.MaterialGroupListSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Matnr": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Asnum": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.DynamicSearchHelpSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "ShplName": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome dell'help di ricerca",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ShplType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo help valori (cfr. valori fissi)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ReturnTabDescSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.ReturnTabDescSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ReturnTabValueSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.ReturnTabValueSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ReturnErrorSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.ReturnErrorSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ReturnFieldValueSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.ReturnFieldValueSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.ReturnTabValueSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Shlpname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Recordpos": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Posizione del record nella tabella di output matchcode F4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldval": {
+          "type": "cds.String",
+          "length": 132,
+          "@sap.unicode": "false",
+          "@sap.label": "Contenuto campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Retfield": {
+          "type": "cds.String",
+          "length": 132,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DynamicSearchHelp": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.DynamicSearchHelpSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.ReturnTabDescSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Fieldname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Lingua",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reptext": {
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DynamicSearchHelp": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.DynamicSearchHelpSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.GetTvtaTvkoSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Vkorg": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Org. comm.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vtweg": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Can. distr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spart": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Settore merc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vtwku": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Can. distr. cl/mat.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spaku": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sett.merc. cl.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vtwko": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Can.distr.Cond.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spako": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sett.merc.cond.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Maber": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Area soll.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vkoau": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Rif.org.comm.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vtwau": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "C.distr. Tp.doc",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spaau": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sett.merc.tp.d.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Gsber": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Sett. cont.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reggb": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Regola SettCont",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Revfp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Reg.calc.disp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fixmg": {
+          "type": "cds.Boolean",
+          "@sap.unicode": "false",
+          "@sap.label": "Data definitiva",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Afind": {
+          "type": "cds.Boolean",
+          "@sap.unicode": "false",
+          "@sap.label": "Det.promozione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kkber": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Area di contr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1asnr": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Pto vend. int.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1aesnr": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Pto vend. esp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IspVb": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Zona diffusione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IsmBpVtbGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr. area vend.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J3gkbaul": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ril. per ETM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "OidCheckc": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Verif.clnt C/D",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Waers": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisa statist.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false",
+          "@sap.semantics": "currency-code"
+        },
+        "Bukrs": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Società",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Adrnr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Indirizzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TxnamAdr": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo indirizzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TxnamKop": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo test.lett",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TxnamFus": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo pié pag.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TxnamGru": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo saluto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kunnr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "CdClFattIn",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Boavo": {
+          "type": "cds.Boolean",
+          "@sap.unicode": "false",
+          "@sap.label": "Bonus attivo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vkokl": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Calend.org.comm",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ekorg": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Org. acquisti",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ekgrp": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo acquisti",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lifnr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornitore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werks": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bsart": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Tp.OrdAcq.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bstyp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Cat. documento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bwart": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo movimento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lgort": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Magazzino",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TxnamSdb": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo mitt. SDS",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mwskz": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice ctrl SD",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xstceg": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Regola imposta",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1anutime": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Orario NumCons",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Maxbi": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "No. bill. items",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Plaufz": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Durata gar. prezzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Plauez": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Unità gar.prezzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.ReturnErrorSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Type": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Cat. messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Id": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Classe messaggi",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Number": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Message": {
+          "type": "cds.String",
+          "length": 220,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo mess.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LogNo": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "N. registro",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LogMsgNo": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "N. messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MessageV1": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.label": "Variabile messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MessageV2": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.label": "Variabile messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MessageV3": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.label": "Variabile messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MessageV4": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.label": "Variabile messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Parameter": {
+          "type": "cds.String",
+          "length": 32,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome parametro",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Row": {
+          "type": "cds.Integer",
+          "@sap.unicode": "false",
+          "@sap.label": "Riga parametro",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Field": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "System": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema logico",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DynamicSearchHelp": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.DynamicSearchHelpSet",
+          "keys": []
+        },
+        "HelpFornitori": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.HelpFornitoriSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.ReturnFieldValueSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Shlpname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname1": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname2": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname3": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname4": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname5": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname6": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname7": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname8": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname9": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname10": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname11": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname12": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname13": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname14": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname15": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname16": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname17": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname18": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname19": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fieldname20": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DynamicSearchHelp": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.DynamicSearchHelpSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.HelpFornitoriSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Lifnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per fornitori",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name1": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ErdatLfa1": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per date assolute",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "UpdatLfa1": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per date assolute",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "ErdatLfb1": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per date assolute",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "UpdatLfb1": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per date assolute",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Bukrs": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "TipoTabella Range Bukrs",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Begru": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo di tabella range per gruppi di autorizzazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZZvmdcui": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Tabella range per fornitori",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Loevm": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Struttura range per stato Kanban",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stceg": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Range STCEG",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd1": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "Range STCD1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd2": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "Range STCD2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LtAdr6Set": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.LtAdr6Set",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "LtLfa1Set": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.LtLfa1Set",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "LtLfb1Set": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.LtLfb1Set",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ReturnErrorSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.ReturnErrorSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.LtLfa1Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Lifnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornitore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Loevm": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flag di canc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sperr": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco registr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sperm": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco acq.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stkzu": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Soggetto ad IVA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xcpdk": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Conto occas.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xzemp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ben.pag.in doc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ltsna": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "APF rilevante",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werkr": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Div. rilevante",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sperz": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco pag.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xlfza": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "DestPagDifInDoc",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Regss": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ass. pr. Pr. S.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ipisp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ripart. imposte",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Nodel": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco canc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MinComp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Micro Comp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TermLi": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Term. di Resp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SubmiRelevant": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Rilevante per SUBMI",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Erdat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data creazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Gbdat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data di nascita",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Revdb": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Ult.verif.est.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Updat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data conferma",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Qssysdat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "FineValidSistQM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Rgdate": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "RG Issue Date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Rnedate": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "RNE Issue Date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zzdatinl": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zzdatfil": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "JScCapital": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Capital Amount",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StagingTime": {
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0,
+          "@sap.unicode": "false",
+          "@sap.label": "Tempo approntamento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Land1": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Paese",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name1": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name2": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name3": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name4": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ort01": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Località",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ort02": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Frazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pfach": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Casella postale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pstl2": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "CAP cas. post.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pstlz": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "CAP",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Regio": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Regione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sortl": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave ric.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stras": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Via",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Adrnr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Indirizzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mcod1": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mcod2": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mcod3": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "Località",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Anred": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bahns": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "Stazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bbbnr": {
+          "type": "cds.String",
+          "length": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "N. ubic. 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bbsnr": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "N.ubicazione 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Begru": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Autorizzazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Brsch": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "S. ind.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bubkz": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Cifra ctr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Datlt": {
+          "type": "cds.String",
+          "length": 14,
+          "@sap.unicode": "false",
+          "@sap.label": "Linea dati",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dtams": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ch. com. DME",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dtaws": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave istruz.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ernam": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Creato da",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Esrnr": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero OPR",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Konzs": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ktokk": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo conti",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kunnr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Cliente",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lnrza": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Dest. pag. div.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Lingua",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd1": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Partita IVA 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd2": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "Partita IVA 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stkza": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Imp. pareggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Telbx": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Telebox",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Telf1": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Telefono 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Telf2": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.label": "Telefono (2)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Telfx": {
+          "type": "cds.String",
+          "length": 31,
+          "@sap.unicode": "false",
+          "@sap.label": "Telefax",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Teltx": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Teletex",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Telx1": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Telex",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vbund": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "Soc. partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fiskn": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Domic. fiscale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stceg": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Partita IVA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stkzn": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Pers. nat.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sperq": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Funz. blocco",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Gbort": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "L.go nasc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sexkz": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Sesso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kraus": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "N. informazioni",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qssys": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema QM eff.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ktock": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr. conti rif.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pfort": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Loc. - CP",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werks": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divisione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Plkal": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Calend. fabbr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Duefl": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Stato ril. dati",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Txjcd": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede fiscale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Scacd": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Stan.Carrier Cd",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sfrgr": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Sped.gr.nolo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lzone": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Zona trasp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dlgrp": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "GrSchFornServ.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fityp": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo di imposta",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcdt": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo part. IVA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Actss": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Cod. prev. soc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd3": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice fisc. 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd4": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice fisc. 4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd5": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Partita IVA 5",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stcd6": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Tax Number 6",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Taxbs": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Base imponibile",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Profs": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Professione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stgdl": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr.stat.for.ser.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Emnfr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "CostruttoreEst.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lfurl": {
+          "type": "cds.String",
+          "length": 132,
+          "@sap.unicode": "false",
+          "@sap.label": "URL",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1kfrepre": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome rappr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1kftbus": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo di attività",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "J1kftind": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo industria",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Confs": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Stato conferma",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Podkzb": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Rilevante POD",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fisku": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Uff. imp. comp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stenr": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Partita IVA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CarrierConf": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Conferma vettore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CrcNum": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.unicode": "false",
+          "@sap.label": "CRC number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CvpXblck": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ind.ob. comm. ragg.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rg": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "RG Number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Exp": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Issued by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uf": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "State",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ric": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "RIC Number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rne": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Foreign National Reg",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Cnae": {
+          "type": "cds.String",
+          "length": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "CNAE",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Legalnat": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Legal Nature",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Crtn": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "CRT Number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Icmstaxpay": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "ICMS Taxpayer",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Indtyp": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Industry Main Type",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tdt": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tax Declaration Type",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Comsize": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Company Size",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Decregpc": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Decl. Reg. PIS/COFI",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "JScCurrency": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Currency",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Alc": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Agency Loc Cd",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PmtOffice": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Payment Office",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psofg": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo respons.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psois": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "ProcPrelSttcto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pson1": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pson2": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pson3": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psovn": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psotl": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Titolo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psohs": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero civico",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Psost": {
+          "type": "cds.String",
+          "length": 28,
+          "@sap.unicode": "false",
+          "@sap.label": "Via",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TransportChain": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Catena di trasporto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SchedulingType": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Proc. schedulazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zzvmdcui": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "CUI",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zzglobals": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornitore Glob",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZzAcc": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Forn. validato",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zzvatgrl": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "P. IVA di Gruppo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZaGlobalInd": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornit.glob.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zstreet": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "30 caratteri",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zzpis": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.unicode": "false",
+          "@sap.label": "PIS Number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZzregTrib": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Tax regime",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zzsuframa": {
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.label": "Suframa Code",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uptim": {
+          "type": "cds.Time",
+          "@sap.unicode": "false",
+          "@sap.label": "Ora di conferma",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HelpFornitori": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.HelpFornitoriSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.LtLfb1Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Lifnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornitore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sperr": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco di reg. soc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Loevm": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flag canc. soc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xverr": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Comp. con cl.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xdezv": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Elaboraz. dec.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reprf": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Doppia fattura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xpore": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Pag.individuale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xedip": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Avviso per EDI",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xlfzb": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "DestPagDifInDoc",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Nodel": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Bl. canc. soc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Gmvkzk": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Esecuzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Erdat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data creazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zindt": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Ult. scadenza",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Datlz": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Ult.calc.inter.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Qszdt": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Valido fino al",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Cerdt": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data certific.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Updat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data conferma",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zbokd": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Ledger Exp. date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zqszdt": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Valid until",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zmindat": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Cer.date min.wage",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zficc": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "St.Date Cash",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Zffcc": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "End.Date.Cash",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Webtr": {
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Limite effetto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kultg": {
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0,
+          "@sap.unicode": "false",
+          "@sap.label": "Durata incasso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "BasisPnt": {
+          "type": "cds.Decimal",
+          "precision": 7,
+          "scale": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Basis points",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bukrs": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Società",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pernr": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "C.I.D.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ernam": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Creato da",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zuawa": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Akont": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Conto riconc.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Begru": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Autorizzazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vzskz": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Cod. interessi",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zwels": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Mod.pag.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zahls": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Blocco pagam.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zterm": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Cond.pagam.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Eikto": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Cto da fornit.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zsabe": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Ut. da forn.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kverm": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nota conto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Fdgrv": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Grp. cash man.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Busab": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Respons. cont.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lnrze": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Centrale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lnrzb": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Dest. pag. div.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zinrt": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Period.cal.int.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Togru": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Grp. tolleranza",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Hbkid": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Banca interna",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qsznr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "N. esenzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qsskz": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice RA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Blnkz": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice pref.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mindk": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Cod. minoranze",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Altkn": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "N. conto prec.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zgrup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave raggr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mgrup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave raggr.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uzawe": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Supp.mod.pag.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qsrec": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Classe RA",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qsbgr": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Mot. esenzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qland": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Paese R.A.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Frgrp": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo rilascio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Togrr": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr. tolleranza",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tlfxs": {
+          "type": "cds.String",
+          "length": 31,
+          "@sap.unicode": "false",
+          "@sap.label": "PEC",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Intad": {
+          "type": "cds.String",
+          "length": 130,
+          "@sap.unicode": "false",
+          "@sap.label": "Email",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Guzte": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Cond.Pag.NoteCr",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Gricd": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice attività",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Gridt": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo ripart.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Xausz": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Estratto conto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Confs": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "St.Conf. (soc.)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tlfns": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Rif.Amm.Con.Ric",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Avsnd": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Avv.pag. md.XML",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AdHash": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "E-mail per avv. pag.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CvpXblckB": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ind.ob. comm. ragg.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ciiucode": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Attività econ.princ.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zqsskz": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Future W.tax code",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Zqsznr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "F.Exemption no.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "JScSubcontype": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Subcontractor Type",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "JScCompdate": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Completion Date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "JScOffsm": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset Method",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "JScOffsr": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset %",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PrepayRelevant": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Rilev. pagam. antic.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssignTest": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr.test attribuzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZzfirmaDocument": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Firma digit.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uptim": {
+          "type": "cds.Time",
+          "@sap.unicode": "false",
+          "@sap.label": "Ora di conferma",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HelpFornitori": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.HelpFornitoriSet",
+          "keys": []
+        }
+      }
+    },
+    "Z4R_SEARCH_HELP_SRV.LtAdr6Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Lifnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Fornitore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Flgdefault": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Indir.standard",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FlgNouse": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Non utilizzare",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HomeFlag": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Ind. principale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DftReceiv": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Destin. stand.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "R3User": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Coll. SAP",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tnef": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "TNEF",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DateFrom": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Da",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Addrnumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "N. indirizzo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Persnumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero persona",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Consnumber": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "N. progressivo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SmtpAddr": {
+          "type": "cds.String",
+          "length": 241,
+          "@sap.unicode": "false",
+          "@sap.label": "Indir. e-mail",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SmtpSrch": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Indirizzo e-mail",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Encode": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Codifica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ValidFrom": {
+          "type": "cds.String",
+          "length": 14,
+          "@sap.unicode": "false",
+          "@sap.label": "In. val.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ValidTo": {
+          "type": "cds.String",
+          "length": 14,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine val.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HelpFornitori": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "Z4R_SEARCH_HELP_SRV.HelpFornitoriSet",
+          "keys": []
+        }
+      }
+    }
+  }
+}

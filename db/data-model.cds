@@ -1,55 +1,77 @@
 namespace my.entity;
 
+using { managed, cuid } from '@sap/cds/common';
+
 entity Books {
   key ID : Integer;
   title  : String;
   stock  : Integer;
 }
 
-entity Strategia {
-    key STARTEGIA:String(30);
+entity Strategia : managed {
+    key ID : Integer;
+    STRATEGIA:String(30);
     STRATEGIA_DESC:String(50);
 }
 
-entity Sede {
+entity Variante {
+    key APP:String(1);
+    key TABLE:String(20);
+    key USER:String(7);
+    key NAME:String(20);
+    COLUMN:String;
+    FILTER:String;
+}
+
+entity SedeTecnica {
     key SEDE_TECNICA:String(1);
     key LIVELLO1:String(3);
     key LIVELLO2:String(4);
     key LIVELLO3:String(2);
-    key LIVELLO4:String(2);
-    key LIVELLO5:String(2);
+    key LIVELLO4:String(3);
+    key LIVELLO5:String(3);
     key LIVELLO6:String(2);
-    DESC_SEDE:String(30);
+    key LANGUAGE:String(2);
+    DESC_SEDE:String(150);
+    NOTE:String(150);
 }
-
-entity Azioni {
-    key INDEX:Decimal(12);
-    key CONTATORE:Decimal(10);
-    DATA_MODIFICA:Date;
+entity Azioni : managed, cuid {
+    key ID : UUID;
+    key CONTATORE: Integer;
+    INDEX : Integer;
     SISTEMA:String(2);
     PROGRES:Decimal(5);
+    DESC_PROG:String(40);
     CLASSE:String(2);
     DES_COMPONENTE:String(80);
-}
-
-entity Index {
-    key INDEX:Decimal(12);
-    STARTEGIA:String(30);
-    STRATEGIA_DESC:String(50);
-    SEDE_TECNICA:String(1);
     DIVISIONE:String(4);
+    SEDE_TECNICA:String(1);
     LIVELLO1:String(3);
     LIVELLO2:String(4);
     LIVELLO3:String(2);
     LIVELLO4:String(3);
     LIVELLO5:String(2);
     LIVELLO6:String(2);
-    DESC_SEDE:String(30);
-    CLASSE_SEDE:Decimal(10);
-    CARATT_SEDE:Decimal(10);
+    DESC_SEDE:String(150);
+    EQUIPMENT:String(18);
+
+    CLASSE_SEDE:String(30);
+    CARATT_SEDE:String(30);
     OGGETTO_TECNICO:String(10);
     PROFILO:String(9);
     ZBAU:String(10);
+    VALORE:String(30);
+
+    TESTO_ESTESO_P:String;
+    ATTIVO:Boolean default true;
+}
+
+entity Index : managed, cuid {
+    key ID : UUID;
+    INDEX : Integer;
+    ID_STRATEGIA : Integer;
+    STRATEGIA:String(30);
+    STRATEGIA_DESC:String(50);
     DIVISIONEC:String(4);
     CENTRO_LAVORO:String(8);
     LSTAR:String(6);
@@ -91,6 +113,7 @@ entity Index {
     TIPO_GESTIONE:String(3);
     TIPO_GESTIONE_1:String(3);
     TIPO_GESTIONE_2:String(3);
+    TIPOFREQUENZA:String(1);
     RISK:String(1);
     POINT:String(12);
     MPTYP:String(1);
@@ -102,82 +125,87 @@ entity Index {
     FREQ_RISK:Decimal(4);
     UNITA_RISK:String(3);
     LIMITE2:String(22);
+    TIPO_ATTIVITA:String(3);
+    DESC_BREVE:String;
+    INDISPONIBILITA:String(1);
+    TIPO_ORDINE:String(4);
 }
 
-entity Index_Azione as SELECT from Index inner JOIN Azioni on Index.INDEX=Azioni.INDEX {
+entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azioni.ID {
+    key Index.ID,
+    key Azioni.CONTATORE, //posizione
     Index.INDEX,
-    Index.STARTEGIA,
+
+    Index.ID_STRATEGIA,
+    Index.STRATEGIA,
     Index.STRATEGIA_DESC,
-    Index.SEDE_TECNICA,
-    Index.DIVISIONE,
-    Index.LIVELLO1,
-    Index.LIVELLO2,
-    Index.LIVELLO3,
-    Index.LIVELLO4,
-    Index.LIVELLO5,
-    Index.LIVELLO6,
-    Index.DESC_SEDE,
-    Index.CLASSE_SEDE,
-    Index.CARATT_SEDE,
-    Index.OGGETTO_TECNICO,
-    Index.PROFILO,
-    Index.ZBAU,
     Index.DIVISIONEC,
     Index.CENTRO_LAVORO,
-    Index.LSTAR,
-    Index.STEUS,
-    Index.NUM,
-    Index.PERSONE,
-    Index.HPER,
-    Index.LSTAR_1,
-    Index.STEUS_1,
-    Index.NUM_1,
-    Index.PERSONE_1,
-    Index.HPER_1,
-    Index.LSTAR_2,
-    Index.STEUS_2,
-    Index.NUM_2,
-    Index.PERSONE_2,
-    Index.HPER_2,
-    Index.LSTAR_3,
-    Index.STEUS_3,
-    Index.NUM_3,
-    Index.PERSONE_3,
-    Index.HPER_3,
-    Index.LSTAR_4,
-    Index.STEUS_4,
-    Index.NUM_4,
-    Index.PERSONE_4,
-    Index.HPER_4,
-    Index.LSTAR_5,
-    Index.STEUS_5,
-    Index.NUM_5,
-    Index.PERSONE_5,
-    Index.HPER_5,
-    Index.PRIORITA,
-    Index.DESTINATARIO,
-    Index.TESTO_ESTESO,
-    Index.SISTEMA_PMO,
-    Index.PROGRES_PMO,
-    Index.CLASSE_PMO,
     Index.TIPO_GESTIONE,
     Index.TIPO_GESTIONE_1,
     Index.TIPO_GESTIONE_2,
+
+    Index.PRIORITA,
+    Index.TIPO_ATTIVITA,
+    Index.DESC_BREVE,
+    Index.TESTO_ESTESO,
+    Index.INDISPONIBILITA,
+    Index.TIPO_ORDINE,
+    
+    Index.LSTAR,
+    Index.STEUS,
+    Index.NUM,
+    Index.LSTAR_1,
+    Index.STEUS_1,
+    Index.NUM_1,
+    Index.LSTAR_2,
+    Index.STEUS_2,
+    Index.NUM_2,
+    Index.LSTAR_3,
+    Index.STEUS_3,
+    Index.NUM_3,
+    Index.LSTAR_4,
+    Index.STEUS_4,
+    Index.NUM_4,
+    Index.LSTAR_5,
+    Index.STEUS_5,
+    Index.NUM_5,
+
     Index.RISK,
-    Index.POINT,
-    Index.MPTYP,
     Index.LIMITE,
     Index.FREQ_TEMPO,
     Index.UNITA_TEMPO,
     Index.FREQ_CICLO,
     Index.UNITA_CICLO,
-    Index.FREQ_RISK,
-    Index.UNITA_RISK,
-    Index.LIMITE2,
-    Azioni.CONTATORE,
-    Azioni.DATA_MODIFICA,
+
+    Index.POINT,
+    Index.MPTYP, 
+    Index.TIPOFREQUENZA,
+    
+    //posizione
+    Azioni.ATTIVO,
     Azioni.SISTEMA,
     Azioni.PROGRES,
+    Azioni.DESC_PROG,
     Azioni.CLASSE,
-    Azioni.DES_COMPONENTE
-} order by Index.INDEX desc;
+    Azioni.DES_COMPONENTE,
+    Azioni.DIVISIONE,
+    Azioni.SEDE_TECNICA,
+    Azioni.LIVELLO1,
+    Azioni.LIVELLO2,
+    Azioni.LIVELLO3,
+    Azioni.LIVELLO4,
+    Azioni.LIVELLO5,
+    Azioni.LIVELLO6,
+    Azioni.DESC_SEDE,
+    Azioni.EQUIPMENT,
+    Azioni.TESTO_ESTESO_P,
+
+    Azioni.CLASSE_SEDE,
+    Azioni.CARATT_SEDE,
+    Azioni.OGGETTO_TECNICO,
+    Azioni.PROFILO,
+    Azioni.ZBAU,
+    Azioni.VALORE
+    
+} order by Index.INDEX desc, Azioni.CONTATORE desc ;

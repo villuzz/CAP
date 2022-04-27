@@ -1,0 +1,784 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZPM4R_PMO_TAB_ANAG_1_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "ZPM4R_PMO_TAB_ANAG_1_SRV.T_CONS_AESet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "IndexPmo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Index Azioni PMO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sottoindex": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "subindex",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Cont": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sistem": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Progres": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Progressivo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Classe": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Classe",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DesComponente": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.unicode": "false",
+          "@sap.label": "Desc comp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tplnr": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Equipment": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ComponentTipo": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.unicode": "false",
+          "@sap.label": "Componente Tipo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DesBreve": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Descriz. Progress",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EquipmentCompo": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IntegTxtEsteso": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flag desc est.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FlagAttivo": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Record valido",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_1_SRV.T_ACT_TYPESet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "InizioVal": {
+          "key": true,
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "FineVal": {
+          "key": true,
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Divisione": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Divis. ubic.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sistema": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Progres": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "Progressivo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Classe": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Classe",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Uzeit": {
+          "key": true,
+          "type": "cds.Time",
+          "@sap.unicode": "false",
+          "@sap.label": "Modifica subito",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CodAzione": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice Azione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ComponentTipo": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.unicode": "false",
+          "@sap.label": "Componente Tipo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DesBreve": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Descriz. Progress",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DesEstesa": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flag desc est.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DurataCiclo": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Ciclo manutenzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Frequenza": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Unità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false",
+          "@sap.semantics": "unit-of-measure"
+        },
+        "FlagAttivo": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Record valido",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TipoGestione": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo Gestione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TipoGestione1": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Finalità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TipoGestione2": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.unicode": "false",
+          "@sap.label": "Grup.Controllo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Datum": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data Modifica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Uname": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Cambia Utente",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ProgAggr": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.label": "N° Prog Aggr",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AggrActTitle": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Titolo Azione Aggreg",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AggrActComponent": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Comp Azione Agggreg",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ClassActType": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Class. Azione Tipo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_1_SRV.T_APP_WOSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Zcount": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IndexOdm": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "ID appointment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Appuntam": {
+          "key": true,
+          "type": "cds.Integer",
+          "@sap.unicode": "false",
+          "@sap.label": "Number appointm",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aufnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Number WO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aufpl": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "N. ciclo oper.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl1": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl2": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl3": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl4": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Aplzl5": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qmnum": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Notice",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NumIntervento": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "N. di class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StatoOdm": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Status WO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DettConf": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "conf details",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DataPian": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data pianif.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "DataFineCard": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data fine c.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "DataPianNatur": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Natural Expiry Date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Aggregatore": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Aggregatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DescAggregatore": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Desc.Aggregator",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZPM4R_PMO_TAB_ANAG_1_SRV.T_CONSSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "IndexPmo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Index Azioni PMO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sottoindex": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "subindex",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StComponente": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EquipmentComp": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DescComp": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo (40 posizioni)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DataEsec": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "OrdConsunt": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Vornr": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Operazione ODM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Avviso": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Avviso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NumIntervento": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "N. di class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Napp": {
+          "type": "cds.Integer",
+          "@sap.unicode": "false",
+          "@sap.label": "Number appointm",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DataPianNatur": {
+          "type": "cds.Timestamp",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Natural Expiry Date",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TipoConf": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo conf.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DettConf": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "conf details",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CausaMancEsec": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Failure to execute",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DettMancEsecuz": {
+          "type": "cds.String",
+          "length": 128,
+          "@sap.unicode": "false",
+          "@sap.label": "Details failure exec",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    }
+  }
+}

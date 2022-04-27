@@ -1,84 +1,80 @@
-## Generated mta.yaml based on template version 0.4.0
-## appName = PM030
-## language=nodejs; multitenant=false
-## approuter=
-_schema-version: '3.1'
+_schema-version: "3.1"
 ID: PM030
+description: A simple CAP project.
 version: 1.0.0
-description: "A simple CAP project."
+modules:
+- name: PM030-srv
+  type: nodejs
+  path: gen/srv
+  requires:
+  - name: ins-gds-gpgdh-cf-hdi-newpm030
+  - name: ins-gds-gpgdh-cf-dest-newpm030
+  - name: ins-gds-gpgdh-cf-uaa-newpm030
+  - name: ins-gds-gpgdh-cf-conn-newpm030
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+  build-parameters:
+    builder: npm-ci
+- name: PM030-db-deployer
+  type: hdb
+  path: gen/db
+  requires:
+  - name: ins-gds-gpgdh-cf-hdi-newpm030
+  parameters:
+    buildpack: nodejs_buildpack
+- name: pm030-approuter
+  type: approuter.nodejs
+  path: pm030-approuter
+  requires:
+  - name: PM030_html_repo_runtime
+  - name: ins-gds-gpgdh-cf-uaa-newpm030
+  - name: srv-api
+    group: destinations
+    properties:
+      name: srv-api
+      url: '~{srv-url}'
+      forwardAuthToken: true
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+resources:
+- name: ins-gds-gpgdh-cf-hdi-newpm030
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+  properties:
+    hdi-service-name: ${service-name}
+- name: ins-gds-gpgdh-cf-dest-newpm030
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service: destination
+    service-plan: lite
+- name: ins-gds-gpgdh-cf-uaa-newpm030
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-plan: application
+- name: ins-gds-gpgdh-cf-conn-newpm030
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: connectivity
+    service-plan: lite
+- name: PM030_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
 parameters:
   enable-parallel-deployments: true
-   
 build-parameters:
   before-all:
-   - builder: custom
-     commands:
-      - npm ci
-      - npx -p @sap/cds-dk cds build --production
-
-modules:
- # --------------------- SERVER MODULE ------------------------
- - name: PM030-srv
- # ------------------------------------------------------------
-   type: nodejs
-   path: gen/srv
-   parameters:
-     buildpack: nodejs_buildpack
-   build-parameters:
-     builder: npm-ci
-   requires:
-    # Resources extracted from CAP configuration
-    - name: ins-gds-gpgdh-cf-hdi-newpm030
-    - name: ins-gds-gpgdh-cf-dest-newpm030
-    - name: ins-gds-gpgdh-cf-uaa-newpm030
-    - name: ins-gds-gpgdh-cf-conn-newpm030
-   provides:
-    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
-      properties:
-        srv-url: ${default-url}
-
- # -------------------- SIDECAR MODULE ------------------------
- - name: PM030-db-deployer
- # ------------------------------------------------------------
-   type: hdb
-   path: gen/db  
-   parameters:
-     buildpack: nodejs_buildpack
-   requires:
-    # 'hana' and 'xsuaa' resources extracted from CAP configuration
-    - name: ins-gds-gpgdh-cf-hdi-newpm030
-
-
-resources:
- # services extracted from CAP configuration
- # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
-# ------------------------------------------------------------
- - name: ins-gds-gpgdh-cf-hdi-newpm030
-# ------------------------------------------------------------
-   type: com.sap.xs.hdi-container
-   parameters:
-     service: hana  # or 'hanatrial' on trial landscapes
-     service-plan: hdi-shared
-   properties:
-     hdi-service-name: ${service-name}
-
- - name: ins-gds-gpgdh-cf-dest-newpm030
-   type: org.cloudfoundry.existing-service
-   parameters:
-     service: destination
-     service-plan: lite
-
- - name: ins-gds-gpgdh-cf-uaa-newpm030
-   type: org.cloudfoundry.managed-service
-   parameters:
-     path: ./xs-security.json
-     service: xsuaa
-     service-plan: application 
-
- - name: ins-gds-gpgdh-cf-conn-newpm030
-   type: org.cloudfoundry.managed-service
-   parameters:
-     service: connectivity
-     service-plan: lite
-
-
+  - builder: custom
+    commands:
+    - npm ci
+    - npx -p @sap/cds-dk cds build --production
