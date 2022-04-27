@@ -19,7 +19,8 @@ module.exports = cds.service.impl(async function () {
     const ERROR_CODE = 460;
     const CONSOLE_LOG = false;
     var that = this;
-    
+
+    const test = "prova";
     
     const { T_PMO } = this.entities;
     this.before('READ', T_PMO , request =>{
