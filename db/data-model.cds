@@ -66,6 +66,7 @@ entity Azioni : managed, cuid {
     ATTIVO:Boolean default true;
 }
 
+
 entity Index : managed, cuid {
     key ID : UUID;
     INDEX : Integer;

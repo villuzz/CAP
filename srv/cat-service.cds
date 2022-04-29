@@ -28,6 +28,8 @@ service CatalogService {
     };
 
     entity T_DEST as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_DESTSet
+    entity T_RAGGR as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_RAGGRSet
+   
 
     entity T_ACT_EL as projection on ZPM4R_PMO_MASTERDATA_SRV.T_ACT_ELSet
     entity T_PMO_M as projection on ZPM4R_PMO_MASTERDATA_SRV.T_PMO_MSet
@@ -39,6 +41,8 @@ service CatalogService {
         T_PMO_MSet: redirected to T_PMO_M,
         T_PMO_SSet: redirected to T_PMO_S
     };
+
+
     
     entity Strategia as projection on my.Strategia;
     entity Sede as projection on my.SedeTecnica;

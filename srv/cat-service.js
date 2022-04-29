@@ -73,6 +73,43 @@ module.exports = cds.service.impl(async function () {
         }
 	});
 
+    const { T_RAGGR } = this.entities;
+    this.on('READ', T_RAGGR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+	});
+
+    this.on('CREATE', T_RAGGR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+	});
+
+    this.on('DELETE', T_RAGGR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+	});
+
+    this.on('UPDATE', T_RAGGR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+	});
+
     const { T_DEST } = this.entities;
     this.on('READ', T_DEST, async request => {
         try {
