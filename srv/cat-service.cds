@@ -44,6 +44,10 @@ service CatalogService {
 
 
     
+    
+    entity Materiali as projection on my.Materiali;
+    entity Servizi as projection on my.Servizi;
+
     entity Strategia as projection on my.Strategia;
     entity Sede as projection on my.SedeTecnica;
     entity Azioni as projection on my.Azioni;

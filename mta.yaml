@@ -1,7 +1,7 @@
 _schema-version: "3.1"
 ID: PM030
 description: A simple CAP project.
-version: 1.0.0
+version: 1.0.1
 modules:
 - name: PM030-srv
   type: nodejs

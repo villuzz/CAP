@@ -196,8 +196,9 @@ module.exports = cds.service.impl(async function () {
                 ShplType: "SH",
                 ShplName: "EHFND_ELM_EQART_T370K"
             };
-    
+            
             let response = await that.get(dySearch).where(data);*/
+            debugger
             let response = await serviceSearch.run(CQN);
             response = await convertDynamicFilter(response[0].ReturnTabValueSet);
             return response;
