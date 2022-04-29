@@ -23,6 +23,20 @@ entity Variante {
     FILTER:String;
 }
 
+entity Materiali {
+    key MATNR:String(18);
+    MAKTX:String(40);
+    MENGE:Decimal(16);
+    MEINS:String(3);
+}
+
+entity Servizi {
+    key ASNUM:String(18);
+    ASKTX:String(40);
+    MENGE:Decimal(16);
+    MEINS:String(3);
+}
+
 entity SedeTecnica {
     key SEDE_TECNICA:String(1);
     key LIVELLO1:String(3);
@@ -61,6 +75,9 @@ entity Azioni : managed, cuid {
     PROFILO:String(9);
     ZBAU:String(10);
     VALORE:String(30);
+
+    MATNR:String(18);
+    ASNUM:String(18);
 
     TESTO_ESTESO_P:String;
     ATTIVO:Boolean default true;
@@ -206,6 +223,9 @@ entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azio
     Azioni.OGGETTO_TECNICO,
     Azioni.PROFILO,
     Azioni.ZBAU,
-    Azioni.VALORE
+    Azioni.VALORE,
+
+    Azioni.MATNR,
+    Azioni.ASNUM
     
 } order by Index.INDEX desc, Azioni.CONTATORE desc ;
