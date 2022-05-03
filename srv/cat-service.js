@@ -147,6 +147,36 @@ module.exports = cds.service.impl(async function () {
         }
 	});
 
+    const { T_ACT_PROG } = this.entities;
+    this.on('READ', T_ACT_PROG, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
+    const { T_TP_MAN } = this.entities;
+    this.on('READ', T_TP_MAN, async request => {
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
+    const { T_TP_MAN1 } = this.entities;
+    this.on('READ', T_TP_MAN1, async request => {
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
+    const { T_TP_MAN2 } = this.entities;
+    this.on('READ', T_TP_MAN2, async request => {
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
+    const { T_ACT_SYST } = this.entities;
+    this.on('READ', T_ACT_SYST, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
+    const { T_ACT_CL } = this.entities;
+    this.on('READ', T_ACT_CL, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+	});
+
     const convertDynamicFilter = (req) => {
         let ExtractionGrouped = _.groupBy( req, ele => ele.Recordpos );
         let Extraction = [];
