@@ -20,10 +20,6 @@ module.exports = cds.service.impl(async function () {
     const CONSOLE_LOG = false;
     var that = this;
 
-    const { T_PMO } = this.entities;
-    this.before('READ', T_PMO, request => {
-        try {
-
     const save_log = (req, error, error_code = ERROR_CODE) => {
         var msg = "";
         if (_.isString(error)) {
@@ -58,11 +54,116 @@ module.exports = cds.service.impl(async function () {
             } else if (_.has(error, "message")) {
                 msg = error.message.toString();
             }
+        }
 
-            request.query.SELECT.columns = ['*', { ref: ['T_ACT_ELSet'], expand: ['*'] },
-                { ref: ['T_PMO_MSet'], expand: ['*'] },
-                { ref: ['T_PMO_SSet'], expand: ['*'] }];
+        LOG.warn(error);
+        LOG.warn(msg);
+        if (CONSOLE_LOG) {
+            console.log(msg);
+        }
+        return req.reject(error_code, msg);
+    };
 
+    const convertDateTimetoDate = (data, field) => {
+        if (data) {
+            data.forEach( (element, index) => {
+                if ( element && typeof element == 'object' && !Array.isArray(element) ) {
+                    if (element.ref && typeof element.ref == 'object' && Array.isArray(element.ref) ) {
+                        if (element.ref.length == 1) {
+                            if (element.ref[0] == field) {
+                                if (data.length >= index+3) {
+                                    if ( data[index+2] && typeof data[index+2] == 'object' && !Array.isArray(data[index+2]) ) {
+                                        if (data[index+2].val) {
+                                            LOG.warn(data[index+2].val);
+                                            var d = new Date(data[index+2].val);
+                                            data[index+2].val = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    };
+
+    const convertIsoToJSEpoch = (isoDateTime) => {
+        let last = isoDateTime.charAt(isoDateTime.length - 1);
+        if (last == "Z") {
+            isoDateTime = isoDateTime.slice(0, -1)
+        }
+        let date = new Date(isoDateTime);
+        let milliseconds = date.getTime();
+        // eslint-disable-next-line no-unused-vars
+        let timezoneOffset = date.getTimezoneOffset();
+        //let correctMillis = milliseconds - (timezoneOffset * 60000); //to convert minutes to millis
+        let correctMillis = milliseconds;
+        return "/Date(" + correctMillis + ")/"
+    }
+
+    // eslint-disable-next-line no-unused-vars
+    const convertEpochToIsoDate = (jsEpoch) => {
+        return convertEpochToIsoDateTime(jsEpoch).substring(0,10)
+    }
+
+    const convertEpochToIsoDateTime = (jsEpoch) => {
+        //return new Date(eval(jsEpoch.replace(/\//g,""))).toJSON()
+        jsEpoch = jsEpoch.replace(/\//g,"");
+        jsEpoch = jsEpoch.substring(5,18);
+        return new Date(parseInt(jsEpoch)).toJSON()
+    }
+
+    const removeNull = (data) => {
+        Object.keys(data).forEach( key => {
+            if ( data[key] == null ) {
+                delete data[key];
+            }
+            if (typeof data[key] == "object" ) {
+                removeNull(data[key])
+            }
+        })
+    }
+
+    const convertDatesv4Tov2 = (req) => {
+        //LOG.warn(JSON.stringify(req.target.elements));
+        Object.keys(req.data).forEach( key => {
+            if ( req.target.elements[key] && (req.target.elements[key].type === "cds.Date" || req.target.elements[key].type === "cds.DateTime" || req.target.elements[key].type === "cds.Timestamp" ) )
+                req.data[key] = convertIsoToJSEpoch(req.data[key])
+        })
+    }
+
+    const removeOdataType = (data) => {
+        Object.keys(data).forEach( key => {
+            if ( key && key == '@odata.type' ) {
+                delete data[key];
+            }
+            if ( data[key] && typeof data[key] == 'object' && Array.isArray(data[key]) ){
+                data[key].forEach(element => {
+                    removeOdataType(element);
+                });
+            } else if (data[key] && typeof data[key] == 'object' && !Array.isArray(data[key]) ) {
+                removeOdataType(data[key]);
+            }
+        })
+    }
+
+    // ------------------------------------------------------------
+
+
+    const { T_PMO } = this.entities;
+    this.before('READ', T_PMO, request => {
+        try {
+            if (request._queryOptions !== null && request._queryOptions.$select !== undefined) {
+                request.query.SELECT.columns = [{ ref: [request._queryOptions.$select] }];
+            } else {
+                if (!Array.isArray(request.query.SELECT.columns)) {
+                    request.query.SELECT.columns = [];
+                }
+                request.query.SELECT.columns = ['*', { ref: ['T_ACT_ELSet'], expand: ['*'] },
+                    { ref: ['T_PMO_MSet'], expand: ['*'] },
+                    { ref: ['T_PMO_SSet'], expand: ['*'] }];
+            }
         } catch (error) {
             return save_log2(request, error);
         }
@@ -183,93 +284,80 @@ module.exports = cds.service.impl(async function () {
         }
     });
 
-    const { T_DEST_USR } = this.entities;
-    this.on('READ', T_DEST_USR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('CREATE', T_DEST_USR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('DELETE', T_DEST_USR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('UPDATE', T_DEST_USR, async request => {
-        try {
-
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
     const { T_ACT_PROG } = this.entities;
     this.on('READ', T_ACT_PROG, async request => {
-        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_ACT_PROG, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_ACT_PROG, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_ACT_PROG, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
     const { T_TP_MAN } = this.entities;
     this.on('READ', T_TP_MAN, async request => {
-        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_TP_MAN, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_TP_MAN, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_TP_MAN, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
 
     const { T_TP_MAN1 } = this.entities;
     this.on('READ', T_TP_MAN1, async request => {
-        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_TP_MAN1, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_TP_MAN1, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_TP_MAN1, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
 
     const { T_TP_MAN2 } = this.entities;
     this.on('READ', T_TP_MAN2, async request => {
-        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_TP_MAN2, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_TP_MAN2, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_TP_MAN2, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
 
     const { T_ACT_SYST } = this.entities;
     this.on('READ', T_ACT_SYST, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('CREATE', T_ACT_SYST, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_ACT_SYST, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_ACT_SYST, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
 
     const { T_ACT_CL } = this.entities;
     this.on('READ', T_ACT_CL, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('CREATE', T_ACT_CL, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_ACT_CL, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_ACT_CL, async request => {
-        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-    });
-
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    
+    const { T_DEST_USR} = this.entities;
+    this.on('READ', T_DEST_USR, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_DEST_USR, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_DEST_USR, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_DEST_USR, async request => {
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        
 
     const convertDynamicFilter = (req) => {
         let ExtractionGrouped = _.groupBy(req, ele => ele.Recordpos);
@@ -405,58 +493,6 @@ module.exports = cds.service.impl(async function () {
             return save_log(request, error);
         }
     });
-
-    const convertDatesv4Tov2 = (req) => {
-        //LOG.warn(JSON.stringify(req.target.elements));
-        Object.keys(req.data).forEach(key => {
-            if (req.target.elements[key] && (req.target.elements[key].type === "cds.Date" || req.target.elements[key].type === "cds.DateTime" || req.target.elements[key].type === "cds.Timestamp"))
-                req.data[key] = convertIsoToJSEpoch(req.data[key])
-        })
-    }
-
-    const save_log = (req, error, error_code = ERROR_CODE) => {
-        var msg = "";
-        if (_.isString(error)) {
-            msg = error;
-        } else {
-            msg = error.toString();
-            if (_.has(error, "innererror")) {
-                msg = error.innererror.toString();
-                if (_.has(error.innererror, "response")) {
-                    msg = error.innererror.response.toString();
-                    if (_.has(error.innererror.response, "body")) {
-                        msg = error.innererror.response.body.toString();
-                        if (_.has(error.innererror.response.body, "error")) {
-                            msg = error.innererror.response.body.error.toString();
-                            if (_.has(error.innererror.response.body.error, "message")) {
-                                msg = error.innererror.response.body.error.message.toString();
-                                if (_.has(error.innererror.response.body.error.message, "value")) {
-                                    msg = error.innererror.response.body.error.message.value.toString();
-                                }
-                            }
-                        }
-                    }
-                } else if (_.has(error.innererror, "error")) {
-                    msg = error.innererror.error.toString();
-                    if (_.has(error.innererror.error, "message")) {
-                        msg = error.innererror.error.message.toString();
-                        if (_.has(error.innererror.error.message, "value")) {
-                            msg = error.innererror.error.message.value.toString();
-                        }
-                    }
-                }
-            } else if (_.has(error, "message")) {
-                msg = error.message.toString();
-            }
-        }
-
-        LOG.warn(error);
-        LOG.warn(msg);
-        if (CONSOLE_LOG) {
-            console.log(msg);
-        }
-        return req.reject(error_code, msg);
-    };
 
     const { Index } = this.entities;
     const { Azioni } = this.entities;
