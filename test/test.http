@@ -1,0 +1,9 @@
+@server = http://localhost:4004
+### ----------------------------------------------------------------------
+
+# Inventory Get
+//GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
+//GET {{server}}/catalog/T_PMO?$filter=Divisioneu eq 'ITZU' and InizioVal eq 2016-08-10
+//(Divisioneu='ITZU',IndexPmo='000000000016',InizioVal=datetime'2016-08-10T00:00:00',FineVal=datetime'9999-12-31T00:00:00',Uzeit=time'PT0H00M00S')
+GET {{server}}/catalog/T_PMO(IndexPmo='17')
+Content-Type: application/json;IEEE754Compatible=true
