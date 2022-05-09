@@ -11,7 +11,7 @@ using { ZPM4R_PMO_TAB_ANAG_2_SRV as ZPM4R_PMO_TAB_ANAG_2_SRV } from './external/
 using { ZPM4R_PMO_TAB_ANAG_3_SRV as ZPM4R_PMO_TAB_ANAG_3_SRV } from './external/ZPM4R_PMO_TAB_ANAG_3_SRV.csn';
 using { ZPM4R_PMO_TAB_ANAG_4_SRV as ZPM4R_PMO_TAB_ANAG_4_SRV } from './external/ZPM4R_PMO_TAB_ANAG_4_SRV.csn';
 
-
+@cds.query.limit: { default: 4000, max: 4000 }
 service CatalogService {
 
     entity ReturnError as projection on Z4R_SEARCH_HELP_SRV.ReturnErrorSet

@@ -171,7 +171,7 @@ module.exports = cds.service.impl(async function () {
 
     this.on('READ', T_PMO, async request => {
         try {
-            debugger
+            
             //convertDatesv4Tov2(request);
             let response = await serviceT_PMO.tx(request).run(request.query);
             return response;
@@ -182,7 +182,7 @@ module.exports = cds.service.impl(async function () {
 
     this.on('CREATE', T_PMO, async request => {
         try {
-            debugger
+            
             let response = await serviceT_PMO.tx(request).run(request.query);
             return response;
         } catch (error) {
@@ -192,7 +192,7 @@ module.exports = cds.service.impl(async function () {
 
     this.on('DELETE', T_PMO, async request => {
         try {
-            debugger
+            
             let response = await serviceT_PMO.tx(request).run(request.query);
             return response;
         } catch (error) {
@@ -202,7 +202,7 @@ module.exports = cds.service.impl(async function () {
 
     this.on('UPDATE', T_PMO, async request => {
         try {
-            debugger
+            
             let response = await serviceT_PMO.tx(request).run(request.query);
             return response;
         } catch (error) {
