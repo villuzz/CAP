@@ -28,6 +28,7 @@ service CatalogService {
     };
 
     entity T_DEST as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_DESTSet
+    entity T_DEST_USR as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_DEST_USRSet
     entity T_RAGGR as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_RAGGRSet
 
     entity T_ACT_PROG as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_ACT_PROGSet

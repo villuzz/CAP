@@ -14,27 +14,27 @@ module.exports = cds.service.impl(async function () {
     const serviceANAG_2 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_2_SRV');
     const serviceANAG_3 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_3_SRV');
     const serviceANAG_4 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_4_SRV');
-    
+
     const BATCH_SIZE = 50;
     const ERROR_CODE = 460;
     const CONSOLE_LOG = false;
     var that = this;
-    
+
     const { T_PMO } = this.entities;
-    this.before('READ', T_PMO , request =>{
+    this.before('READ', T_PMO, request => {
         try {
 
             if (!Array.isArray(request.query.SELECT.columns)) {
                 request.query.SELECT.columns = [];
             }
-            
-            request.query.SELECT.columns = ['*', {ref:['T_ACT_ELSet'], expand:['*']}, 
-                                                 {ref:['T_PMO_MSet'], expand:['*']}, 
-                                                 {ref:['T_PMO_SSet'], expand:['*']}];
 
-          } catch (error) {
+            request.query.SELECT.columns = ['*', { ref: ['T_ACT_ELSet'], expand: ['*'] },
+                { ref: ['T_PMO_MSet'], expand: ['*'] },
+                { ref: ['T_PMO_SSet'], expand: ['*'] }];
+
+        } catch (error) {
             return save_log2(request, error);
-          }
+        }
     });
 
     this.on('READ', T_PMO, async request => {
@@ -44,7 +44,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('CREATE', T_PMO, async request => {
         try {
@@ -53,7 +53,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('DELETE', T_PMO, async request => {
         try {
@@ -62,7 +62,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('UPDATE', T_PMO, async request => {
         try {
@@ -71,7 +71,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     const { T_RAGGR } = this.entities;
     this.on('READ', T_RAGGR, async request => {
@@ -81,7 +81,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('CREATE', T_RAGGR, async request => {
         try {
@@ -90,7 +90,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('DELETE', T_RAGGR, async request => {
         try {
@@ -99,7 +99,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('UPDATE', T_RAGGR, async request => {
         try {
@@ -108,7 +108,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     const { T_DEST } = this.entities;
     this.on('READ', T_DEST, async request => {
@@ -118,7 +118,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('CREATE', T_DEST, async request => {
         try {
@@ -127,7 +127,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('DELETE', T_DEST, async request => {
         try {
@@ -136,7 +136,7 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     this.on('UPDATE', T_DEST, async request => {
         try {
@@ -145,40 +145,98 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
+
+    const { T_DEST_USR } = this.entities;
+    this.on('READ', T_DEST_USR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+
+    this.on('CREATE', T_DEST_USR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+
+    this.on('DELETE', T_DEST_USR, async request => {
+        try {
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+
+    this.on('UPDATE', T_DEST_USR, async request => {
+        try {
+
+            let response = await serviceANAG_2.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
 
     const { T_ACT_PROG } = this.entities;
     this.on('READ', T_ACT_PROG, async request => {
         try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
 
     const { T_TP_MAN } = this.entities;
     this.on('READ', T_TP_MAN, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
 
     const { T_TP_MAN1 } = this.entities;
     this.on('READ', T_TP_MAN1, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
 
     const { T_TP_MAN2 } = this.entities;
     this.on('READ', T_TP_MAN2, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
 
     const { T_ACT_SYST } = this.entities;
     this.on('READ', T_ACT_SYST, async request => {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
+    this.on('CREATE', T_ACT_SYST, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('DELETE', T_ACT_SYST, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('UPDATE', T_ACT_SYST, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
 
     const { T_ACT_CL } = this.entities;
     this.on('READ', T_ACT_CL, async request => {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
-	});
+    });
+    this.on('CREATE', T_ACT_CL, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('DELETE', T_ACT_CL, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('UPDATE', T_ACT_CL, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+
+
 
     const convertDynamicFilter = (req) => {
-        let ExtractionGrouped = _.groupBy( req, ele => ele.Recordpos );
+        let ExtractionGrouped = _.groupBy(req, ele => ele.Recordpos);
         let Extraction = [];
         let oData = {};
         Object.keys(ExtractionGrouped).forEach(ele => {
@@ -188,7 +246,7 @@ module.exports = cds.service.impl(async function () {
             });
             Extraction.push(oData);
             oData = {};
-        });        
+        });
         return Extraction;
     }
 
@@ -207,16 +265,16 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-	});
+    });
 
     const { shEQART } = this.entities;
     this.on('READ', shEQART, async request => {
         let CQN = {
-            SELECT:{
+            SELECT: {
                 columns: [{ ref: ['ReturnTabValueSet'], expand: ['*'] }],
-                from: {ref: ['CatalogService.dySearch']},
-                where: [{ref:["ShplType"]}, "=", {val:'SH'} , 'and', {ref:["ShplName"]}, "=", {val:'EHFND_ELM_EQART_T370K'}],
-                orderBy: [{ref: ['ShplName'], sort: ['asc']}],
+                from: { ref: ['CatalogService.dySearch'] },
+                where: [{ ref: ["ShplType"] }, "=", { val: 'SH' }, 'and', { ref: ["ShplName"] }, "=", { val: 'EHFND_ELM_EQART_T370K' }],
+                orderBy: [{ ref: ['ShplName'], sort: ['asc'] }],
             }
         };
 
@@ -232,7 +290,7 @@ module.exports = cds.service.impl(async function () {
             let response = await serviceSearch.run(CQN);
             response = await convertDynamicFilter(response[0].ReturnTabValueSet);
             return response;
-            
+
         } catch (error) {
             return save_log(request, error);
         }
@@ -312,11 +370,11 @@ module.exports = cds.service.impl(async function () {
             return save_log(request, error);
         }
     });
-    
+
     const convertDatesv4Tov2 = (req) => {
         //LOG.warn(JSON.stringify(req.target.elements));
-        Object.keys(req.data).forEach( key => {
-            if ( req.target.elements[key] && (req.target.elements[key].type === "cds.Date" || req.target.elements[key].type === "cds.DateTime" || req.target.elements[key].type === "cds.Timestamp" ) )
+        Object.keys(req.data).forEach(key => {
+            if (req.target.elements[key] && (req.target.elements[key].type === "cds.Date" || req.target.elements[key].type === "cds.DateTime" || req.target.elements[key].type === "cds.Timestamp"))
                 req.data[key] = convertIsoToJSEpoch(req.data[key])
         })
     }
@@ -367,7 +425,7 @@ module.exports = cds.service.impl(async function () {
 
     const { Index } = this.entities;
     const { Azioni } = this.entities;
-    
+
     /*const { Index_Azione } = this.entities;
     this.before('READ', Index_Azione, request => {
         if (!Array.isArray(request.query.SELECT.columns)) {
@@ -454,15 +512,15 @@ module.exports = cds.service.impl(async function () {
                 CQN_Sede = {
                     SELECT: {
                         distinct: true,
-                        columns: [ {ref:[request._queryOptions.$select]} ],
+                        columns: [{ ref: [request._queryOptions.$select] }],
                         from: { ref: ['CatalogService.Sede'] },
                         where: request.query.SELECT.where,
                         limit: request.query.SELECT.limit,
-                        orderBy: [{ref:[request._queryOptions.$select], sort:'asc' }],
+                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
                     }
                 };
             }
-            
+
             ret = await db.run(CQN_Sede);
             return ret;
 
@@ -490,15 +548,15 @@ module.exports = cds.service.impl(async function () {
                 CQN_Index = {
                     SELECT: {
                         distinct: true,
-                        columns: [ {ref:[request._queryOptions.$select]} ],
+                        columns: [{ ref: [request._queryOptions.$select] }],
                         from: { ref: ['CatalogService.Index_Azioni'] },
                         where: request.query.SELECT.where,
                         limit: request.query.SELECT.limit,
-                        orderBy: [{ref:[request._queryOptions.$select], sort:'asc' }],
+                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
                     }
                 };
             }
-            
+
             ret = await db.run(CQN_Index);
             return ret;
 
