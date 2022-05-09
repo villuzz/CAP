@@ -46,10 +46,7 @@ service CatalogService {
         T_ACT_ELSet: redirected to T_ACT_EL,
         T_PMO_MSet: redirected to T_PMO_M,
         T_PMO_SSet: redirected to T_PMO_S
-    };
-
-
-    
+    };    
     
     entity Materiali as projection on my.Materiali;
     entity Servizi as projection on my.Servizi;

@@ -25,7 +25,8 @@
         },
         "FineVal": {
           "key": true,
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -45,7 +46,8 @@
         },
         "InizioVal": {
           "key": true,
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -56,6 +58,8 @@
         "Uzeit": {
           "key": true,
           "type": "cds.Time",
+          "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
           "@sap.unicode": "false",
           "@sap.label": "Now edit",
           "@sap.creatable": "false",
@@ -211,7 +215,8 @@
           "@sap.filterable": "false"
         },
         "DataInizCiclo": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -220,7 +225,8 @@
           "@sap.updatable": "false"
         },
         "Datum": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -349,7 +355,8 @@
           "@sap.filterable": "false"
         },
         "FineCard": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -989,7 +996,8 @@
           "@sap.filterable": "false"
         },
         "UltimaEsecuz": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+"_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -1175,7 +1183,8 @@
           "@sap.filterable": "false"
         },
         "Datum": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+          "_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -1195,6 +1204,9 @@
         },
         "Uzeit": {
           "type": "cds.Time",
+          "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+
           "@sap.unicode": "false",
           "@sap.label": "Now edit",
           "@sap.creatable": "false",
