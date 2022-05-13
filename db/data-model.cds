@@ -36,6 +36,23 @@ entity Servizi {
     MENGE:Decimal(16);
     MEINS:String(3);
 }
+entity AzioniMateriali {
+    key INDEX : Integer;
+    key CONTATORE: Integer;    
+    key MATNR:String(18);
+    MAKTX:String(40);
+    MENGE:Decimal(16);
+    MEINS:String(3);
+}
+
+entity AzioniServizi {
+    key INDEX : Integer;
+    key CONTATORE: Integer;
+    key ASNUM:String(18);
+    ASKTX:String(40);
+    MENGE:Decimal(16);
+    MEINS:String(3);
+}
 
 entity SedeTecnica {
     key SEDE_TECNICA:String(1);
@@ -76,8 +93,8 @@ entity Azioni : managed, cuid {
     ZBAU:String(10);
     VALORE:String(30);
 
-    MATNR:String(18);
-    ASNUM:String(18);
+    //MATNR:String(18);
+    //ASNUM:String(18);
 
     TESTO_ESTESO_P:String;
     ATTIVO:Boolean default true;
@@ -226,7 +243,7 @@ entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azio
     Azioni.ZBAU,
     Azioni.VALORE,
 
-    Azioni.MATNR,
-    Azioni.ASNUM
+    //Azioni.MATNR,
+    //Azioni.ASNUM
     
 } order by Index.INDEX desc, Azioni.CONTATORE desc ;
