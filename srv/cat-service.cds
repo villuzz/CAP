@@ -37,6 +37,7 @@ service CatalogService {
     entity T_TP_MAN2 as projection on ZPM4R_PMO_TAB_ANAG_3_SRV.T_TP_MAN2Set
     entity T_ACT_SYST as projection on ZPM4R_PMO_TAB_ANAG_4_SRV.T_ACT_SYSTSet
     entity T_ACT_CL as projection on ZPM4R_PMO_TAB_ANAG_4_SRV.T_ACT_CLSet
+    entity T_ACT_TYPE as projection on ZPM4R_PMO_TAB_ANAG_1_SRV.T_ACT_TYPESet
 
     entity T_ACT_EL as projection on ZPM4R_PMO_MASTERDATA_SRV.T_ACT_ELSet
     entity T_PMO_M as projection on ZPM4R_PMO_MASTERDATA_SRV.T_PMO_MSet
