@@ -1,9 +1,25 @@
 @server = http://localhost:4004
 ### ----------------------------------------------------------------------
 
+POST {{server}}/v2/catalog/GetODM
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+"PDat1":"2012-08-16T00:00:00",
+"PDat2":"2012-08-16T00:00:00",
+"PDat3":"2012-08-16T00:00:00",
+"SDivisioneu": [{
+"Sign":"I",
+"Option":"EQ",
+"Low":"ITH2",
+"High":"" }],
+"Odm":[{}]
+}
+
+### ----------------------------------------------------------------------
 # Inventory Get
 //GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
 //GET {{server}}/catalog/T_PMO?$filter=Divisioneu eq 'ITZU' and InizioVal eq 2016-08-10
 //(Divisioneu='ITZU',IndexPmo='000000000016',InizioVal=datetime'2016-08-10T00:00:00',FineVal=datetime'9999-12-31T00:00:00',Uzeit=time'PT0H00M00S')
-GET {{server}}/catalog/T_PMO(IndexPmo='17')
+GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
 Content-Type: application/json;IEEE754Compatible=true

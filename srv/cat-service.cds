@@ -10,6 +10,8 @@ using { ZPM4R_PMO_TAB_ANAG_1_SRV as ZPM4R_PMO_TAB_ANAG_1_SRV } from './external/
 using { ZPM4R_PMO_TAB_ANAG_2_SRV as ZPM4R_PMO_TAB_ANAG_2_SRV } from './external/ZPM4R_PMO_TAB_ANAG_2_SRV.csn';
 using { ZPM4R_PMO_TAB_ANAG_3_SRV as ZPM4R_PMO_TAB_ANAG_3_SRV } from './external/ZPM4R_PMO_TAB_ANAG_3_SRV.csn';
 using { ZPM4R_PMO_TAB_ANAG_4_SRV as ZPM4R_PMO_TAB_ANAG_4_SRV } from './external/ZPM4R_PMO_TAB_ANAG_4_SRV.csn';
+using { ZPM4R_PMO_ODM_SRV as ZPM4R_PMO_ODM_SRV } from './external/ZPM4R_PMO_ODM_SRV.csn';
+
 
 @cds.query.limit: { default: 4000, max: 4000 }
 service CatalogService {
@@ -26,6 +28,54 @@ service CatalogService {
         ReturnTabValueSet: redirected to ReturnTabValue,
         ReturnFieldValueSet: redirected to ReturnFieldValue
     };
+
+    entity Odm as projection on ZPM4R_PMO_ODM_SRV.OdmSet
+    entity SAzione as projection on ZPM4R_PMO_ODM_SRV.SAzioneSet
+    entity SCentroLavoro as projection on ZPM4R_PMO_ODM_SRV.SCentroLavoroSet
+    entity SClasse as projection on ZPM4R_PMO_ODM_SRV.SClasseSet
+    entity SDesComponente as projection on ZPM4R_PMO_ODM_SRV.SDesComponenteSet
+    entity SDestinatario as projection on ZPM4R_PMO_ODM_SRV.SDestinatarioSet
+    entity SDivisioneu as projection on ZPM4R_PMO_ODM_SRV.SDivisioneuSet
+    entity SEquipmentCompo as projection on ZPM4R_PMO_ODM_SRV.SEquipmentCompoSet
+    entity SIndexPmo as projection on ZPM4R_PMO_ODM_SRV.SIndexPmoSet
+    entity SIndisponibilita as projection on ZPM4R_PMO_ODM_SRV.SIndisponibilitaSet
+    entity SPercorso as projection on ZPM4R_PMO_ODM_SRV.SPercorsoSet
+    entity SPltxu as projection on ZPM4R_PMO_ODM_SRV.SPltxuSet
+    entity SProgres as projection on ZPM4R_PMO_ODM_SRV.SProgresSet
+    entity SSistema as projection on ZPM4R_PMO_ODM_SRV.SSistemaSet
+    entity SStrno as projection on ZPM4R_PMO_ODM_SRV.SStrnoSet
+    entity STipoAttivita as projection on ZPM4R_PMO_ODM_SRV.STipoAttivitaSet
+    entity STipoGestione1 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione1Set
+    entity STipoGestione2 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione2Set
+    entity STipoGestione as projection on ZPM4R_PMO_ODM_SRV.STipoGestioneSet
+    entity STipoOrdine as projection on ZPM4R_PMO_ODM_SRV.STipoOrdineSet
+    entity STipoPmo as projection on ZPM4R_PMO_ODM_SRV.STipoPmoSet
+
+    entity GetODM as projection on ZPM4R_PMO_ODM_SRV.GetODMSet{
+        *,
+        Odm: redirected to Odm,
+        SAzione: redirected to SAzione,
+        SCentroLavoro: redirected to SCentroLavoro,
+        SClasse: redirected to SClasse,
+        SDesComponente: redirected to SDesComponente,
+        SDestinatario: redirected to SDestinatario,
+        SDivisioneu: redirected to SDivisioneu,
+        SEquipmentCompo: redirected to SEquipmentCompo,
+        SIndexPmo: redirected to SIndexPmo,
+        SIndisponibilita: redirected to SIndisponibilita,
+        SPercorso: redirected to SPercorso,
+        SPltxu: redirected to SPltxu,
+        SProgres: redirected to SProgres,
+        SSistema: redirected to SSistema,
+        SStrno: redirected to SStrno,
+        //STipoAttivita: redirected to STipoAttivita,
+        STipoGestione1: redirected to STipoGestione1,
+        STipoGestione2: redirected to STipoGestione2,
+        STipoGestione: redirected to STipoGestione,
+        STipoOrdine: redirected to STipoOrdine,
+        STipoPmo: redirected to STipoPmo
+    };
+
 
     entity T_DEST as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_DESTSet
     entity T_DEST_USR as projection on ZPM4R_PMO_TAB_ANAG_2_SRV.T_DEST_USRSet
@@ -52,7 +102,9 @@ service CatalogService {
     
     entity Materiali as projection on my.Materiali;
     entity Servizi as projection on my.Servizi;
-
+    entity AzioniMateriali as projection on my.AzioniMateriali;
+    entity AzioniServizi as projection on my.AzioniServizi;
+    
     entity Strategia as projection on my.Strategia;
     entity Sede as projection on my.SedeTecnica;
     entity Azioni as projection on my.Azioni;

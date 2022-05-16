@@ -9,6 +9,7 @@ module.exports = cds.service.impl(async function () {
     const serviceT_PMO = await cds.connect.to('ZPM4R_PMO_MASTERDATA_SRV');
     const serviceSearch = await cds.connect.to('Z4R_SEARCH_HELP_SRV');
     const serviceORDER = await cds.connect.to('ZEWRKR_WORK_ORDER_SRV');
+    const serviceODM = await cds.connect.to('ZPM4R_PMO_ODM_SRV');
 
     const serviceANAG_1 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_1_SRV');
     const serviceANAG_2 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_2_SRV');
@@ -149,7 +150,61 @@ module.exports = cds.service.impl(async function () {
     }
 
     // ------------------------------------------------------------
+    const { GetODM } = this.entities;
+    this.on('CREATE', GetODM, async request => {
+        try {
+            convertDatesv4Tov2(request);
+            let response = await serviceODM.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+    
+   /* this.before('READ', GetODM, request => {
+        try {
+            if (request._queryOptions !== null && request._queryOptions.$select !== undefined) {
+                request.query.SELECT.columns = [{ ref: [request._queryOptions.$select] }];
+            } else {
+                if (!Array.isArray(request.query.SELECT.columns)) {
+                    request.query.SELECT.columns = [];
+                }
+                request.query.SELECT.columns = [{ ref: ['Odm'], expand: ['*'] }];
+            }
+        } catch (error) {
+            return save_log2(request, error);
+        }
+    });
 
+    this.on('READ', GetODM, async request => {
+        try {
+            let response = await serviceODM.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+
+    this.on('DELETE', GetODM, async request => {
+        try {
+            
+            let response = await serviceODM.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });*/
+
+    this.on('UPDATE', GetODM, async request => {
+        try {
+            
+            let response = await serviceODM.tx(request).run(request.query);
+            return response;
+        } catch (error) {
+            return save_log(request, error);
+        }
+    });
+    
 
     const { T_PMO } = this.entities;
     this.before('READ', T_PMO, request => {

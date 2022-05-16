@@ -168,6 +168,20 @@
           "destination": "backend_dest",
           "path": "/ZPM4R_PMO_TAB_ANAG_4_SRV"
         }
+      },
+      "ZPM4R_PMO_ODM_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPM4R_PMO_ODM_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/ZPM4R_PMO_ODM_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/ZPM4R_PMO_ODM_SRV"
+        }
       }
     },
     "hana": {
