@@ -415,13 +415,38 @@ module.exports = cds.service.impl(async function () {
         
     const { T_ACT_TYPE} = this.entities;
     this.on('READ', T_ACT_TYPE, async request => {
-        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } 
+        catch (error) { return save_log(request, error); } 
+    });
     this.on('CREATE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+            
+
+    const { T_ATTPM } = this.entities; 
+    this.on('READ', T_ATTPM, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_ATTPM, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_ATTPM, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_ATTPM, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+
+
+        const { T_AGGREG } = this.entities; 
+        this.on('READ', T_AGGREG, async request => {
+            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        this.on('CREATE', T_AGGREG, async request => {
+            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        this.on('DELETE', T_AGGREG, async request => {
+            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        this.on('UPDATE', T_AGGREG, async request => {
+            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
             
     const convertDynamicFilter = (req) => {
         let ExtractionGrouped = _.groupBy(req, ele => ele.Recordpos);
