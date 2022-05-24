@@ -90,6 +90,7 @@ service CatalogService {
     entity T_ACT_TYPE as projection on ZPM4R_PMO_TAB_ANAG_1_SRV.T_ACT_TYPESet
     entity T_ATTPM as projection on ZPM4R_PMO_TAB_ANAG_4_SRV.T_ATTPMSet
     entity T_AGGREG as projection on ZPM4R_PMO_TAB_ANAG_4_SRV.T_AGGREGSet
+    entity T_APP_WO as projection on ZPM4R_PMO_TAB_ANAG_1_SRV.T_APP_WOSet
 
     entity T_ACT_EL as projection on ZPM4R_PMO_MASTERDATA_SRV.T_ACT_ELSet
     entity T_PMO_M as projection on ZPM4R_PMO_MASTERDATA_SRV.T_PMO_MSet

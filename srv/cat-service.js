@@ -448,7 +448,21 @@ module.exports = cds.service.impl(async function () {
         this.on('UPDATE', T_AGGREG, async request => {
             try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
             
-    const convertDynamicFilter = (req) => {
+
+        const { T_APP_WO} = this.entities;
+        this.on('READ', T_APP_WO, async request => {
+            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } 
+            catch (error) { return save_log(request, error); } 
+        });
+        this.on('CREATE', T_APP_WO, async request => {
+            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        this.on('DELETE', T_APP_WO, async request => {
+            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+        this.on('UPDATE', T_APP_WO, async request => {
+            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    
+    
+            const convertDynamicFilter = (req) => {
         let ExtractionGrouped = _.groupBy(req, ele => ele.Recordpos);
         let Extraction = [];
         let oData = {};
