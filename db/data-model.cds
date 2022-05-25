@@ -164,6 +164,9 @@ entity Index : managed, cuid {
     DESC_BREVE:String;
     INDISPONIBILITA:String(1);
     TIPO_ORDINE:String(4);
+    AZIONE:Integer;
+    RIFERIMENTO:Integer;
+
 }
 
 entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azioni.ID {
@@ -190,21 +193,38 @@ entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azio
     Index.LSTAR,
     Index.STEUS,
     Index.NUM,
+    Index.PERSONE,
+    Index.HPER,
+
     Index.LSTAR_1,
     Index.STEUS_1,
     Index.NUM_1,
+    Index.PERSONE_1,
+    Index.HPER_1,
+
     Index.LSTAR_2,
     Index.STEUS_2,
     Index.NUM_2,
+    Index.PERSONE_2,
+    Index.HPER_2,
+
     Index.LSTAR_3,
     Index.STEUS_3,
     Index.NUM_3,
+    Index.PERSONE_3,
+    Index.HPER_3,
+
     Index.LSTAR_4,
     Index.STEUS_4,
     Index.NUM_4,
+    Index.PERSONE_4,
+    Index.HPER_4,
+
     Index.LSTAR_5,
     Index.STEUS_5,
     Index.NUM_5,
+    Index.PERSONE_5,
+    Index.HPER_5,
 
     Index.RISK,
     Index.LIMITE,
@@ -216,6 +236,10 @@ entity Index_Azioni as SELECT from Index LEFT OUTER JOIN Azioni on Index.ID=Azio
     Index.POINT,
     Index.MPTYP, 
     Index.TIPOFREQUENZA,
+
+    Index.AZIONE,
+    Index.RIFERIMENTO,
+    Index.DESTINATARIO,
     
     //posizione
     Azioni.ATTIVO,
