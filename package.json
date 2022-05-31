@@ -182,6 +182,20 @@
           "destination": "backend_dest",
           "path": "/ZPM4R_PMO_ODM_SRV"
         }
+      },
+      "Z4R_TEXT_MANAGEMENT_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/Z4R_TEXT_MANAGEMENT_SRV",
+        "[production]": {
+          "credentials": {
+            "destination": "Enel_Gateway",
+            "path": "/Z4R_TEXT_MANAGEMENT_SRV"
+          }
+        },
+        "credentials": {
+          "destination": "backend_dest",
+          "path": "/Z4R_TEXT_MANAGEMENT_SRV"
+        }
       }
     },
     "hana": {

@@ -9,13 +9,17 @@ module.exports = cds.service.impl(async function () {
     const serviceT_PMO = await cds.connect.to('ZPM4R_PMO_MASTERDATA_SRV');
     const serviceSearch = await cds.connect.to('Z4R_SEARCH_HELP_SRV');
     const serviceORDER = await cds.connect.to('ZEWRKR_WORK_ORDER_SRV');
+    const serviceNOTIFICATION = await cds.connect.to('ZEWRKR_NOTIFICATION_SRV');
+    
     const serviceODM = await cds.connect.to('ZPM4R_PMO_ODM_SRV');
-
+    const serviceTEXT = await cds.connect.to('Z4R_TEXT_MANAGEMENT_SRV');
+    
     const serviceANAG_1 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_1_SRV');
     const serviceANAG_2 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_2_SRV');
     const serviceANAG_3 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_3_SRV');
     const serviceANAG_4 = await cds.connect.to('ZPM4R_PMO_TAB_ANAG_4_SRV');
 
+    // *************************************************** COSTANTI **************************************************************** 
     const BATCH_SIZE = 50;
     const ERROR_CODE = 460;
     const CONSOLE_LOG = false;
@@ -149,195 +153,65 @@ module.exports = cds.service.impl(async function () {
         })
     }
 
-    // ------------------------------------------------------------
+    // *************************************************** TESTI ESTESI **************************************************************** 
+    const { TestiEstesi } = this.entities;
+    this.on('READ', TestiEstesi, async request => {
+        try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', TestiEstesi, async request => {
+        try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', TestiEstesi, async request => {
+        try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', TestiEstesi, async request => {
+        try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+    // *************************************************** APP4 **************************************************************** 
     const { GetODM } = this.entities;
-    this.on('CREATE', GetODM, async request => {
-        try {
-            convertDatesv4Tov2(request);
-            let response = await serviceODM.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
+    this.on('CREATE', GetODM, async request => { try { convertDatesv4Tov2(request); let response = await serviceODM.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', GetODM, async request => { try { let response = await serviceODM.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+    // *************************************************** ORDINE **************************************************************** 
+    const { CreateOrder } = this.entities;
+    this.on('CREATE', CreateOrder, async request => { try { let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+    const { PrintOrderOutputBin } = this.entities;
+    this.on('CREATE', PrintOrderOutputBin, async request => { try { let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+    const { ConfirmCreate } = this.entities;
+    this.on('READ', ConfirmCreate, async request => { try { let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+    const { GetOMList } = this.entities;
+    this.on('READ', GetOMList, async request => { try { let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     
-   /* this.before('READ', GetODM, request => {
-        try {
-            if (request._queryOptions !== null && request._queryOptions.$select !== undefined) {
-                request.query.SELECT.columns = [{ ref: [request._queryOptions.$select] }];
-            } else {
-                if (!Array.isArray(request.query.SELECT.columns)) {
-                    request.query.SELECT.columns = [];
-                }
-                request.query.SELECT.columns = [{ ref: ['Odm'], expand: ['*'] }];
-            }
-        } catch (error) {
-            return save_log2(request, error);
-        }
-    });
+    // *************************************************** AVVISI ****************************************************************
+    const { CreateNotification } = this.entities;
+    this.on('CREATE', CreateNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
-    this.on('READ', GetODM, async request => {
-        try {
-            let response = await serviceODM.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
+    const { UpdateNotification } = this.entities;
+    this.on('CREATE', UpdateNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
-    this.on('DELETE', GetODM, async request => {
-        try {
-            
-            let response = await serviceODM.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });*/
+    const { GetNotification } = this.entities;
+    this.on('READ', GetNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
-    this.on('UPDATE', GetODM, async request => {
-        try {
-            
-            let response = await serviceODM.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-    
-
-    const { T_PMO } = this.entities;
-    this.before('READ', T_PMO, request => {
-        try {
-            if (request._queryOptions !== null && request._queryOptions.$select !== undefined) {
-                request.query.SELECT.columns = [{ ref: [request._queryOptions.$select] }];
-            } else {
-                if (!Array.isArray(request.query.SELECT.columns)) {
-                    request.query.SELECT.columns = [];
-                }
-                request.query.SELECT.columns = ['*', { ref: ['T_ACT_ELSet'], expand: ['*'] },
-                    { ref: ['T_PMO_MSet'], expand: ['*'] },
-                    { ref: ['T_PMO_SSet'], expand: ['*'] }];
-            }
-        } catch (error) {
-            return save_log2(request, error);
-        }
-    });
-
-    this.on('READ', T_PMO, async request => {
-        try {
-            
-            //convertDatesv4Tov2(request);
-            let response = await serviceT_PMO.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('CREATE', T_PMO, async request => {
-        try {
-            
-            let response = await serviceT_PMO.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('DELETE', T_PMO, async request => {
-        try {
-            
-            let response = await serviceT_PMO.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
-    this.on('UPDATE', T_PMO, async request => {
-        try {
-            
-            let response = await serviceT_PMO.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+    // *************************************************** APP1 ****************************************************************
     const { T_RAGGR } = this.entities;
     this.on('READ', T_RAGGR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('CREATE', T_RAGGR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_RAGGR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_RAGGR, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    
     const { T_DEST } = this.entities;
     this.on('READ', T_DEST, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('CREATE', T_DEST, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_DEST, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
-
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_DEST, async request => {
-        try {
-            let response = await serviceANAG_2.tx(request).run(request.query);
-            return response;
-        } catch (error) {
-            return save_log(request, error);
-        }
-    });
+        try { let response = await serviceANAG_2.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
     const { T_ACT_PROG } = this.entities;
     this.on('READ', T_ACT_PROG, async request => {
@@ -359,7 +233,6 @@ module.exports = cds.service.impl(async function () {
     this.on('UPDATE', T_TP_MAN, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
-
     const { T_TP_MAN1 } = this.entities;
     this.on('READ', T_TP_MAN1, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
@@ -369,7 +242,6 @@ module.exports = cds.service.impl(async function () {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_TP_MAN1, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-
 
     const { T_TP_MAN2 } = this.entities;
     this.on('READ', T_TP_MAN2, async request => {
@@ -381,7 +253,6 @@ module.exports = cds.service.impl(async function () {
     this.on('UPDATE', T_TP_MAN2, async request => {
         try { let response = await serviceANAG_3.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
-
     const { T_ACT_SYST } = this.entities;
     this.on('READ', T_ACT_SYST, async request => {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
@@ -391,7 +262,6 @@ module.exports = cds.service.impl(async function () {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_ACT_SYST, async request => {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-
 
     const { T_ACT_CL } = this.entities;
     this.on('READ', T_ACT_CL, async request => {
@@ -415,16 +285,13 @@ module.exports = cds.service.impl(async function () {
         
     const { T_ACT_TYPE} = this.entities;
     this.on('READ', T_ACT_TYPE, async request => {
-        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } 
-        catch (error) { return save_log(request, error); } 
-    });
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('CREATE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('DELETE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
     this.on('UPDATE', T_ACT_TYPE, async request => {
         try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-            
 
     const { T_ATTPM } = this.entities; 
     this.on('READ', T_ATTPM, async request => {
@@ -437,32 +304,28 @@ module.exports = cds.service.impl(async function () {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
 
-
-        const { T_AGGREG } = this.entities; 
-        this.on('READ', T_AGGREG, async request => {
-            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-        this.on('CREATE', T_AGGREG, async request => {
-            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-        this.on('DELETE', T_AGGREG, async request => {
-            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-        this.on('UPDATE', T_AGGREG, async request => {
-            try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    const { T_AGGREG } = this.entities; 
+    this.on('READ', T_AGGREG, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_AGGREG, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_AGGREG, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_AGGREG, async request => {
+        try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
             
 
-        const { T_APP_WO} = this.entities;
-        this.on('READ', T_APP_WO, async request => {
-            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } 
-            catch (error) { return save_log(request, error); } 
-        });
-        this.on('CREATE', T_APP_WO, async request => {
-            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-        this.on('DELETE', T_APP_WO, async request => {
-            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-        this.on('UPDATE', T_APP_WO, async request => {
-            try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
-    
-    
-            const convertDynamicFilter = (req) => {
+    const { T_APP_WO} = this.entities;
+    this.on('READ', T_APP_WO, async request => {
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', T_APP_WO, async request => {
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('DELETE', T_APP_WO, async request => {
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('UPDATE', T_APP_WO, async request => {
+        try { let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
+        const convertDynamicFilter = (req) => {
         let ExtractionGrouped = _.groupBy(req, ele => ele.Recordpos);
         let Extraction = [];
         let oData = {};
@@ -477,6 +340,131 @@ module.exports = cds.service.impl(async function () {
         return Extraction;
     }
 
+
+    // *************************************************** APP2 ****************************************************************
+    const { T_PMO } = this.entities;
+    this.before('READ', T_PMO, request => {
+        try {
+            if (request._queryOptions !== null && request._queryOptions.$select !== undefined) {
+                request.query.SELECT.columns = [{ ref: [request._queryOptions.$select] }];
+            } else {
+                if (!Array.isArray(request.query.SELECT.columns)) {
+                    request.query.SELECT.columns = [];
+                }
+                request.query.SELECT.columns = ['*', { ref: ['T_ACT_ELSet'], expand: ['*'] },
+                                                     { ref: ['T_PMO_MSet'],  expand: ['*'] },
+                                                     { ref: ['T_PMO_SSet'],  expand: ['*'] }];
+            }
+        } catch (error) { return save_log2(request, error); }
+    });
+
+    this.on('READ', T_PMO, async request => {
+        try {
+            let response = await serviceT_PMO.tx(request).run(request.query);
+            return response;
+        } catch (error) { return save_log(request, error); }
+    });
+
+    this.on('CREATE', T_PMO, async request => {
+        try {
+            convertDatesv4Tov2(request);
+            let response = await serviceT_PMO.tx(request).run(request.query);
+            return response;
+        } catch (error) { return save_log(request, error); }
+    });
+
+    this.on('DELETE', T_PMO, async request => {
+        try {
+            convertDatesv4Tov2(request);
+            let response = await serviceT_PMO.tx(request).run(request.query);
+            return response;
+        } catch (error) { return save_log(request, error); }
+    });
+
+    this.on('UPDATE', T_PMO, async request => {
+        try {
+            convertDatesv4Tov2(request);
+            let response = await serviceT_PMO.tx(request).run(request.query);
+            return response;
+        } catch (error) { return save_log(request, error); }
+    });
+
+    const { Index } = this.entities;
+    const { Azioni } = this.entities;
+
+    const { SedeDistinct } = this.entities;
+    this.on('READ', SedeDistinct, async request => {
+        try {
+            let ret = [], res = {}, prova = [], CQN_Sede = "";
+            if (request._queryOptions === null || request._queryOptions.$select === undefined) {
+                CQN_Sede = {
+                    SELECT: {
+                        distinct: true,
+                        from: { ref: ['CatalogService.Sede'] },
+                        where: request.query.SELECT.where,
+                        limit: request.query.SELECT.limit,
+                        orderBy: request.query.SELECT.orderBy
+                    }
+                };
+            } else {
+                CQN_Sede = {
+                    SELECT: {
+                        distinct: true,
+                        columns: [{ ref: [request._queryOptions.$select] }],
+                        from: { ref: ['CatalogService.Sede'] },
+                        where: request.query.SELECT.where,
+                        limit: request.query.SELECT.limit,
+                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
+                    }
+                };
+            }
+
+            ret = await db.run(CQN_Sede);
+            return ret;
+
+        } catch (error) {
+            return save_log(request, error);
+        }
+
+    });
+
+    const { Index_Azioni } = this.entities;
+    this.on('READ', Index_Azioni, async request => {
+        try {
+            let ret = [], res = {}, prova = [], CQN_Index = "";
+            if (request._queryOptions === null || request._queryOptions.$select === undefined) {
+                CQN_Index = {
+                    SELECT: {
+                        distinct: true,
+                        from: { ref: ['CatalogService.Index_Azioni'] },
+                        where: request.query.SELECT.where,
+                        limit: request.query.SELECT.limit,
+                        orderBy: request.query.SELECT.orderBy
+                    }
+                };
+            } else {
+                CQN_Index = {
+                    SELECT: {
+                        distinct: true,
+                        columns: [{ ref: [request._queryOptions.$select] }],
+                        from: { ref: ['CatalogService.Index_Azioni'] },
+                        where: request.query.SELECT.where,
+                        limit: request.query.SELECT.limit,
+                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
+                    }
+                };
+            }
+
+            ret = await db.run(CQN_Index);
+            return ret;
+
+        } catch (error) {
+            return save_log(request, error);
+        }
+
+    });
+
+    // *************************************************** DYNAMIC SEARCH ****************************************************************
     const { dySearch } = this.entities;
     this.before('READ', dySearch, request => {
         if (!Array.isArray(request.query.SELECT.columns)) {
@@ -595,149 +583,6 @@ module.exports = cds.service.impl(async function () {
         } catch (error) {
             return save_log(request, error);
         }
-    });
-
-    const { Index } = this.entities;
-    const { Azioni } = this.entities;
-
-    /*const { Index_Azione } = this.entities;
-    this.before('READ', Index_Azione, request => {
-        if (!Array.isArray(request.query.SELECT.columns)) {
-            request.query.SELECT.columns = [];
-        }
-        request.query.SELECT.columns.push({ ref: ['AZIONI'], expand: ['*'] });
-    });
-
-    this.on('READ', Index_Azione, async request => {
-        let paramID = request.data.ID;
-        try {
-            if (paramID) {
-                
-                let Indice = await db.read(Index, paramID);
-                let AzioniItem = await db.read(Azioni, paramID);
-
-                if (!Array.isArray(AzioniItem)) {
-                    AzioniItem = [AzioniItem];
-                }
-                AzioniItem.forEach(element => {
-                    delete element.ID;
-                });
-        
-                let ret = Indice;
-                
-                ret.AZIONI = AzioniItem;        
-                return [ret];
-
-            } else { 
-            let ret = [], Indice = [];
-
-            let CQN_Indice = {
-                SELECT: {
-                    columns: ['*'],
-                    from: { ref: ['CatalogService.Index'] },
-                    where: request.query.SELECT.where,
-                    limit: request.query.SELECT.limit
-                }
-            };
-
-            Indice = await db.read(CQN_Indice);
-            //await Indice.forEach(header => {
-            await Promise.all(await Indice.map(async function (header) {
-                let res = header;
-                let whereItem = { ID: res.ID };
-                let AzioniItem = await db.read(Azioni).where(whereItem);
-
-                if (!Array.isArray(AzioniItem)) {
-                    AzioniItem = [AzioniItem];
-                }
-
-                AzioniItem.forEach(element => {
-                    res.AZIONI = element.CONTATORE;
-                    ret.push(res);
-                });
-                
-            }));
-        
-
-            return ret;
-        }
-
-        } catch (error) {
-            return save_log(request, error);
-        }
-
-    });
-*/
-    const { SedeDistinct } = this.entities;
-    this.on('READ', SedeDistinct, async request => {
-        try {
-            let ret = [], res = {}, prova = [], CQN_Sede = "";
-            if (request._queryOptions === null || request._queryOptions.$select === undefined) {
-                CQN_Sede = {
-                    SELECT: {
-                        distinct: true,
-                        from: { ref: ['CatalogService.Sede'] },
-                        where: request.query.SELECT.where,
-                        limit: request.query.SELECT.limit,
-                        orderBy: request.query.SELECT.orderBy
-                    }
-                };
-            } else {
-                CQN_Sede = {
-                    SELECT: {
-                        distinct: true,
-                        columns: [{ ref: [request._queryOptions.$select] }],
-                        from: { ref: ['CatalogService.Sede'] },
-                        where: request.query.SELECT.where,
-                        limit: request.query.SELECT.limit,
-                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
-                    }
-                };
-            }
-
-            ret = await db.run(CQN_Sede);
-            return ret;
-
-        } catch (error) {
-            return save_log(request, error);
-        }
-
-    });
-
-    const { Index_Azioni } = this.entities;
-    this.on('READ', Index_Azioni, async request => {
-        try {
-            let ret = [], res = {}, prova = [], CQN_Index = "";
-            if (request._queryOptions === null || request._queryOptions.$select === undefined) {
-                CQN_Index = {
-                    SELECT: {
-                        distinct: true,
-                        from: { ref: ['CatalogService.Index_Azioni'] },
-                        where: request.query.SELECT.where,
-                        limit: request.query.SELECT.limit,
-                        orderBy: request.query.SELECT.orderBy
-                    }
-                };
-            } else {
-                CQN_Index = {
-                    SELECT: {
-                        distinct: true,
-                        columns: [{ ref: [request._queryOptions.$select] }],
-                        from: { ref: ['CatalogService.Index_Azioni'] },
-                        where: request.query.SELECT.where,
-                        limit: request.query.SELECT.limit,
-                        orderBy: [{ ref: [request._queryOptions.$select], sort: 'asc' }],
-                    }
-                };
-            }
-
-            ret = await db.run(CQN_Index);
-            return ret;
-
-        } catch (error) {
-            return save_log(request, error);
-        }
-
     });
 
 });

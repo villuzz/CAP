@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "Z4R_TEXT_MANAGEMENT_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Testo": {
+          "key": true,
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdname": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdid": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "ID testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdspras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Lingua",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdobject": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Oggetto testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Command": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Comando ESS",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Overwrite": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Indicatore a una posizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        }
+      }
+    },
+    "Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiDeleteSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Tdname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdid": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "ID testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdspras": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Lingua",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Tdobject": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Oggetto testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Testo": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Testo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        },
+        "Overwrite": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Indicatore a una posizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false"
+        }
+      }
+    }
+  }
+}

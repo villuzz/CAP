@@ -11,10 +11,19 @@ using { ZPM4R_PMO_TAB_ANAG_2_SRV as ZPM4R_PMO_TAB_ANAG_2_SRV } from './external/
 using { ZPM4R_PMO_TAB_ANAG_3_SRV as ZPM4R_PMO_TAB_ANAG_3_SRV } from './external/ZPM4R_PMO_TAB_ANAG_3_SRV.csn';
 using { ZPM4R_PMO_TAB_ANAG_4_SRV as ZPM4R_PMO_TAB_ANAG_4_SRV } from './external/ZPM4R_PMO_TAB_ANAG_4_SRV.csn';
 using { ZPM4R_PMO_ODM_SRV as ZPM4R_PMO_ODM_SRV } from './external/ZPM4R_PMO_ODM_SRV.csn';
-
+using { Z4R_TEXT_MANAGEMENT_SRV as Z4R_TEXT_MANAGEMENT_SRV } from './external/Z4R_TEXT_MANAGEMENT_SRV.csn';
 
 @cds.query.limit: { default: 4000, max: 4000 }
 service CatalogService {
+
+    entity CreateOrder as projection on ZEWRKR_WORK_ORDER_SRV.CreateOrderSet //POST
+    entity PrintOrderOutputBin as projection on ZEWRKR_WORK_ORDER_SRV.PrintOrderOutputBinSet //POST
+    entity ConfirmCreate as projection on ZEWRKR_WORK_ORDER_SRV.ConfirmCreateSet //GET
+    entity GetOMList as projection on ZEWRKR_WORK_ORDER_SRV.GetOMListSet //GET
+
+    entity CreateNotification as projection on ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet //POST
+    entity UpdateNotification as projection on ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet //POST
+    entity GetNotification as projection on ZEWRKR_NOTIFICATION_SRV.GetNotificationSet //NON TROVATO GET 
 
     entity ReturnError as projection on Z4R_SEARCH_HELP_SRV.ReturnErrorSet
     entity ReturnTabDesc as projection on Z4R_SEARCH_HELP_SRV.ReturnTabDescSet
@@ -50,6 +59,9 @@ service CatalogService {
     entity STipoGestione as projection on ZPM4R_PMO_ODM_SRV.STipoGestioneSet
     entity STipoOrdine as projection on ZPM4R_PMO_ODM_SRV.STipoOrdineSet
     entity STipoPmo as projection on ZPM4R_PMO_ODM_SRV.STipoPmoSet
+
+    entity TestiEstesi as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiSet
+    
 
     entity GetODM as projection on ZPM4R_PMO_ODM_SRV.GetODMSet{
         *,

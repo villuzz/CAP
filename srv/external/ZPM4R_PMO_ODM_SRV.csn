@@ -25,7 +25,7 @@
         },
         "PDat1": {
           "type": "cds.Date",
-          "_comment": "tag type edited manually",          
+          "_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 8,
           "@sap.unicode": "false",
@@ -36,8 +36,8 @@
           "@sap.filterable": "false"
         },
         "PDat2": {
-          "type": "cds.Date",
-          "_comment": "tag type edited manually",
+            "type": "cds.Date",
+            "_comment": "tag type edited manually",
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 8,
           "@sap.unicode": "false",
@@ -95,51 +95,6 @@
           },
           "keys": []
         },
-        "STipoGestione2": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.STipoGestione2Set",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "STipoGestione1": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.STipoGestione1Set",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "STipoGestione": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.STipoGestioneSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "SStrno": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SStrnoSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "SSistema": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SSistemaSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
         "STipoAttivita": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
@@ -149,19 +104,19 @@
           },
           "keys": []
         },
-        "SProgres": {
+        "Odm": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SProgresSet",
+          "target": "ZPM4R_PMO_ODM_SRV.OdmSet",
           "cardinality": {
             "max": "*"
           },
           "keys": []
         },
-        "Odm": {
+        "STipoGestione2": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.OdmSet",
+          "target": "ZPM4R_PMO_ODM_SRV.STipoGestione2Set",
           "cardinality": {
             "max": "*"
           },
@@ -185,19 +140,19 @@
           },
           "keys": []
         },
-        "SPltxu": {
+        "SClasse": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SPltxuSet",
+          "target": "ZPM4R_PMO_ODM_SRV.SClasseSet",
           "cardinality": {
             "max": "*"
           },
           "keys": []
         },
-        "SClasse": {
+        "STipoGestione1": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SClasseSet",
+          "target": "ZPM4R_PMO_ODM_SRV.STipoGestione1Set",
           "cardinality": {
             "max": "*"
           },
@@ -221,19 +176,19 @@
           },
           "keys": []
         },
-        "SPercorso": {
+        "SDivisioneu": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SPercorsoSet",
+          "target": "ZPM4R_PMO_ODM_SRV.SDivisioneuSet",
           "cardinality": {
             "max": "*"
           },
           "keys": []
         },
-        "SDivisioneu": {
+        "STipoGestione": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZPM4R_PMO_ODM_SRV.SDivisioneuSet",
+          "target": "ZPM4R_PMO_ODM_SRV.STipoGestioneSet",
           "cardinality": {
             "max": "*"
           },
@@ -261,6 +216,51 @@
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
           "target": "ZPM4R_PMO_ODM_SRV.SIndisponibilitaSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SStrno": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZPM4R_PMO_ODM_SRV.SStrnoSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SPercorso": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZPM4R_PMO_ODM_SRV.SPercorsoSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SPltxu": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZPM4R_PMO_ODM_SRV.SPltxuSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SProgres": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZPM4R_PMO_ODM_SRV.SProgresSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SSistema": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZPM4R_PMO_ODM_SRV.SSistemaSet",
           "cardinality": {
             "max": "*"
           },
@@ -298,6 +298,15 @@
           "type": "cds.Boolean",
           "@sap.unicode": "false",
           "@sap.label": "Indicatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ggtot": {
+          "type": "cds.Integer",
+          "@sap.unicode": "false",
+          "@sap.label": "Numero",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
