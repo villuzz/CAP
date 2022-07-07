@@ -8,15 +8,14 @@ entity Books {
   stock  : Integer;
 }
 
-entity Strategia : managed {
-    key ID : Integer;
-    STRATEGIA:String(30);
+entity StrategiaT : managed {
+    key STRATEGIA:String(30);
     STRATEGIA_DESC:String(50);
 }
 
 entity Variante {
     key APP:String(1);
-    key TABLE:String(20);
+    key TABLE:String(40);
     key USER:String(7);
     key NAME:String(20);
     COLUMN:String;
@@ -71,7 +70,7 @@ entity Azioni : managed, cuid {
     key CONTATORE: Integer;
     INDEX : Integer;
     SISTEMA:String(2);
-    PROGRES:Decimal(5);
+    PROGRES:String(5);
     DESC_PROG:String(40);
     CLASSE:String(2);
     DES_COMPONENTE:String(80);
@@ -143,7 +142,7 @@ entity Index : managed, cuid {
     DESTINATARIO:String(12);
     TESTO_ESTESO:String;
     SISTEMA_PMO:String(2);
-    PROGRES_PMO:Decimal(5);
+    PROGRES_PMO:String(5);
     CLASSE_PMO:String(2);
     TIPO_GESTIONE:String(3);
     TIPO_GESTIONE_1:String(3);

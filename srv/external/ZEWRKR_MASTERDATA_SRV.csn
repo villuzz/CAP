@@ -1,0 +1,3630 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.7.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZEWRKR_MASTERDATA_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "ZEWRKR_MASTERDATA_SRV.HierarchySet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Tplnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pltxt": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Iwerk": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tplma": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HierarchyEquip": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Tplnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "IWithMara": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Levdo": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Liv. vs.il basso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Levup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Livelli vs.alto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Equnr": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HierarchySet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.HierarchySet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "EquipmentsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.EquipmentsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MaterialsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MaterialsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.ActivityTypeSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Activitytype": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.ControlKeySet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Controlkey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.DepartmentsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "PlannerGroup": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NamePlanGroup": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MaintPlantPlant": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MeasurementUnitsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "MeasureUnit": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.NotificationsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "UserStatus": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT04": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT30": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LanguageKey": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.OrderTypeSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Ordertype": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Languagekey": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.RangeControlKeySet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Sign": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Option": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Low": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "High": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.RangeStsmSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Sign": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Option": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Low": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "High": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.SystemStatusSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Systemstatus": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LanguageKey": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT04": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT30": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.WorkAreasSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "WorkCenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Plant": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LanguageKey": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ObjectID": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.WorkOrdersSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "LanguageKey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT04": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TXT30": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.OrdMtActTypeSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "OrderType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MtActType": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.VerifyConnectivitySet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "UserName": {
+          "key": true,
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.HierarchyFLSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Tplnr": {
+          "key": true,
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TplnrHier": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Pltxt": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Iwerk": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tplma": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.EquipmentsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Tplnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Eqktx": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Equnr": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Eqtyp": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Iwerk": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Swerk": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Hequi": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HierarchyEquip": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.DropdownSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Fieldname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Perfil": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Catlogue": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Plant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Workcenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Priority": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "UserStatus": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lingua": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifTypeLow": {
+          "key": true,
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifTypeHigh": {
+          "key": true,
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifTypeOp": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "OrderType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PlanGroup": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "OrdType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ActTypePM": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StatusTechSyst": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ParamMedidas": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SystCondition": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PrioritySet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.PrioritySet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ActivityTypeSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ActivityTypeSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ControlKeySet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ControlKeySet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "DepartmentsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DepartmentsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MeasurementUnitsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MeasurementUnitsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotificationsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.NotificationsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "OrderTypeSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.OrderTypeSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "RangeControlKeySet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.RangeControlKeySet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "RangeStsmSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.RangeStsmSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SystemStatusSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.SystemStatusSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "WorkAreasSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.WorkAreasSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "WorkOrdersSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.WorkOrdersSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "OrdMtActTypeSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.OrdMtActTypeSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "PlannerGroupSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.PlannerGroupSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotificationTypeSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.NotificationTypeSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MainworkctrSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MainworkctrSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MaintenancePlantSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MaintenancePlantSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "UserStatusSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.UserStatusSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "CatalogueSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.CatalogueSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "CatologueProfileSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.CatologueProfileSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "WapiuseSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.WapiuseSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MedidasSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MedidasSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ParnrAproSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ParnrAproSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ParnrSolSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ParnrSolSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "PermisosSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.PermisosSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "RiegosSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.RiegosSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "Dispositivi_ObbligatoriSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.Dispositivi_ObbligatoriSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "Pericoli_LavoroSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.Pericoli_LavoroSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "Rischi_SpecificiSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.Rischi_SpecificiSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "Dispositivi_AggiuntiviSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.Dispositivi_AggiuntiviSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifTypeCatalogueSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.NotifTypeCatalogueSetSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "UltPrescrAreaLavoroSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.UltPrescrAreaLavoroSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "UltPrescrAttivitaSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.UltPrescrAttivitaSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "DocumentiAllegatiSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DocumentiAllegatiSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "UserResponsibleSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.UserResponsibleSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "DescrAttrezzatureSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DescrAttrezzatureSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "DescrLavoroSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DescrLavoroSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "UlterioriPrescrSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.UlterioriPrescrSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "StatusTechSystSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.StatusTechSystSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "EParamMedidasSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.EParamMedidasSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "SystConditionSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.SystConditionSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.CatologueProfileSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "CatalogPerfil": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rbnrx": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Katalogart": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Codegrupe": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.CatalogueSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "CatalogPerfil": {
+          "key": true,
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Catalog": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CodeGrupe": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Status": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CatalogText": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Code": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "KurzText": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CodeGruppeTxt": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo breve",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MaintenancePlantSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Werks": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name1": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Iwerk": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Name_Iwerk": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DropdownSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MainworkctrSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Arbpl": {
+          "key": true,
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werks": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ktext": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.NotificationTypeSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Qmart": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qmartx": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rbnr": {
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Auart": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stsma": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.PlannerGroupSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Iwerk": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Ingrp": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Innam": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Langu": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.PrioritySet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Piriok": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qmart": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Artpr": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Priokx": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.UserStatusSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Auart": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stsma": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Status": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Text04": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Inist": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stonr": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Hsonr": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Nsonr": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Txt30": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Spras": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.GetListFLSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "MaintPlant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Language": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rbnr": {
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DefObject": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EquipmentNum": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tplnr": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FunctLoc": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Tplma": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SupfunctLoc": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.CreaPtwNewSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Aufnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "WAP": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Utilizzo del documento di disconnessione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "GSTRP": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Data inizio cardine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "GLTRP": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Data fine cardine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PROCEDIMENTOS": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Campo carattere (70 posizioni)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TPLNR": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EQUNR": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "STXT": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo breve di descrizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "STAT": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Flag 'Stato attualmente attivo'",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DESCRIPCION": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CONDICIONES": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Condizionii",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "COMENTARIOS": {
+          "type": "cds.LargeString",
+          "@sap.unicode": "false",
+          "@sap.label": "Commenti",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LUGAR1": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Campo carattere (70 posizioni)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LUGAR2": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Campo carattere (70 posizioni)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TimeFr": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Ora inizio val.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TimeTo": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Ora fine valid.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ESITO": {
+          "type": "cds.String",
+          "length": 100,
+          "@sap.unicode": "false",
+          "@sap.label": "Esito",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EstadoSistTecn": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "St. imp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "E_PERMISOS_newset": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_PERMISOSSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "E_RIEGOS_newset": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_RIEGOSSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "E_MEDIDAS_newset": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_MEDIDASSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "MailPtwNav": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.MailPtwSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "EPartnerSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.EPartnerSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.E_MEDIDASSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "AUFNR": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DDTEXT": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione breve degli oggetti Repository",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FIELDNAME": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Value",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ReadWapiuse": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ReadWapiuseSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.E_PERMISOSSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "AUFNR": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DDTEXT": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione breve degli oggetti Repository",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FIELDNAME": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Value",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ReadWapiuse": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ReadWapiuseSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.E_RIEGOSSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "AUFNR": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DDTEXT": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.label": "Descrizione breve degli oggetti Repository",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FIELDNAME": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "VALUE": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Value",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ReadWapiuse": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.ReadWapiuseSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MailPtwSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Aufnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Mail": {
+          "type": "cds.String",
+          "length": 241,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MedidasSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Fieldname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reptext": {
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Value": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.ParnrAproSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "USUARIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.ParnrSolSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "USUARIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.PermisosSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Fieldname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reptext": {
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Value": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.ReadWapiuseSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "AUFNR": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Lingua": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "WAPIUSE": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "E_MEDIDASSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_MEDIDASSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "E_PERMISOSSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_PERMISOSSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "E_RIEGOSSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.E_RIEGOSSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.RiegosSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Fieldname": {
+          "key": true,
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Reptext": {
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Value": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.WapiuseSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "WAPIUSE": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "WAPIUSEX": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown01": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.PtwInfoSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "PtwId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwNum": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Stato": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sent": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Descrizione": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwDes": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwDateFr": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwTimeFr": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwDateTo": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwTimeTo": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZOrder": {
+          "type": "cds.String",
+          "length": 22,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ZOrderDes": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Notif": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifDes": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifPri": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifPlGroup": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PlanningPl": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FunctionalLoc": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FlDes": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PfApplicant": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PfAprobador": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PfWorkChief": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PfSupervisor": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwDescargo": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwStActive": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwIdDescargo": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwCrdate": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwPriok": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DateTo": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DateFr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Werks": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.Dispositivi_AggiuntiviSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "COD_RISCHIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TEXT": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.Dispositivi_ObbligatoriSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "COD_RISCHIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TEXT": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.Pericoli_LavoroSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "COD_RISCHIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TEXT": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.Rischi_SpecificiSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "COD_RISCHIO": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TEXT": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.NotifTypeCatalogueSetSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Qmart": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Qmartx": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Rbnr": {
+          "type": "cds.String",
+          "length": 9,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.EPartnerSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Usuario": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Function": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Ruolo partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CreaPtwNew": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.CreaPtwNewSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.UltPrescrAreaLavoroSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.UltPrescrAttivitaSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.DocumentiAllegatiSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.UserResponsibleSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Parnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "WorkCenter": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "UserResp": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.DescrLavoroSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.DescrAttrezzatureSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.UlterioriPrescrSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Reptext": {
+          "key": true,
+          "type": "cds.String",
+          "length": 55,
+          "@sap.unicode": "false",
+          "@sap.label": "Intestazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FieldName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Nome campo",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.MaterialsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice materiale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MaterialDesc": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Definizione componente",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Equipment": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FunctLocation": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "HierarchyEquip": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.AssignMOrderToPtwSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Aufnr": {
+          "key": true,
+          "type": "cds.String",
+          "length": 22,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero oggetto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PtwId": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Richiesta",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EReturnSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.EReturnSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.EReturnSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Type": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Cat. messaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Message": {
+          "type": "cds.String",
+          "length": 220,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo mess.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssignMOrderToPtw": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.AssignMOrderToPtwSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.StatusTechSystSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Status": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "StGlobSistTecn.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StatusText": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo st.compl.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.EParamMedidasSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Parametro": {
+          "key": true,
+          "type": "cds.String",
+          "length": 16,
+          "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Descripcion": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.unicode": "false",
+          "@sap.label": "Char20",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_MASTERDATA_SRV.SystConditionSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Anlzu": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "St. imp.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AnlzuX": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Tsto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Kapao": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Occupazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Dropdown": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_MASTERDATA_SRV.DropdownSet",
+          "keys": []
+        }
+      }
+    }
+  }
+}

@@ -210,20 +210,6 @@
           "destination": "backend_dest",
           "path": "/ZPM4R_TECHNICAL_OBJECT_SRV_03"
         }
-      },
-      "ZEWRKR_MASTERDATA_SRV": {
-        "kind": "odata-v2",
-        "model": "srv/external/ZEWRKR_MASTERDATA_SRV",
-        "[production]": {
-          "credentials": {
-            "destination": "Enel_Gateway",
-            "path": "/ZEWRKR_MASTERDATA_SRV"
-          }
-        },
-        "credentials": {
-          "destination": "backend_dest",
-          "path": "/ZEWRKR_MASTERDATA_SRV"
-        }
       }
     },
     "hana": {

@@ -18,43 +18,39 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione",
+          "@sap.label": "Plant",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sistema": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Sistema",
+          "@sap.label": "System",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Classe": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Classe",
+          "@sap.label": "Class",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Txt": {
           "type": "cds.String",
           "length": 60,
           "@sap.unicode": "false",
-          "@sap.label": "Testo",
+          "@sap.label": "Text",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         }
       }
     },
@@ -68,64 +64,58 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione",
+          "@sap.label": "Plant",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sistema": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Sistema",
+          "@sap.label": "System",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Classe": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Classe",
+          "@sap.label": "Class",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "ProgAggr": {
           "key": true,
           "type": "cds.String",
           "length": 5,
           "@sap.unicode": "false",
-          "@sap.label": "N° Prog Aggr",
+          "@sap.label": "Prog_aggreg_num",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "AggrActTitle": {
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
-          "@sap.label": "Titolo Azione Aggreg",
+          "@sap.label": "Aggregate Act Title",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "AggrActComponent": {
           "type": "cds.String",
           "length": 60,
           "@sap.unicode": "false",
-          "@sap.label": "Comp Azione Agggreg",
+          "@sap.label": "Aggreg. Act. Comp.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         }
       }
     },
@@ -139,32 +129,29 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione",
+          "@sap.label": "Plant",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sistema": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Sistema",
+          "@sap.label": "System",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Txt": {
           "type": "cds.String",
           "length": 60,
           "@sap.unicode": "false",
-          "@sap.label": "Testo",
+          "@sap.label": "Text",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         }
       }
     },
@@ -178,28 +165,26 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Lingua",
+          "@sap.label": "Language",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Ilart": {
           "key": true,
           "type": "cds.String",
           "length": 3,
           "@sap.unicode": "false",
-          "@sap.label": "Tp. attività PM",
+          "@sap.label": "MaintActivType",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Ilatx": {
           "type": "cds.String",
           "length": 30,
           "@sap.unicode": "false",
-          "@sap.label": "Def. att.PM",
+          "@sap.label": "MAT descriptn",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -217,7 +202,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione",
+          "@sap.label": "Plant",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -228,7 +213,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
-          "@sap.label": "Centro di lav.",
+          "@sap.label": "Work center",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -236,21 +221,23 @@
         },
         "Bedat": {
           "key": true,
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
-          "@sap.label": "Data ord. acq.",
+          "@sap.label": "PO Date",
           "@sap.creatable": "false",
           "@sap.updatable": "false"
         },
         "Endat": {
           "key": true,
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
-          "@sap.label": "Data scadenza",
+          "@sap.label": "Expiration date",
           "@sap.creatable": "false",
           "@sap.updatable": "false"
         },
@@ -259,7 +246,7 @@
           "type": "cds.String",
           "length": 6,
           "@sap.unicode": "false",
-          "@sap.label": "Tp. attività",
+          "@sap.label": "Activity Type",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -269,7 +256,7 @@
           "type": "cds.String",
           "length": 3,
           "@sap.unicode": "false",
-          "@sap.label": "GrRespPianManut",
+          "@sap.label": "Planner group",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",

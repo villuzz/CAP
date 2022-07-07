@@ -48,8 +48,7 @@
           "https://*.authentication.eu10.hana.ondemand.com/**",
           "https://workspaces-ws-qdszb-app1.eu10.applicationstudio.cloud.sap/**",
           "http://localhost:5000/",
-          "http://localhost:4004/",
-          "http://*.enel.com:8080/**"
+          "http://localhost:4004/"
           ]
       }  
   }

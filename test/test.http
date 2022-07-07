@@ -1,19 +1,17 @@
 @server = http://localhost:4004
 ### ----------------------------------------------------------------------
 
-POST {{server}}/v2/catalog/GetODM
+PUT {{server}}/v2/catalog/T_ACT_TYPE(Divisione='ITSU',Progres='01',Classe='A',Sistema='AG')
 Content-Type: application/json;IEEE754Compatible=true
 
 {
-"PDat1":"2012-08-16T00:00:00",
-"PDat2":"2012-08-16T00:00:00",
-"PDat3":"2012-08-16T00:00:00",
-"SDivisioneu": [{
-"Sign":"I",
-"Option":"EQ",
-"Low":"ITH2",
-"High":"" }],
-"Odm":[{}]
+"InizioVal":"2020-01-01T00:00:00.000",
+"FineVal":"9999-12-31T00:00:00.000",
+"Divisione":"ITSU",
+"Sistema":"AG",
+"Progres":"01",
+"Classe":"A",
+"Uzeit":"15:38:49"
 }
 
 ### ----------------------------------------------------------------------
@@ -21,5 +19,11 @@ Content-Type: application/json;IEEE754Compatible=true
 //GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
 //GET {{server}}/catalog/T_PMO?$filter=Divisioneu eq 'ITZU' and InizioVal eq 2016-08-10
 //(Divisioneu='ITZU',IndexPmo='000000000016',InizioVal=datetime'2016-08-10T00:00:00',FineVal=datetime'9999-12-31T00:00:00',Uzeit=time'PT0H00M00S')
-GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
+GET {{server}}/catalog/T_ACT_TYPE?$filter=Divisione eq 'ITZU'
 Content-Type: application/json;IEEE754Compatible=true
+
+### ----------------------------------------------------------------------
+
+GET {{server}}/catalog/T_DEST_USR?$filter=Destinatario eq 'ELE+MAC'
+Content-Type: application/json;IEEE754Compatible=true
+

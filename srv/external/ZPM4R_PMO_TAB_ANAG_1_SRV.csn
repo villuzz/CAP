@@ -21,8 +21,7 @@
           "@sap.label": "Index Azioni PMO",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sottoindex": {
           "key": true,
@@ -32,8 +31,7 @@
           "@sap.label": "subindex",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Cont": {
           "key": true,
@@ -43,8 +41,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sistem": {
           "type": "cds.String",
@@ -53,8 +50,7 @@
           "@sap.label": "Sistema",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Progres": {
           "type": "cds.String",
@@ -63,8 +59,7 @@
           "@sap.label": "Progressivo",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Classe": {
           "type": "cds.String",
@@ -73,8 +68,7 @@
           "@sap.label": "Classe",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DesComponente": {
           "type": "cds.String",
@@ -83,8 +77,7 @@
           "@sap.label": "Desc comp.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Tplnr": {
           "type": "cds.String",
@@ -93,8 +86,7 @@
           "@sap.label": "Sede tecnica",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Equipment": {
           "type": "cds.String",
@@ -103,8 +95,7 @@
           "@sap.label": "Equipment",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "ComponentTipo": {
           "type": "cds.String",
@@ -113,8 +104,7 @@
           "@sap.label": "Componente Tipo",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DesBreve": {
           "type": "cds.String",
@@ -123,8 +113,7 @@
           "@sap.label": "Descriz. Progress",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "EquipmentCompo": {
           "type": "cds.String",
@@ -133,8 +122,7 @@
           "@sap.label": "Equipment",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "IntegTxtEsteso": {
           "type": "cds.String",
@@ -143,8 +131,7 @@
           "@sap.label": "Flag desc est.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "FlagAttivo": {
           "type": "cds.String",
@@ -153,8 +140,7 @@
           "@sap.label": "Record valido",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         }
       }
     },
@@ -163,26 +149,6 @@
       "@cds.persistence.skip": true,
       "@sap.content.version": "1",
       "elements": {
-        "InizioVal": {
-          "key": true,
-          "type": "cds.Timestamp",
-          "@odata.type": "Edm.DateTime",
-          "@odata.precision": 7,
-          "@sap.unicode": "false",
-          "@sap.label": "Inizio validità",
-          "@sap.creatable": "false",
-          "@sap.updatable": "false"
-        },
-        "FineVal": {
-          "key": true,
-          "type": "cds.Timestamp",
-          "@odata.type": "Edm.DateTime",
-          "@odata.precision": 7,
-          "@sap.unicode": "false",
-          "@sap.label": "Fine validità",
-          "@sap.creatable": "false",
-          "@sap.updatable": "false"
-        },
         "Divisione": {
           "key": true,
           "type": "cds.String",
@@ -227,9 +193,29 @@
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
+        "InizioVal": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "FineVal": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine validità",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
         "Uzeit": {
-          "key": true,
           "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
           "@sap.unicode": "false",
           "@sap.label": "Modifica subito",
           "@sap.creatable": "false",
@@ -339,7 +325,8 @@
           "@sap.filterable": "false"
         },
         "Datum": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -412,8 +399,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "IndexOdm": {
           "key": true,
@@ -423,8 +409,7 @@
           "@sap.label": "ID appointment",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Appuntam": {
           "key": true,
@@ -433,8 +418,7 @@
           "@sap.label": "Number appointm",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aufnr": {
           "key": true,
@@ -444,8 +428,7 @@
           "@sap.label": "Number WO",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aufpl": {
           "key": true,
@@ -455,8 +438,7 @@
           "@sap.label": "N. ciclo oper.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl": {
           "key": true,
@@ -466,8 +448,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl1": {
           "key": true,
@@ -477,8 +458,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl2": {
           "key": true,
@@ -488,8 +468,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl3": {
           "key": true,
@@ -499,8 +478,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl4": {
           "key": true,
@@ -510,8 +488,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Aplzl5": {
           "key": true,
@@ -521,8 +498,7 @@
           "@sap.label": "Contatore",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Qmnum": {
           "key": true,
@@ -552,8 +528,7 @@
           "@sap.label": "Status WO",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DettConf": {
           "type": "cds.String",
@@ -562,11 +537,11 @@
           "@sap.label": "conf details",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DataPian": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -575,7 +550,8 @@
           "@sap.updatable": "false"
         },
         "DataFineCard": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -584,7 +560,8 @@
           "@sap.updatable": "false"
         },
         "DataPianNatur": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -627,8 +604,7 @@
           "@sap.label": "Index Azioni PMO",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Sottoindex": {
           "key": true,
@@ -638,8 +614,7 @@
           "@sap.label": "subindex",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "StComponente": {
           "type": "cds.String",
@@ -648,8 +623,7 @@
           "@sap.label": "Sede tecnica",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "EquipmentComp": {
           "type": "cds.String",
@@ -658,8 +632,7 @@
           "@sap.label": "Equipment",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DescComp": {
           "type": "cds.String",
@@ -668,11 +641,11 @@
           "@sap.label": "Testo (40 posizioni)",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DataEsec": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -687,8 +660,7 @@
           "@sap.label": "Ordine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Vornr": {
           "type": "cds.String",
@@ -697,8 +669,7 @@
           "@sap.label": "Operazione ODM",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Avviso": {
           "type": "cds.String",
@@ -707,8 +678,7 @@
           "@sap.label": "Avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "NumIntervento": {
           "type": "cds.String",
@@ -717,8 +687,7 @@
           "@sap.label": "N. di class.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "Napp": {
           "type": "cds.Integer",
@@ -726,11 +695,11 @@
           "@sap.label": "Number appointm",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DataPianNatur": {
-          "type": "cds.Timestamp",
+          "type": "cds.Date",
+            "_comment": "tag type edited manually", 
           "@odata.type": "Edm.DateTime",
           "@odata.precision": 7,
           "@sap.unicode": "false",
@@ -745,8 +714,7 @@
           "@sap.label": "Tipo conf.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DettConf": {
           "type": "cds.String",
@@ -755,8 +723,7 @@
           "@sap.label": "conf details",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "CausaMancEsec": {
           "type": "cds.String",
@@ -765,8 +732,7 @@
           "@sap.label": "Failure to execute",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         },
         "DettMancEsecuz": {
           "type": "cds.String",
@@ -775,8 +741,7 @@
           "@sap.label": "Details failure exec",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.sortable": "false"
         }
       }
     }

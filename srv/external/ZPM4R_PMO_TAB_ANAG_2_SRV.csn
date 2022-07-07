@@ -18,33 +18,33 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione"
+          "@sap.label": "Plant"
         },
         "Sistema": {
           "key": true,
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "Sistema"
+          "@sap.label": "System"
         },
         "Progres": {
           "key": true,
           "type": "cds.String",
           "length": 5,
           "@sap.unicode": "false",
-          "@sap.label": "Progressivo"
+          "@sap.label": "Progressive"
         },
         "Txt": {
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
-          "@sap.label": "Descriz. Progress"
+          "@sap.label": "Progr. Description"
         },
         "ComponentTipo": {
           "type": "cds.String",
           "length": 80,
           "@sap.unicode": "false",
-          "@sap.label": "Componente Tipo"
+          "@sap.label": "Component Type"
         }
       }
     },
@@ -58,20 +58,20 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divis. ubic."
+          "@sap.label": "MaintPlant"
         },
         "Raggruppamento": {
           "key": true,
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
-          "@sap.label": "Raggruppamento"
+          "@sap.label": "Grouping"
         },
         "DescRaggr": {
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
-          "@sap.label": "Desc. raggrup."
+          "@sap.label": "Grouping description"
         }
       }
     },
@@ -85,39 +85,39 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione"
+          "@sap.label": "Plant"
         },
         "Arbpl": {
           "key": true,
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
-          "@sap.label": "Centro di lav."
+          "@sap.label": "Work center"
         },
         "Destinatario": {
           "key": true,
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
-          "@sap.label": "Destinatario"
+          "@sap.label": "Recipient"
         },
         "Txt": {
           "type": "cds.String",
           "length": 60,
           "@sap.unicode": "false",
-          "@sap.label": "Descrizione Destin."
+          "@sap.label": "Recipient Descript."
         },
         "Raggruppamento": {
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
-          "@sap.label": "Raggruppamento"
+          "@sap.label": "Grouping"
         },
         "Mail": {
           "type": "cds.String",
           "length": 241,
           "@sap.unicode": "false",
-          "@sap.label": "Indir. e-mail"
+          "@sap.label": "E-Mail Address"
         }
       }
     },
@@ -131,28 +131,28 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
-          "@sap.label": "Divisione"
+          "@sap.label": "Plant"
         },
         "Arbpl": {
           "key": true,
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
-          "@sap.label": "Centro di lav."
+          "@sap.label": "Work center"
         },
         "Destinatario": {
           "key": true,
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
-          "@sap.label": "Destinatario"
+          "@sap.label": "Recipient"
         },
         "Uname": {
           "key": true,
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
-          "@sap.label": "Utente"
+          "@sap.label": "User"
         },
         "Object": {
           "key": true,
@@ -173,13 +173,13 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
-          "@sap.label": "auth. object z_auth_"
+          "@sap.label": "Authorization check"
         },
         "Raggruppamento": {
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
-          "@sap.label": "Raggruppamento"
+          "@sap.label": "Grouping"
         }
       }
     }

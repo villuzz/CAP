@@ -50,11 +50,11 @@
       "db": {
         "kind": "hana"
       },
-      "Enel_Gateway": {
+      "Enel_Gateway_pri": {
         "kind": "odata",
-        "model": "srv/external/Enel_Gateway",
+        "model": "srv/external/Enel_Gateway_pri",
         "credentials": {
-          "destination": "Enel_Gateway"
+          "destination": "Enel_Gateway_pri"
         }
       },
       "ZEWRKR_NOTIFICATION_SRV": {
@@ -62,7 +62,7 @@
         "model": "srv/external/ZEWRKR_NOTIFICATION_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZEWRKR_NOTIFICATION_SRV"
           }
         },
@@ -76,7 +76,7 @@
         "model": "srv/external/ZEWRKR_WORK_ORDER_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZEWRKR_WORK_ORDER_SRV"
           }
         },
@@ -90,7 +90,7 @@
         "model": "srv/external/ZPM4R_PMO_MASTERDATA_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_MASTERDATA_SRV"
           }
         },
@@ -104,7 +104,7 @@
         "model": "srv/external/Z4R_SEARCH_HELP_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/Z4R_SEARCH_HELP_SRV"
           }
         },
@@ -118,7 +118,7 @@
         "model": "srv/external/ZPM4R_PMO_TAB_ANAG_1_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_TAB_ANAG_1_SRV"
           }
         },
@@ -132,7 +132,7 @@
         "model": "srv/external/ZPM4R_PMO_TAB_ANAG_2_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_TAB_ANAG_2_SRV"
           }
         },
@@ -146,7 +146,7 @@
         "model": "srv/external/ZPM4R_PMO_TAB_ANAG_3_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_TAB_ANAG_3_SRV"
           }
         },
@@ -160,7 +160,7 @@
         "model": "srv/external/ZPM4R_PMO_TAB_ANAG_4_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_TAB_ANAG_4_SRV"
           }
         },
@@ -174,7 +174,7 @@
         "model": "srv/external/ZPM4R_PMO_ODM_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_PMO_ODM_SRV"
           }
         },
@@ -188,7 +188,7 @@
         "model": "srv/external/Z4R_TEXT_MANAGEMENT_SRV",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/Z4R_TEXT_MANAGEMENT_SRV"
           }
         },
@@ -202,27 +202,13 @@
         "model": "srv/external/ZPM4R_TECHNICAL_OBJECT_SRV_03",
         "[production]": {
           "credentials": {
-            "destination": "Enel_Gateway",
+            "destination": "Enel_Gateway_pri",
             "path": "/ZPM4R_TECHNICAL_OBJECT_SRV_03"
           }
         },
         "credentials": {
           "destination": "backend_dest",
           "path": "/ZPM4R_TECHNICAL_OBJECT_SRV_03"
-        }
-      },
-      "ZEWRKR_MASTERDATA_SRV": {
-        "kind": "odata-v2",
-        "model": "srv/external/ZEWRKR_MASTERDATA_SRV",
-        "[production]": {
-          "credentials": {
-            "destination": "Enel_Gateway",
-            "path": "/ZEWRKR_MASTERDATA_SRV"
-          }
-        },
-        "credentials": {
-          "destination": "backend_dest",
-          "path": "/ZEWRKR_MASTERDATA_SRV"
         }
       }
     },
