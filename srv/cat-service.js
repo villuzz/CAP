@@ -193,7 +193,7 @@ module.exports = cds.service.impl(async function () {
             return save_log(request, error);
         }
     });
-    // *************************************************** TESTI ESTESI **************************************************************** 
+    // *************************************************** TESTI ESTESI ****************************************************************     
     const { TestiEstesi } = this.entities;
     this.on('READ', TestiEstesi, async request => {
         try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
@@ -205,6 +205,12 @@ module.exports = cds.service.impl(async function () {
         try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
     });
     this.on('UPDATE', TestiEstesi, async request => {
+        try { 
+            let response = await serviceTEXT.tx(request).run(request.query); 
+            return response; } catch (error) { return save_log(request, error); }
+    });
+    const { TestiEstesiDelete } = this.entities;
+    this.on('DELETE', TestiEstesiDelete, async request => { 
         try { let response = await serviceTEXT.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
     });
 
@@ -214,6 +220,10 @@ module.exports = cds.service.impl(async function () {
     this.on('UPDATE', GetODM, async request => { try { let response = await serviceODM.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
     // *************************************************** ORDINE **************************************************************** 
+    
+    const { ShopPaper } = this.entities;
+    this.on('CREATE', ShopPaper, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    
     const { CreateOrder } = this.entities;
     this.on('CREATE', CreateOrder, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 

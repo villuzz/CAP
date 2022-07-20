@@ -1,29 +1,19 @@
 @server = http://localhost:4004
 ### ----------------------------------------------------------------------
 
-PUT {{server}}/v2/catalog/T_ACT_TYPE(Divisione='ITSU',Progres='01',Classe='A',Sistema='AG')
+DELETE {{server}}/v2/catalog/TestiEstesiDelete(Tdname='ZTEXT_LC',Tdid='ST',Tdspras='I',Tdobject='TEXT')
 Content-Type: application/json;IEEE754Compatible=true
-
-{
-"InizioVal":"2020-01-01T00:00:00.000",
-"FineVal":"9999-12-31T00:00:00.000",
-"Divisione":"ITSU",
-"Sistema":"AG",
-"Progres":"01",
-"Classe":"A",
-"Uzeit":"15:38:49"
-}
 
 ### ----------------------------------------------------------------------
 # Inventory Get
 //GET {{server}}/catalog/T_PMO(Divisioneu='ITZU',FineVal=9999-12-31,IndexPmo='17',InizioVal=2016-08-10,Uzeit=00:00:00)
 //GET {{server}}/catalog/T_PMO?$filter=Divisioneu eq 'ITZU' and InizioVal eq 2016-08-10
 //(Divisioneu='ITZU',IndexPmo='000000000016',InizioVal=datetime'2016-08-10T00:00:00',FineVal=datetime'9999-12-31T00:00:00',Uzeit=time'PT0H00M00S')
-GET {{server}}/catalog/T_ACT_TYPE?$filter=Divisione eq 'ITZU'
+GET {{server}}/catalog/T_APP_WO?$select=Aggregatore&$top=1&$orderby=Aggregatore%20desc
 Content-Type: application/json;IEEE754Compatible=true
 
 ### ----------------------------------------------------------------------
 
-GET {{server}}/catalog/T_DEST_USR?$filter=Destinatario eq 'ELE+MAC'
+GET {{server}}/catalog/TestiEstesi?$filter=Equnr eq '120000000000000052'
 Content-Type: application/json;IEEE754Compatible=true
 

@@ -66,6 +66,19 @@ service CatalogService {
 
     };
     
+
+    entity TOrder as projection on ZEWRKR_WORK_ORDER_SRV.TOrderSet
+    entity PrintOrderOutputBin as projection on ZEWRKR_WORK_ORDER_SRV.PrintOrderOutputBinSet
+
+    entity ShopPaper as projection on ZEWRKR_WORK_ORDER_SRV.ShopPaperSet{
+        *,
+        TOrderSet: redirected to TOrder,
+        PrintOrderOutputBinSet: redirected to PrintOrderOutputBin,
+    }
+
+
+
+
     entity Hierarchy as projection on ZEWRKR_MASTERDATA_SRV.HierarchySet
     entity Materials as projection on ZEWRKR_MASTERDATA_SRV.MaterialsSet
     entity Equipments as projection on ZEWRKR_MASTERDATA_SRV.EquipmentsSet
@@ -109,7 +122,6 @@ service CatalogService {
     };
 
     
-    entity PrintOrderOutputBin as projection on ZEWRKR_WORK_ORDER_SRV.PrintOrderOutputBinSet //POST
     entity ConfirmCreate as projection on ZEWRKR_WORK_ORDER_SRV.ConfirmCreateSet //GET
     entity GetOMList as projection on ZEWRKR_WORK_ORDER_SRV.GetOMListSet //GET
 
@@ -158,6 +170,7 @@ service CatalogService {
     entity STipoPmo as projection on ZPM4R_PMO_ODM_SRV.STipoPmoSet
 
     entity TestiEstesi as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiSet
+    entity TestiEstesiDelete as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiDeleteSet
     
 
     entity GetODM as projection on ZPM4R_PMO_ODM_SRV.GetODMSet{
