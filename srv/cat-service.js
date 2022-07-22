@@ -239,12 +239,15 @@ module.exports = cds.service.impl(async function () {
     const { UpdateOrder } = this.entities;
     this.on('CREATE', UpdateOrder, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
+    const { GetOrder } = this.entities;
+    this.on('CREATE', GetOrder, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceORDER.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+
     // *************************************************** AVVISI ****************************************************************
     const { CreateNotification } = this.entities;
-    this.on('CREATE', CreateNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', CreateNotification, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
     const { UpdateNotification } = this.entities;
-    this.on('CREATE', UpdateNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
+    this.on('CREATE', UpdateNotification, async request => { try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });
 
     const { GetNotification } = this.entities;
     this.on('READ', GetNotification, async request => { try { let response = await serviceNOTIFICATION.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); } });

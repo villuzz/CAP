@@ -18,29 +18,29 @@ using { ZEWRKR_MASTERDATA_SRV as ZEWRKR_MASTERDATA_SRV } from './external/ZEWRKR
 @cds.query.limit: { default: 5000, max: 5000 }
 service CatalogService {
 
-    entity	AddressCityRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressCityRaSet
-    entity	AddressNameRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressNameRaSet
-    entity	AddressPostCodeRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressPostCodeRaSet
-    entity	AddressSearchTerm1Ra	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressSearchTerm1RaSet
-    entity	AddressSearchTerm2Ra	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressSearchTerm2RaSet
-    entity	AddressStreetRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressStreetRaSet
-    entity	Alkey	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AlkeySet
-    entity	CategoryRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.CategoryRaSet
-    entity	CountryRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.CountryRaSet
-    entity	DescriptRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.DescriptRaSet
-    entity	FunclocList	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.FunclocListSet
-    entity	FunclocRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.FunclocRaSet
-    entity	Gewrk	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.GewrkSet
-    entity	MaintplantRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.MaintplantRaSet
-    entity	ObjecttypeRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.ObjecttypeRaSet
-    entity	PartnerRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PartnerRaSet
-    entity	PlangroupRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PlangroupRaSet
-    entity	PlanplantRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PlanplantRaSet
-    entity	SortfieldRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SortfieldRaSet
-    entity	StatusRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.StatusRaSet
-    entity	SupflocRa	as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SupflocRaSet
+    entity AddressCityRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressCityRaSet
+    entity AddressNameRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressNameRaSet
+    entity AddressPostCodeRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressPostCodeRaSet
+    entity AddressSearchTerm1Ra as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressSearchTerm1RaSet
+    entity AddressSearchTerm2Ra as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressSearchTerm2RaSet
+    entity AddressStreetRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AddressStreetRaSet
+    entity Alkey as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.AlkeySet
+    entity CategoryRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.CategoryRaSet
+    entity CountryRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.CountryRaSet
+    entity DescriptRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.DescriptRaSet
+    entity FunclocList as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.FunclocListSet
+    entity FunclocRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.FunclocRaSet
+    entity Gewrk as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.GewrkSet
+    entity MaintplantRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.MaintplantRaSet
+    entity ObjecttypeRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.ObjecttypeRaSet
+    entity PartnerRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PartnerRaSet
+    entity PlangroupRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PlangroupRaSet
+    entity PlanplantRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.PlanplantRaSet
+    entity SortfieldRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SortfieldRaSet
+    entity StatusRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.StatusRaSet
+    entity SupflocRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SupflocRaSet
     
-    entity ListFl as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.ListFlSet{ 
+    entity ListFl as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.ListFlSet{ 
         *,
         N_AddressCityRa: redirected to AddressCityRa,
         N_AddressNameRa: redirected to AddressNameRa,
@@ -67,10 +67,10 @@ service CatalogService {
     };
     
 
-    entity TOrder as projection on ZEWRKR_WORK_ORDER_SRV.TOrderSet
-    entity PrintOrderOutputBin as projection on ZEWRKR_WORK_ORDER_SRV.PrintOrderOutputBinSet
+    entity TOrder as projection on ZEWRKR_WORK_ORDER_SRV.TOrderSet
+    entity PrintOrderOutputBin as projection on ZEWRKR_WORK_ORDER_SRV.PrintOrderOutputBinSet
 
-    entity ShopPaper as projection on ZEWRKR_WORK_ORDER_SRV.ShopPaperSet{
+    entity ShopPaper as projection on ZEWRKR_WORK_ORDER_SRV.ShopPaperSet{
         *,
         TOrderSet: redirected to TOrder,
         PrintOrderOutputBinSet: redirected to PrintOrderOutputBin,
@@ -79,28 +79,28 @@ service CatalogService {
 
 
 
-    entity Hierarchy as projection on ZEWRKR_MASTERDATA_SRV.HierarchySet
-    entity Materials as projection on ZEWRKR_MASTERDATA_SRV.MaterialsSet
-    entity Equipments as projection on ZEWRKR_MASTERDATA_SRV.EquipmentsSet
+    entity Hierarchy as projection on ZEWRKR_MASTERDATA_SRV.HierarchySet
+    entity Materials as projection on ZEWRKR_MASTERDATA_SRV.MaterialsSet
+    entity Equipments as projection on ZEWRKR_MASTERDATA_SRV.EquipmentsSet
 
-    entity HierarchyEquip as projection on ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet{ 
+    entity HierarchyEquip as projection on ZEWRKR_MASTERDATA_SRV.HierarchyEquipSet{ 
         *,
         HierarchySet: redirected to Hierarchy,
         MaterialsSet: redirected to Materials,
         EquipmentsSet: redirected to Equipments
     }
 
-    entity ErrorMessages as projection on ZEWRKR_WORK_ORDER_SRV.ErrorMessagesSet
-    entity ObjectList as projection on ZEWRKR_WORK_ORDER_SRV.ObjectListSet 
-    entity OperationList as projection on ZEWRKR_WORK_ORDER_SRV.OperationListSet 
-    entity OrderDetails as projection on ZEWRKR_WORK_ORDER_SRV.OrderDetailsSet
-    entity TextCreateOrder as projection on ZEWRKR_WORK_ORDER_SRV.TextCreateOrderSet 
-    entity TUserStatus as projection on ZEWRKR_WORK_ORDER_SRV.TUserStatusSet
-    entity ComponentUpdate as projection on ZEWRKR_WORK_ORDER_SRV.ComponentUpdateSet
-    entity TecoUpdateOrder as projection on ZEWRKR_WORK_ORDER_SRV.TecoUpdateOrderSet
-    entity NotifToOdm as projection on ZEWRKR_WORK_ORDER_SRV.NotifToOdmSet
+    entity ErrorMessages as projection on ZEWRKR_WORK_ORDER_SRV.ErrorMessagesSet
+    entity ObjectList as projection on ZEWRKR_WORK_ORDER_SRV.ObjectListSet 
+    entity OperationList as projection on ZEWRKR_WORK_ORDER_SRV.OperationListSet 
+    entity OrderDetails as projection on ZEWRKR_WORK_ORDER_SRV.OrderDetailsSet
+    entity TextCreateOrder as projection on ZEWRKR_WORK_ORDER_SRV.TextCreateOrderSet 
+    entity TUserStatus as projection on ZEWRKR_WORK_ORDER_SRV.TUserStatusSet
+    entity ComponentUpdate as projection on ZEWRKR_WORK_ORDER_SRV.ComponentUpdateSet
+    entity TecoUpdateOrder as projection on ZEWRKR_WORK_ORDER_SRV.TecoUpdateOrderSet
+    entity NotifToOdm as projection on ZEWRKR_WORK_ORDER_SRV.NotifToOdmSet
 
-    entity CreateOrder as projection on ZEWRKR_WORK_ORDER_SRV.CreateOrderSet{ //POST
+    entity CreateOrder as projection on ZEWRKR_WORK_ORDER_SRV.CreateOrderSet{ //POST
         *,
         ErrorMessagesSet: redirected to ErrorMessages,
         ObjectListSet: redirected to ObjectList,
@@ -109,7 +109,7 @@ service CatalogService {
         TextCreateOrderSet: redirected to TextCreateOrder,
         TUserStatusSet: redirected to TUserStatus
     };
-    entity UpdateOrder as projection on ZEWRKR_WORK_ORDER_SRV.UpdateOrderSet{ //POST
+    entity UpdateOrder as projection on ZEWRKR_WORK_ORDER_SRV.UpdateOrderSet{ //POST
         *,
         OperationListSet: redirected to OperationList,
         OrderDetailsSet: redirected to OrderDetails,
@@ -122,15 +122,74 @@ service CatalogService {
     };
 
     
-    entity ConfirmCreate as projection on ZEWRKR_WORK_ORDER_SRV.ConfirmCreateSet //GET
-    entity GetOMList as projection on ZEWRKR_WORK_ORDER_SRV.GetOMListSet //GET
+    entity ConfirmCreate as projection on ZEWRKR_WORK_ORDER_SRV.ConfirmCreateSet //GET
+    entity GetOMList as projection on ZEWRKR_WORK_ORDER_SRV.GetOMListSet 
+    
+    
+    entity GetOperationList  as projection on ZEWRKR_WORK_ORDER_SRV.GetOperationListSet
+    entity GetOrderText  as projection on ZEWRKR_WORK_ORDER_SRV.GetOrderTextSet
+    entity IRev  as projection on ZEWRKR_WORK_ORDER_SRV.IRevSet
+    entity IVaplz  as projection on ZEWRKR_WORK_ORDER_SRV.IVaplzSet
+    entity OrderHeader  as projection on ZEWRKR_WORK_ORDER_SRV.OrderHeaderSet
+    entity SedTechRG  as projection on ZEWRKR_WORK_ORDER_SRV.SedTechRGSet
+    entity StsistemRG  as projection on ZEWRKR_WORK_ORDER_SRV.StsistemRGSet
+    entity SystemStatus  as projection on ZEWRKR_WORK_ORDER_SRV.SystemStatusSet
+    entity WorkCntr  as projection on ZEWRKR_WORK_ORDER_SRV.WorkCntrSet
 
-    entity CreateNotification as projection on ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet //POST
-    entity UpdateNotification as projection on ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet //POST
-    entity GetNotification as projection on ZEWRKR_NOTIFICATION_SRV.GetNotificationSet //NON TROVATO GET 
+    entity GetOrder as projection on ZEWRKR_WORK_ORDER_SRV.GetOrderSet { //POST
+        *,
+        GetOperationListSet: redirected to GetOperationList,
+        GetOrderTextSet: redirected to GetOrderText,
+        IRevSet: redirected to IRev,
+        IVaplzSet: redirected to IVaplz,
+        OrderHeaderSet: redirected to OrderHeader,
+        SedTechRGSet: redirected to SedTechRG,
+        StsistemRGSet: redirected to StsistemRG,
+        SystemStatusSet: redirected to SystemStatus,
+        WorkCntrSet: redirected to WorkCntr
+    }
+
+    entity ErrorMessagesN as projection on ZEWRKR_NOTIFICATION_SRV.ErrorMessagesSet
+    entity KeyRelationships as projection on ZEWRKR_NOTIFICATION_SRV.KeyRelationshipsSet
+    entity LongTexts as projection on ZEWRKR_NOTIFICATION_SRV.LongTextsSet
+    entity NotifActv as projection on ZEWRKR_NOTIFICATION_SRV.NotifActvSet
+    entity NotifItemCreate as projection on ZEWRKR_NOTIFICATION_SRV.NotifItemCreateSet
+    entity NotifPartners as projection on ZEWRKR_NOTIFICATION_SRV.NotifPartnersSet
+    entity NotifPartnrCheckDuplication as projection on ZEWRKR_NOTIFICATION_SRV.NotifPartnrCheckDuplicationSet
+    entity NotifTask as projection on ZEWRKR_NOTIFICATION_SRV.NotifTaskSet
+    entity UserStatus as projection on ZEWRKR_NOTIFICATION_SRV.UserStatusSet
+    entity INoco as projection on ZEWRKR_NOTIFICATION_SRV.INocoSet
+    entity NotifActDelete as projection on ZEWRKR_NOTIFICATION_SRV.NotifActDeleteSet
+    entity NotifItemDelete as projection on ZEWRKR_NOTIFICATION_SRV.NotifItemDeleteSet
+    entity NotifItemUpd as projection on ZEWRKR_NOTIFICATION_SRV.NotifItemUpdSet
+    entity TUserStatusN as projection on ZEWRKR_NOTIFICATION_SRV.TUserStatusSet
+
+    entity GetNotification as projection on ZEWRKR_NOTIFICATION_SRV.GetNotificationSet 
+    entity CreateNotification as projection on ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet { //POST
+        *,
+        ErrorMessagesSet: redirected to ErrorMessagesN,
+        KeyRelationshipsSet: redirected to KeyRelationships,
+        LongTextsSet: redirected to LongTexts,
+        NotifActvSet: redirected to NotifActv,
+        NotifItemCreateSet: redirected to NotifItemCreate,
+        NotifPartnersSet: redirected to NotifPartners,
+        NotifPartnrCheckDuplicationSet: redirected to NotifPartnrCheckDuplication,
+        NotifTaskSet: redirected to NotifTask,
+        UserStatusSet: redirected to UserStatus
+    };
+    entity UpdateNotification as projection on ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet { //POST
+        *,
+        ErrorMessagesSet: redirected to ErrorMessagesN,
+        INocoSet: redirected to INoco,
+        LongTextsSet: redirected to LongTexts,
+        NotifActvSet: redirected to NotifActv,
+        NotifActDeleteSet: redirected to NotifActDelete,
+        NotifItemDeleteSet: redirected to NotifItemDelete,
+        NotifItemUpdSet: redirected to NotifItemUpd,
+        TUserStatusSet: redirected to TUserStatusN
+    };
 
     entity StorageList as projection on Z4R_SEARCH_HELP_SRV.StorageListSet
-
     entity ReturnError as projection on Z4R_SEARCH_HELP_SRV.ReturnErrorSet
     entity ReturnTabDesc as projection on Z4R_SEARCH_HELP_SRV.ReturnTabDescSet
     entity ReturnTabValue as projection on Z4R_SEARCH_HELP_SRV.ReturnTabValueSet
@@ -147,55 +206,54 @@ service CatalogService {
 
     };
 
-    entity Odm as projection on ZPM4R_PMO_ODM_SRV.OdmSet
-    entity SAzione as projection on ZPM4R_PMO_ODM_SRV.SAzioneSet
-    entity SCentroLavoro as projection on ZPM4R_PMO_ODM_SRV.SCentroLavoroSet
-    entity SClasse as projection on ZPM4R_PMO_ODM_SRV.SClasseSet
-    entity SDesComponente as projection on ZPM4R_PMO_ODM_SRV.SDesComponenteSet
-    entity SDestinatario as projection on ZPM4R_PMO_ODM_SRV.SDestinatarioSet
-    entity SDivisioneu as projection on ZPM4R_PMO_ODM_SRV.SDivisioneuSet
-    entity SEquipmentCompo as projection on ZPM4R_PMO_ODM_SRV.SEquipmentCompoSet
-    entity SIndexPmo as projection on ZPM4R_PMO_ODM_SRV.SIndexPmoSet
-    entity SIndisponibilita as projection on ZPM4R_PMO_ODM_SRV.SIndisponibilitaSet
-    entity SPercorso as projection on ZPM4R_PMO_ODM_SRV.SPercorsoSet
-    entity SPltxu as projection on ZPM4R_PMO_ODM_SRV.SPltxuSet
-    entity SProgres as projection on ZPM4R_PMO_ODM_SRV.SProgresSet
-    entity SSistema as projection on ZPM4R_PMO_ODM_SRV.SSistemaSet
-    entity SStrno as projection on ZPM4R_PMO_ODM_SRV.SStrnoSet
-    entity STipoAttivita as projection on ZPM4R_PMO_ODM_SRV.STipoAttivitaSet
-    entity STipoGestione1 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione1Set
-    entity STipoGestione2 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione2Set
-    entity STipoGestione as projection on ZPM4R_PMO_ODM_SRV.STipoGestioneSet
-    entity STipoOrdine as projection on ZPM4R_PMO_ODM_SRV.STipoOrdineSet
-    entity STipoPmo as projection on ZPM4R_PMO_ODM_SRV.STipoPmoSet
+    entity Odm as projection on ZPM4R_PMO_ODM_SRV.OdmSet
+    entity SAzione as projection on ZPM4R_PMO_ODM_SRV.SAzioneSet
+    entity SCentroLavoro as projection on ZPM4R_PMO_ODM_SRV.SCentroLavoroSet
+    entity SClasse as projection on ZPM4R_PMO_ODM_SRV.SClasseSet
+    entity SDesComponente as projection on ZPM4R_PMO_ODM_SRV.SDesComponenteSet
+    entity SDestinatario as projection on ZPM4R_PMO_ODM_SRV.SDestinatarioSet
+    entity SDivisioneu as projection on ZPM4R_PMO_ODM_SRV.SDivisioneuSet
+    entity SEquipmentCompo as projection on ZPM4R_PMO_ODM_SRV.SEquipmentCompoSet
+    entity SIndexPmo as projection on ZPM4R_PMO_ODM_SRV.SIndexPmoSet
+    entity SIndisponibilita as projection on ZPM4R_PMO_ODM_SRV.SIndisponibilitaSet
+    entity SPercorso as projection on ZPM4R_PMO_ODM_SRV.SPercorsoSet
+    entity SPltxu as projection on ZPM4R_PMO_ODM_SRV.SPltxuSet
+    entity SProgres as projection on ZPM4R_PMO_ODM_SRV.SProgresSet
+    entity SSistema as projection on ZPM4R_PMO_ODM_SRV.SSistemaSet
+    entity SStrno as projection on ZPM4R_PMO_ODM_SRV.SStrnoSet
+    entity STipoAttivita as projection on ZPM4R_PMO_ODM_SRV.STipoAttivitaSet
+    entity STipoGestione1 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione1Set
+    entity STipoGestione2 as projection on ZPM4R_PMO_ODM_SRV.STipoGestione2Set
+    entity STipoGestione as projection on ZPM4R_PMO_ODM_SRV.STipoGestioneSet
+    entity STipoOrdine as projection on ZPM4R_PMO_ODM_SRV.STipoOrdineSet
+    entity STipoPmo as projection on ZPM4R_PMO_ODM_SRV.STipoPmoSet
 
-    entity TestiEstesi as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiSet
-    entity TestiEstesiDelete as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiDeleteSet
-    
+    entity TestiEstesi as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiSet
+    entity TestiEstesiDelete as projection on Z4R_TEXT_MANAGEMENT_SRV.TestiEstesiDeleteSet
 
     entity GetODM as projection on ZPM4R_PMO_ODM_SRV.GetODMSet{
         *,
         Odm: redirected to Odm,
         SAzione: redirected to SAzione,
-        SCentroLavoro: redirected to SCentroLavoro,
-        SClasse: redirected to SClasse,
-        SDesComponente: redirected to SDesComponente,
-        SDestinatario: redirected to SDestinatario,
-        SDivisioneu: redirected to SDivisioneu,
-        SEquipmentCompo: redirected to SEquipmentCompo,
-        SIndexPmo: redirected to SIndexPmo,
-        SIndisponibilita: redirected to SIndisponibilita,
-        SPercorso: redirected to SPercorso,
-        SPltxu: redirected to SPltxu,
-        SProgres: redirected to SProgres,
-        SSistema: redirected to SSistema,
-        SStrno: redirected to SStrno,
+        SCentroLavoro: redirected to SCentroLavoro,
+        SClasse: redirected to SClasse,
+        SDesComponente: redirected to SDesComponente,
+        SDestinatario: redirected to SDestinatario,
+        SDivisioneu: redirected to SDivisioneu,
+        SEquipmentCompo: redirected to SEquipmentCompo,
+        SIndexPmo: redirected to SIndexPmo,
+        SIndisponibilita: redirected to SIndisponibilita,
+        SPercorso: redirected to SPercorso,
+        SPltxu: redirected to SPltxu,
+        SProgres: redirected to SProgres,
+        SSistema: redirected to SSistema,
+        SStrno: redirected to SStrno,
         //STipoAttivita: redirected to STipoAttivita,
-        STipoGestione1: redirected to STipoGestione1,
-        STipoGestione2: redirected to STipoGestione2,
-        STipoGestione: redirected to STipoGestione,
-        STipoOrdine: redirected to STipoOrdine,
-        STipoPmo: redirected to STipoPmo
+        STipoGestione1: redirected to STipoGestione1,
+        STipoGestione2: redirected to STipoGestione2,
+        STipoGestione: redirected to STipoGestione,
+        STipoOrdine: redirected to STipoOrdine,
+        STipoPmo: redirected to STipoPmo
     };
 
 

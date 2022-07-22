@@ -223,69 +223,16 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
-        "NotifItemDeleteSet": {
+        "NotifItemUpdSet": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifItemDeleteSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "NotifActDeleteSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActDeleteSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "TUserStatusSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.TUserStatusSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "INocoSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.INocoSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "NotifActvSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActvSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "ErrorMessagesSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.ErrorMessagesSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "LongTextsSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.LongTextsSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifItemUpdSet",
           "cardinality": {
             "max": "*"
           },
@@ -300,10 +247,64 @@
           },
           "keys": []
         },
-        "NotifItemUpdSet": {
+        "LongTextsSet": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifItemUpdSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.LongTextsSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ErrorMessagesSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.ErrorMessagesSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifActvSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActvSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "INocoSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.INocoSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "TUserStatusSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.TUserStatusSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifActDeleteSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActDeleteSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifItemDeleteSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifItemDeleteSet",
           "cardinality": {
             "max": "*"
           },
@@ -411,6 +412,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici - problemi",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -420,6 +422,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice problema o codice guasto",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -429,6 +432,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -438,6 +442,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici - cause",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -447,6 +452,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -539,6 +545,26 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StatusExt": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Stato singolo di un oggetto (forma breve)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LanguIso": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice lingua SAP a due posizioni",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -820,55 +846,10 @@
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
-        "LongTextsSet": {
+        "NotificationTextSet": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.LongTextsSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "StatusNotifSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.StatusNotifSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "ErrorMessagesSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.ErrorMessagesSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "NotifCausSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifCausSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "NotifActvGetSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActvGetSet",
-          "cardinality": {
-            "max": "*"
-          },
-          "keys": []
-        },
-        "NotItemSet": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotItemSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotificationTextSet",
           "cardinality": {
             "max": "*"
           },
@@ -883,10 +864,55 @@
           },
           "keys": []
         },
-        "NotificationTextSet": {
+        "NotItemSet": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotificationTextSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotItemSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifActvGetSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifActvGetSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifCausSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifCausSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "ErrorMessagesSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.ErrorMessagesSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "StatusNotifSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.StatusNotifSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "LongTextsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.LongTextsSet",
           "cardinality": {
             "max": "*"
           },
@@ -1248,6 +1274,56 @@
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
+        "Breakdown": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Fermo macchina",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Strmlfndat": {
+            "type": "cds.Date",
+            "_comment": "tag type edited manually", 
+            "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Strmlfnt": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "OraFineGuasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Endmlfndat": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Endmlfnt": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "OraFineGuasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
         "NotificationList": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
@@ -1294,9 +1370,7 @@
           "length": 8,
           "@sap.unicode": "false",
           "@sap.creatable": "false",
-          "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.updatable": "false"
         },
         "RequiredStartTime": {
           "type": "cds.String",
@@ -1312,9 +1386,7 @@
           "length": 8,
           "@sap.unicode": "false",
           "@sap.creatable": "false",
-          "@sap.updatable": "false",
-          "@sap.sortable": "false",
-          "@sap.filterable": "false"
+          "@sap.updatable": "false"
         },
         "RequiredEndTime": {
           "type": "cds.String",
@@ -1358,7 +1430,6 @@
           "@sap.unicode": "false",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
-          "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
         "UserCreatorNotif": {
@@ -1481,6 +1552,617 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Numero ordine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "RefRelType": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo collegamento",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Assembly": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Assemblaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SerialNo": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero di serie",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice materiale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Division": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Settore merceologico",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SalesOrg": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Organizzazione commerciale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DistrChan": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Canale di distribuzione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SalesOffice": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Ufficio vendite",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SalesGrp": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Gr.add.vendite",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DeviceData": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Dati supplementari apparecchiatura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PurchNoC": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.unicode": "false",
+          "@sap.label": "N. ord. acq.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PurchDate": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Data ORDACQ",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Breakdown": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Fermo macchina",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Strmlfndate": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Strmlfntime": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DocNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Doc. vendita",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ItmNumber": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "Posizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Endmlfndate": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Endmlfntime": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "OraFineGuasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Scenario": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Scenario",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyExternal": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice materiale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyGuid": {
+          "type": "cds.String",
+          "length": 32,
+          "@sap.unicode": "false",
+          "@sap.label": "GUID (esterno)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyVersion": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero versione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MaterialExternal": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Cd. materiale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MaterialGuid": {
+          "type": "cds.String",
+          "length": 32,
+          "@sap.unicode": "false",
+          "@sap.label": "GUID (esterno)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MaterialVersion": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero versione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Maintloc": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Ubicazione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Maintroom": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Locale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Pto iniz.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Punto finale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearLength": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Lunghezza",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetTypeCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetValue": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 1 ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetTypeCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetValue": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 2 ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerStartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Marc.in.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceStartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Dist.PI M.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerEndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Marc.fine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceEndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Dist.MPF",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Sortfield": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.unicode": "false",
+          "@sap.label": "Campo sort",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ExternalNumber": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero avviso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Btpln": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "ST considerata",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Bequi": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipm. cons.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Auswk": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Effetto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Verfv": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Disp.p.guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Anlzv": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "SImp.pGuasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Verfn": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Disp.d.guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Anlzn": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "SImp.d.guasto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Verfm": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "Disp.dopo mis.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Anlze": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "S.imp.dopo mis.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskDetermination": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Indicator",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SetInactive": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.unicode": "false",
+          "@sap.label": "Notification Has Status &quot;Completed&quot;",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LogSystem": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema logico",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1499,6 +2181,33 @@
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
           "target": "ZEWRKR_NOTIFICATION_SRV.NotifPartnersSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifTaskSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifTaskSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "NotifPartnrCheckDuplicationSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotifPartnrCheckDuplicationSet",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "KeyRelationshipsSet": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.KeyRelationshipsSet",
           "cardinality": {
             "max": "*"
           },
@@ -1641,6 +2350,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Tipo ogg.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1650,6 +2360,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Chiave",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1659,6 +2370,7 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
+          "@sap.label": "Colonna formato",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1703,6 +2415,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1712,6 +2425,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo interv.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1721,6 +2435,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1730,6 +2445,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Cd. attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1739,6 +2455,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Inizio",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1748,6 +2465,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1757,6 +2475,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Fine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1766,21 +2485,52 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
-        "CreateNotification": {
-          "@cds.ambiguous": "missing on condition?",
-          "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
-          "keys": []
+        "RefObjectKey": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave oggetto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ActSortNo": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero di classificazione attività",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ItemSortNo": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero classificazione della posizione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
         },
         "UpdateNotification": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
           "target": "ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet",
+          "keys": []
+        },
+        "CreateNotification": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
           "keys": []
         }
       }
@@ -1795,6 +2545,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1804,6 +2555,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Pos.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1813,6 +2565,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1822,6 +2575,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1831,6 +2585,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1840,6 +2595,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1849,6 +2605,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo cd. causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1872,6 +2629,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Numero avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1881,6 +2639,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Numero progressivo dell'attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1890,6 +2649,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Numero posizione nel record posizioni",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1899,6 +2659,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici - interventi",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1908,6 +2669,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1917,6 +2679,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo interv.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1926,6 +2689,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Nome dell'utente che ha inserito l'oggetto",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1935,6 +2699,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Data di inserimento del record",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1944,6 +2709,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Nome dell'utente autore della modifica",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1953,6 +2719,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Data dell'ultima modifica",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1962,6 +2729,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Data inizio",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1971,6 +2739,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Data fine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1980,6 +2749,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora di inizio dell'attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1989,6 +2759,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora fine attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -1998,6 +2769,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora dell'inserimento del record",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2007,6 +2779,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora modifica",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2030,6 +2803,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2039,6 +2813,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Pos.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2048,6 +2823,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Tsto",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2057,6 +2833,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2066,6 +2843,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice guasti",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2075,6 +2853,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo cd.probl.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2098,6 +2877,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2116,6 +2896,7 @@
           "type": "cds.String",
           "length": 10,
           "@sap.unicode": "false",
+          "@sap.label": "Data rif.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2125,6 +2906,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Ora riferimento",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2148,6 +2930,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Stato",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2157,6 +2940,7 @@
           "type": "cds.String",
           "length": 5,
           "@sap.unicode": "false",
+          "@sap.label": "Stato",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2166,6 +2950,7 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
+          "@sap.label": "Lingua (ISO)",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2175,6 +2960,328 @@
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
           "target": "ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_NOTIFICATION_SRV.NotifTaskSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Refobjectkey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskKey": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Misura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskSortNo": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "N. di class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskText": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Testo misure",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskCodegrp": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskCode": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice misura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PartnRole": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Ruolo resp.mis.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Partner": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Responsabile",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PlndStartDate": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Inizio pianif.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "PlndStartTime": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "Ora iniz.pian.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PlndEndDate": {
+          "type": "cds.Date",
+            "_comment": "tag type edited manually",
+          "@odata.type": "Edm.DateTime",
+          "@odata.precision": 7,
+          "@sap.unicode": "false",
+          "@sap.label": "Fine pian.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "PlndEndTime": {
+          "type": "cds.Time",
+          "@odata.type": "Edm.TimeOfDay",
+          "@sap.unicode": "false",
+          "@sap.label": "Ora fine pian.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CarriedOutBy": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Autore esec.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ItemSortNo": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "N. di class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CreateNotification": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_NOTIFICATION_SRV.NotifPartnrCheckDuplicationSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "CheckSequence": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "N. di class.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PartnRole": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Ruolo partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CreateNotification": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
+          "keys": []
+        }
+      }
+    },
+    "ZEWRKR_NOTIFICATION_SRV.KeyRelationshipsSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Refobjecttype": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo ogg.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Refobjectkey": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LogSystem": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Sistema logico",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "NotifNo": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Avviso",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ItemKey": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Pos.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CauseKey": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Causa",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ActKey": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Misura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "TaskKey": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Misura",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "ObjectNo": {
+          "type": "cds.String",
+          "length": 22,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero oggetto",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "PartnRole": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Ruolo partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Counter": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.unicode": "false",
+          "@sap.label": "Contatore",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Partner": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.unicode": "false",
+          "@sap.label": "Partner",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "CreateNotification": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
           "keys": []
         }
       }
@@ -2189,6 +3296,7 @@
           "type": "cds.String",
           "length": 70,
           "@sap.unicode": "false",
+          "@sap.label": "Chiave oggetto",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2198,6 +3306,7 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
+          "@sap.label": "Ruolo partner",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2207,6 +3316,7 @@
           "type": "cds.String",
           "length": 2,
           "@sap.unicode": "false",
+          "@sap.label": "Ruolo partner",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2216,6 +3326,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Partner",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2225,6 +3336,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Partner",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2248,6 +3360,7 @@
           "type": "cds.String",
           "length": 20,
           "@sap.unicode": "false",
+          "@sap.label": "Id",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2257,6 +3370,7 @@
           "type": "cds.String",
           "length": 1,
           "@sap.unicode": "false",
+          "@sap.label": "Type",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2266,15 +3380,16 @@
           "type": "cds.String",
           "length": 220,
           "@sap.unicode": "false",
+          "@sap.label": "Message",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
           "@sap.filterable": "false"
         },
-        "NotificationListSet": {
+        "CreateNotification": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.NotificationListSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
           "keys": []
         },
         "UpdateNotification": {
@@ -2283,10 +3398,10 @@
           "target": "ZEWRKR_NOTIFICATION_SRV.UpdateNotificationSet",
           "keys": []
         },
-        "CreateNotification": {
+        "NotificationListSet": {
           "@cds.ambiguous": "missing on condition?",
           "type": "cds.Association",
-          "target": "ZEWRKR_NOTIFICATION_SRV.CreateNotificationSet",
+          "target": "ZEWRKR_NOTIFICATION_SRV.NotificationListSet",
           "keys": []
         }
       }
@@ -2345,6 +3460,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
+          "@sap.label": "Notification No",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2353,6 +3469,7 @@
         "OutputBin": {
           "type": "cds.LargeString",
           "@sap.unicode": "false",
+          "@sap.label": "OutputBin",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2379,6 +3496,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "PM: documenti associati all'ordine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2388,6 +3506,7 @@
           "type": "cds.String",
           "length": 30,
           "@sap.unicode": "false",
+          "@sap.label": "Definizione dei documenti associati all'ordine",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2397,6 +3516,7 @@
           "type": "cds.String",
           "length": 30,
           "@sap.unicode": "false",
+          "@sap.label": "Spool: dispositivo di output",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2420,7 +3540,7 @@
           "type": "cds.String",
           "length": 5,
           "@sap.unicode": "false",
-          "@sap.label": "Status",
+          "@sap.label": "Stato",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2430,7 +3550,7 @@
           "type": "cds.String",
           "length": 12,
           "@sap.unicode": "false",
-          "@sap.label": "Notification",
+          "@sap.label": "Avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2454,6 +3574,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo breve relativo alla posizione dell'avviso",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2463,6 +3584,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici - problemi",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2472,6 +3594,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice problema o codice guasto",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2481,6 +3604,7 @@
           "type": "cds.String",
           "length": 40,
           "@sap.unicode": "false",
+          "@sap.label": "Testo causa",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2490,6 +3614,7 @@
           "type": "cds.String",
           "length": 8,
           "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici - cause",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2499,6 +3624,287 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Codice causa",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Refobjectkey": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.unicode": "false",
+          "@sap.label": "Chiave",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DlCodegrp": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.unicode": "false",
+          "@sap.label": "Gruppo codici",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DlCode": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.unicode": "false",
+          "@sap.label": "Cd. parte ogg.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Assembly": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Assemblaggio",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyExternal": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Codice materiale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyGuid": {
+          "type": "cds.String",
+          "length": 32,
+          "@sap.unicode": "false",
+          "@sap.label": "GUID (esterno)",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "AssemblyVersion": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.unicode": "false",
+          "@sap.label": "Numero versione",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "StartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Pto iniz.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "EndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Punto finale",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearLength": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Lunghezza",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "LinearUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetTypeCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetValue": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FirstOffsetUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 1 ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetTypeCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.unicode": "false",
+          "@sap.label": "Tipo offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetValue": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "SecondOffsetUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM offset 2 ISO",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Equipment": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Equipment",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "FunctLoc": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Sede tecnica",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerStartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Marc.in.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceStartPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Dist.PI M.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerEndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Marc.fine",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceEndPoint": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Dist.MPF",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceUnit": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "MarkerDistanceUnitIso": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.unicode": "false",
+          "@sap.label": "UM ISO",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2522,6 +3928,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Attivita",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
@@ -2545,6 +3952,7 @@
           "type": "cds.String",
           "length": 4,
           "@sap.unicode": "false",
+          "@sap.label": "Pos.",
           "@sap.creatable": "false",
           "@sap.updatable": "false",
           "@sap.sortable": "false",
