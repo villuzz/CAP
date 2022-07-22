@@ -39,6 +39,7 @@ service CatalogService {
     entity SortfieldRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SortfieldRaSet
     entity StatusRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.StatusRaSet
     entity SupflocRa as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.SupflocRaSet
+    entity T_CONS_AE as projection on ZPM4R_PMO_TAB_ANAG_1_SRV.T_CONS_AESet
     
     entity ListFl as projection on ZPM4R_TECHNICAL_OBJECT_SRV_03.ListFlSet{ 
         *,

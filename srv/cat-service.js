@@ -399,6 +399,20 @@ module.exports = cds.service.impl(async function () {
         }
     });
 
+    const { T_CONS_AE } = this.entities;
+    this.on('READ', T_CONS_AE, async request => {
+        try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('CREATE', T_CONS_AE, async request => {
+        try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('DELETE', T_CONS_AE, async request => {
+        try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+    this.on('UPDATE', T_CONS_AE, async request => {
+        try { convertDatesv4Tov2(request); convertTimev4Tov2(request); let response = await serviceANAG_1.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
+    });
+
     const { T_ATTPM } = this.entities;
     this.on('READ', T_ATTPM, async request => {
         try { let response = await serviceANAG_4.tx(request).run(request.query); return response; } catch (error) { return save_log(request, error); }
